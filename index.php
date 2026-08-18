@@ -1,17 +1,80 @@
-<?php
-$pageTitle = 'Delivering Results for All of Charlotte';
-require_once __DIR__ . '/includes/header.php';
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimple Ajmera | Charlotte City Council At-Large</title>
+  <meta name="description" content="Official campaign website for Dimple Ajmera for Charlotte City Council At-Large. Working Mother, Accountant, and Fighter for all Charlotte families.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dimple Ajmera for Charlotte City Council At-Large">
+  <meta property="og:description" content="Working Mother • Accountant • Fighter. Delivering Results for All of Charlotte.">
+  <meta property="og:url" content="https://www.dimpleajmera.com">
+  <meta property="og:image" content="assets/images/DimpleMainLogo.png">
 
-<!-- SPLC Webby Winner Style Full-Bleed Hero Stage (Clean White / Light Theme) -->
-<section class="splc-hero-stage" id="top">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Clean White Theme Styles -->
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body id="top">
+
+<!-- Refined Navigation Header with Active Navigation Underline Markers -->
+<nav class="navbar navbar-expand-lg navbar-campaign sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center text-dark fw-bold serif-font fs-4" href="index.html">
+      <span class="text-patriot-red me-2">★</span> Dimple Ajmera
+    </a>
+
+    <button class="navbar-toggler border-0 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCampaignNav" aria-controls="navbarCampaignNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCampaignNav">
+      <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html#top">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#event-townhall">Environment Town Hall</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Dimple</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#media">Media & Socials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#priorities">Key Priorities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="endorsements.html">Endorsements</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="volunteer.html">Get Involved</a>
+        </li>
+      </ul>
+      <div class="d-flex gap-2">
+        <a href="https://www.dimpleajmera.com/donate" target="_blank" rel="noopener" class="btn btn-red-patriot">
+          <i class="bi bi-heart-fill me-1"></i> Donate
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- SPLC Webby Winner Style Full-Bleed Hero Stage (Clean Master Logo) -->
+<section class="splc-hero-stage">
   <div class="splc-hero-bg"></div>
   <div class="splc-hero-vignette"></div>
 
   <div class="splc-hero-content">
-    <!-- Massive Master Transparent Logo Overlay -->
+    <!-- Clean Master Logo Overlay (Without Re-Elect) -->
     <div class="hero-giant-logo-container">
-      <img src="assets/images/DimpleHzLogo2025.png" alt="<?php echo CANDIDATE_NAME; ?> Master Campaign Logo" class="hero-giant-logo">
+      <img src="assets/images/DimpleMainLogo.png" alt="Dimple Ajmera Official Master Logo" class="hero-giant-logo">
     </div>
 
     <h1 class="splc-hero-headline serif-font">
@@ -22,13 +85,13 @@ require_once __DIR__ . '/includes/header.php';
     </p>
 
     <div class="d-flex flex-wrap justify-content-center gap-3">
-      <a href="volunteer.php" class="btn btn-red-patriot btn-lg">
+      <a href="volunteer.html" class="btn btn-red-patriot btn-lg">
         <i class="bi bi-people-fill me-2"></i> Join Team Dimple
       </a>
       <a href="#event-townhall" class="btn btn-blue-patriot btn-lg">
         <i class="bi bi-calendar-event me-2"></i> Environment Town Hall
       </a>
-      <a href="<?php echo DONATE_URL; ?>" target="_blank" rel="noopener" class="btn btn-gold-2 btn-lg">
+      <a href="https://www.dimpleajmera.com/donate" target="_blank" rel="noopener" class="btn btn-gold-2 btn-lg">
         <i class="bi bi-credit-card-fill me-2"></i> Contribute
       </a>
     </div>
@@ -79,13 +142,25 @@ require_once __DIR__ . '/includes/header.php';
         
         <div class="col-lg-5 text-center text-lg-end">
           <div class="d-flex justify-content-center justify-content-lg-end gap-2 mb-4">
-            <div class="countdown-box"><div class="countdown-num" id="countDays">00</div><div class="countdown-lbl">Days</div></div>
-            <div class="countdown-box"><div class="countdown-num" id="countHours">00</div><div class="countdown-lbl">Hours</div></div>
-            <div class="countdown-box"><div class="countdown-num" id="countMins">00</div><div class="countdown-lbl">Mins</div></div>
-            <div class="countdown-box"><div class="countdown-num" id="countSecs">00</div><div class="countdown-lbl">Secs</div></div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="countDays">00</div>
+              <div class="countdown-lbl">Days</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="countHours">00</div>
+              <div class="countdown-lbl">Hours</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="countMins">00</div>
+              <div class="countdown-lbl">Mins</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="countSecs">00</div>
+              <div class="countdown-lbl">Secs</div>
+            </div>
           </div>
 
-          <a href="<?php echo TOWN_HALL_RSVP_URL; ?>" target="_blank" rel="noopener" class="btn btn-red-patriot btn-lg w-100 mb-2">
+          <a href="https://charlottenc.seamlessdocs.com/ng/fa/rjotkfzz0tct" target="_blank" rel="noopener" class="btn btn-red-patriot btn-lg w-100 mb-2">
             <i class="bi bi-box-arrow-up-right me-2"></i> RSVP Required (Seats Limited)
           </a>
           <a href="https://www.google.com/maps/search/?api=1&query=Project%20658%2C%203646%20Central%20Ave.%2C%20Charlotte%2C%20NC%2028205" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm w-100">
@@ -97,7 +172,7 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 2. About Section (White Background) -->
+<!-- 2. About Section & High-Res Gallery -->
 <section id="about" class="py-5 bg-off-white">
   <div class="container py-lg-4">
     <div class="row align-items-center g-5 mb-5">
@@ -118,12 +193,34 @@ require_once __DIR__ . '/includes/header.php';
         <div class="feature-card-2">
           <h3 class="serif-font text-navy-dark mb-4"><i class="bi bi-award-fill text-gold-accent me-2"></i> Honors & Awards</h3>
           <ul class="list-unstyled mb-0">
-            <?php foreach ($AWARDS as $award): ?>
-              <li class="d-flex align-items-start mb-3 pb-2 border-bottom border-secondary border-opacity-25">
-                <i class="bi bi-star-fill text-gold-accent me-3 mt-1"></i>
-                <div><strong class="text-dark"><?php echo htmlspecialchars($award); ?></strong></div>
-              </li>
-            <?php endforeach; ?>
+            <li class="d-flex align-items-start mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+              <i class="bi bi-star-fill text-gold-accent me-3 mt-1"></i>
+              <div>
+                <strong class="text-dark">2019 Blue Sky Award</strong>
+                <div class="text-secondary small">Awarded for environmental public policy work by Clean Air Carolina</div>
+              </div>
+            </li>
+            <li class="d-flex align-items-start mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+              <i class="bi bi-star-fill text-gold-accent me-3 mt-1"></i>
+              <div>
+                <strong class="text-dark">NAACP Excellence in Leadership Award</strong>
+                <div class="text-secondary small">Recognized for civil rights and community advocacy</div>
+              </div>
+            </li>
+            <li class="d-flex align-items-start mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+              <i class="bi bi-star-fill text-gold-accent me-3 mt-1"></i>
+              <div>
+                <strong class="text-dark">Charlotte Business Journal 40 Under 40</strong>
+                <div class="text-secondary small">Recognized for outstanding leadership and fiscal management</div>
+              </div>
+            </li>
+            <li class="d-flex align-items-start mb-3">
+              <i class="bi bi-star-fill text-gold-accent me-3 mt-1"></i>
+              <div>
+                <strong class="text-dark">Global Service Award by Rotary International</strong>
+                <div class="text-secondary small">Honored for public service and community dedication</div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -188,7 +285,7 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 3. Media, Speech Clips & Live Socials (White Background) -->
+<!-- 3. Media, Speech Clips & Live Socials -->
 <section id="media" class="py-5 bg-white">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
@@ -298,7 +395,7 @@ require_once __DIR__ . '/includes/header.php';
           </p>
         </div>
         <div class="col-lg-5">
-          <form action="<?php echo SUBSTACK_URL; ?>" method="get" target="_blank" class="p-3 bg-dark bg-opacity-50 rounded-4 border border-secondary border-opacity-25">
+          <form action="https://dimpleajmera.substack.com" method="get" target="_blank" class="p-3 bg-dark bg-opacity-50 rounded-4 border border-secondary border-opacity-25">
             <div class="mb-3 text-start">
               <label class="form-label text-white small fw-bold">Enter Your Email Address</label>
               <input type="email" class="form-control bg-dark text-white border-secondary" placeholder="name@example.com" required>
@@ -313,7 +410,7 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 4. Key Priorities Grid Section (White Background) -->
+<!-- 4. Key Priorities Grid Section -->
 <section id="priorities" class="py-5 bg-white">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
@@ -322,22 +419,50 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <div class="row g-4">
-      <?php foreach ($ISSUES as $issue): ?>
-        <div class="col-lg-6">
-          <div class="feature-card-2">
-            <div class="feature-icon-wrapper">
-              <i class="bi <?php echo $issue['icon']; ?>"></i>
-            </div>
-            <h3 class="serif-font h4 fw-bold text-dark mb-3"><?php echo htmlspecialchars($issue['title']); ?></h3>
-            <p class="text-secondary mb-0"><?php echo htmlspecialchars($issue['full_desc']); ?></p>
+      <div class="col-lg-6">
+        <div class="feature-card-2">
+          <div class="feature-icon-wrapper">
+            <i class="bi bi-shield-lock-fill"></i>
           </div>
+          <h3 class="serif-font h4 fw-bold text-dark mb-3">Build a Safe Charlotte Regardless of Your ZIP Code</h3>
+          <p class="text-secondary mb-0">Dimple works tirelessly to build a safe Charlotte for all families. She championed providing city healthcare coverage for families of CMPD officers killed in the line of duty, which was unanimously approved by City Council.</p>
         </div>
-      <?php endforeach; ?>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="feature-card-2">
+          <div class="feature-icon-wrapper">
+            <i class="bi bi-tree-fill"></i>
+          </div>
+          <h3 class="serif-font h4 fw-bold text-dark mb-3">Sustainable Infrastructure & Resilient Future</h3>
+          <p class="text-secondary mb-0">Winner of the 2019 Blue Sky Award, Dimple called for a pause on new data center developments near neighborhoods to safeguard Charlotte’s natural water supply and tree canopy.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="feature-card-2">
+          <div class="feature-icon-wrapper">
+            <i class="bi bi-house-heart-fill"></i>
+          </div>
+          <h3 class="serif-font h4 fw-bold text-dark mb-3">Expand Access to Affordable Housing</h3>
+          <p class="text-secondary mb-0">Dimple continues to champion municipal housing bonds, down-payment assistance programs for first-time homebuyers, and anti-displacement strategies keeping long-term residents in their homes.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="feature-card-2">
+          <div class="feature-icon-wrapper">
+            <i class="bi bi-graph-up-arrow"></i>
+          </div>
+          <h3 class="serif-font h4 fw-bold text-dark mb-3">Create Economic Opportunities Across All City Districts</h3>
+          <p class="text-secondary mb-0">As a CPA with corporate finance background at TIAA, Dimple applies rigorous fiscal oversight while expanding access to capital and municipal contracts for local small businesses.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 5. Endorsements Showcase Section (White Background) -->
+<!-- 5. Endorsements Showcase Section -->
 <section class="py-5 bg-off-white">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
@@ -346,24 +471,100 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <div class="row g-4 mb-5">
-      <?php foreach ($SPOTLIGHT_QUOTES as $quote): ?>
-        <div class="col-lg-6">
-          <div class="quote-card-2">
-            <p class="serif-font fs-5 fst-italic text-dark mb-3">
-              "<?php echo htmlspecialchars($quote['quote']); ?>"
-            </p>
-            <div class="fw-bold text-patriot-red">&mdash; <?php echo htmlspecialchars($quote['source']); ?></div>
-          </div>
+      <div class="col-lg-6">
+        <div class="quote-card-2">
+          <p class="serif-font fs-5 fst-italic text-dark mb-3">
+            "Ajmera continues to be a thoughtful and dedicated representative with a knack for hearing and uplifting the community’s concerns. We recommend Ajmera."
+          </p>
+          <div class="fw-bold text-patriot-red">&mdash; The Charlotte Observer</div>
         </div>
-      <?php endforeach; ?>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="quote-card-2">
+          <p class="serif-font fs-5 fst-italic text-dark mb-3">
+            "Councilwoman Ajmera championed providing city healthcare coverages for families of employees killed in the line of duty after the death of CMPD Officer Joshua Eyer... Due to Councilwoman Ajmera, this benefit was unanimously approved by all members of council."
+          </p>
+          <div class="fw-bold text-patriot-red">&mdash; Charlotte-Mecklenburg Fraternal Order of Police (FOP Lodge 9)</div>
+        </div>
+      </div>
     </div>
 
     <div class="text-center">
-      <a href="endorsements.php" class="btn btn-red-patriot btn-lg">
+      <a href="endorsements.html" class="btn btn-red-patriot btn-lg">
         <i class="bi bi-journal-check me-2"></i> View Full List of 38+ Endorsing Leaders & Organizations
       </a>
     </div>
   </div>
 </section>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<!-- Footer -->
+<footer class="footer-2-0">
+  <div class="container">
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4 col-md-6">
+        <h3 class="serif-font text-white fw-bold mb-3">Dimple Ajmera</h3>
+        <p class="text-white-50">
+          Serving Charlotte as City Council Member (At-Large). Working Mother, Certified Public Accountant, and Fighter for all Charlotte families.
+        </p>
+        <div class="d-flex gap-3 fs-5 mt-3">
+          <a href="https://www.facebook.com/DimpleAjmeraNC/" target="_blank" rel="noopener" class="text-white-50" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/dimpleajmeranc/" target="_blank" rel="noopener" class="text-white-50" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://twitter.com/dimpleajmera" target="_blank" rel="noopener" class="text-white-50" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.linkedin.com/in/dimpleajmera" target="_blank" rel="noopener" class="text-white-50" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://dimpleajmera.substack.com" target="_blank" rel="noopener" class="text-white-50" aria-label="Substack"><i class="bi bi-newspaper"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h5 class="text-white fw-bold mb-3">Navigation</h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a href="index.html#top" class="text-white-50">Home</a></li>
+          <li class="mb-2"><a href="#event-townhall" class="text-white-50">Environment Town Hall</a></li>
+          <li class="mb-2"><a href="#about" class="text-white-50">About Dimple</a></li>
+          <li class="mb-2"><a href="#media" class="text-white-50">Media & Socials</a></li>
+          <li class="mb-2"><a href="#priorities" class="text-white-50">Key Priorities</a></li>
+          <li class="mb-2"><a href="endorsements.html" class="text-white-50">Endorsements</a></li>
+          <li class="mb-2"><a href="volunteer.html" class="text-white-50">Volunteer & Join Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-5 col-md-12">
+        <h5 class="text-white fw-bold mb-3">Stay Connected</h5>
+        <p class="text-white-50 small mb-3">
+          Subscribe to Dimple's newsletter for official city updates, town hall announcements, and community reports.
+        </p>
+        <form action="https://dimpleajmera.substack.com" method="get" target="_blank" class="row g-2">
+          <div class="col-8">
+            <input type="email" class="form-control bg-dark text-white border-secondary" placeholder="Enter your email address" required>
+          </div>
+          <div class="col-4">
+            <button type="submit" class="btn btn-red-patriot w-100">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="disclaimer-pill">
+          Paid for by the Committee to Elect Dimple Ajmera.
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4 pt-3 border-top border-secondary border-opacity-25 text-white-50 small">
+      <div class="col-md-6 text-center text-md-start">
+        &copy; 2026 Committee to Elect Dimple Ajmera. All rights reserved.
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        DimpleAjmera.com 3.2 Clean Logo Release
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
