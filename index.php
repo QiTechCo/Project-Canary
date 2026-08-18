@@ -4,7 +4,7 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <!-- 2.0 Hero Section -->
-<section class="hero-2-0">
+<section class="hero-2-0" id="top">
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-7">
@@ -31,7 +31,7 @@ require_once __DIR__ . '/includes/header.php';
       </div>
       <div class="col-lg-5">
         <div class="hero-portrait-card">
-          <img src="assets/images/dimple-ajmera-portrait.png" alt="<?php echo CANDIDATE_NAME; ?>" class="img-fluid w-100">
+          <img src="assets/images/Dimple_Ajmera_Charlotte_Councilmember_2025.jpg" alt="<?php echo CANDIDATE_NAME; ?>" class="img-fluid w-100">
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </div>
 
-<!-- Featured Event: State of Our Environment Town Hall Hub -->
+<!-- 1. Environment Town Hall Section -->
 <section id="event-townhall" class="py-5 mt-4">
   <div class="container">
     <div class="event-banner-card p-4 p-lg-5">
@@ -100,10 +100,10 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- About Section 2.0 -->
+<!-- 2. About Section -->
 <section id="about" class="py-5 bg-light">
   <div class="container py-lg-4">
-    <div class="row align-items-center g-5">
+    <div class="row align-items-center g-5 mb-5">
       <div class="col-lg-6">
         <span class="text-primary-green fw-bold text-uppercase tracking-wider">Meet Council Member Ajmera</span>
         <h2 class="serif-font display-5 fw-bold text-dark mb-4">A Proven Track Record of Public Service & Fiscal Integrity</h2>
@@ -131,10 +131,42 @@ require_once __DIR__ . '/includes/header.php';
         </div>
       </div>
     </div>
+
+    <!-- Original High-Res Campaign Photo Gallery Grid -->
+    <div class="text-center mb-4">
+      <h3 class="serif-font text-dark fw-bold">Community & Leadership Gallery</h3>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="photo-gallery-card">
+          <img src="assets/images/Dimple_Ajmera_Charlotte_Councilmember_2025.jpg" alt="Dimple Ajmera Speaking at Community Event">
+          <div class="p-3 bg-white text-center">
+            <span class="fw-bold text-dark">Dimple Ajmera at Community Forum</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="photo-gallery-card">
+          <img src="assets/images/Dimple_Hugh_McColl.jpg" alt="Dimple Ajmera with Hugh McColl">
+          <div class="p-3 bg-white text-center">
+            <span class="fw-bold text-dark">With Hugh McColl, Former CEO of Bank of America</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="photo-gallery-card">
+          <img src="assets/images/Susan_Dimple_Susan.jpg" alt="Dimple Ajmera with Susan Rodriguez McDowell">
+          <div class="p-3 bg-white text-center">
+            <span class="fw-bold text-dark">With Commissioner Susan Rodriguez McDowell</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- Substack Video & Speech Clips 2.0 -->
+<!-- 3. Media & Speech Clips Section -->
 <section id="media" class="py-5">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
@@ -146,7 +178,7 @@ require_once __DIR__ . '/includes/header.php';
     <div class="row g-4">
       <div class="col-lg-4 col-md-6">
         <div class="video-card h-100">
-          <video controls poster="assets/images/dimple-ajmera-event-photo.jpg">
+          <video controls poster="assets/images/Dimple_Ajmera_Charlotte_Councilmember_2025.jpg">
             <source src="assets/images/Clip 1 - Data Center Wave.mp4" type="video/mp4">
           </video>
           <div class="p-4">
@@ -186,7 +218,7 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- Key Priorities Grid 2.0 -->
+<!-- 4. Key Priorities Grid Section -->
 <section id="priorities" class="py-5 bg-light">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
@@ -210,7 +242,7 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- Endorsements Showcase 2.0 -->
+<!-- 5. Endorsements Showcase Section -->
 <section class="py-5">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
