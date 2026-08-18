@@ -1,33 +1,6 @@
 <?php
-$pageTitle = 'Community Endorsements';
+$pageTitle = 'Proudly Endorsed By | Community & Civic Leaders';
 require_once __DIR__ . '/includes/header.php';
-
-$ENDORSEMENTS_LIST = [
-    [
-        'name'     => 'Environmental & Conservation Advocates',
-        'title'    => 'Clean Energy & Water Stewardship Coalition',
-        'quote'    => 'Council Member Dimple Ajmera has consistently led Charlotte on environmental conservation, tree canopy expansion, and protecting our water resources against industrial strain.',
-        'category' => 'Environment'
-    ],
-    [
-        'name'     => 'Small Business Owners & MWBE Leaders',
-        'title'    => 'Charlotte Small Business Council',
-        'quote'    => 'Dimple understands the numbers. As a CPA, she brings real fiscal acumen to the city budget while expanding opportunities for local small businesses to thrive.',
-        'category' => 'Business & Economy'
-    ],
-    [
-        'name'     => 'Workforce Housing Advocates',
-        'title'    => 'Charlotte Community Housing Network',
-        'quote'    => 'Dimple has been an unwavering champion for workforce housing bonds and down-payment assistance for working families across Charlotte.',
-        'category' => 'Housing'
-    ],
-    [
-        'name'     => 'Public Safety & Neighborhood Leaders',
-        'title'    => 'East Charlotte Neighborhood Coalition',
-        'quote'    => 'From pedestrian safety improvements on Central Avenue to supporting community policing, Dimple delivers real results for our neighborhoods.',
-        'category' => 'Public Safety'
-    ]
-];
 ?>
 
 <!-- Page Header Banner -->
@@ -35,59 +8,115 @@ $ENDORSEMENTS_LIST = [
   <div class="container py-3">
     <div class="row align-items-center">
       <div class="col-lg-8">
-        <span class="badge bg-warning text-dark uppercase tracking-wider mb-2">Community Support</span>
-        <h1 class="serif-font display-4 fw-bold mb-3">Endorsements & Community Backing</h1>
+        <span class="badge bg-warning text-dark uppercase tracking-wider mb-2">Community & Civic Backing</span>
+        <h1 class="serif-font display-4 fw-bold mb-3">Proudly Endorsed By</h1>
         <p class="lead text-white-50 mb-0">
-          Trusted by neighborhood advocates, conservation leaders, small business owners, and working families across Charlotte.
+          Council Member Dimple Ajmera is trusted by civil rights leaders, law enforcement, labor unions, conservation organizations, and North Carolina community leaders.
         </p>
       </div>
       <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
         <a href="volunteer.php" class="btn btn-gold btn-lg">
-          <i class="bi bi-person-plus-fill me-2"></i> Add Your Endorsement
+          <i class="bi bi-person-plus-fill me-2"></i> Join Our Endorsement Roster
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Endorsements Roster -->
-<section class="py-5">
+<!-- Featured Spotlight Quotes Section -->
+<section class="py-5 bg-light">
   <div class="container py-lg-4">
+    <div class="text-center max-w-700 mx-auto mb-5">
+      <span class="text-primary-green fw-bold text-uppercase tracking-wider">Endorsement Spotlights</span>
+      <h2 class="serif-font display-5 fw-bold text-dark">What Community Leaders Say</h2>
+    </div>
+
     <div class="row g-4">
-      <?php foreach ($ENDORSEMENTS_LIST as $item): ?>
-        <div class="col-md-6">
-          <div class="endorsement-card shadow-sm h-100 bg-white">
-            <span class="badge bg-primary-soft text-primary-green mb-3"><?php echo htmlspecialchars($item['category']); ?></span>
+      <?php foreach ($SPOTLIGHT_QUOTES as $quote): ?>
+        <div class="col-lg-6">
+          <div class="endorsement-card shadow-sm h-100 bg-white p-4 p-lg-5">
+            <i class="bi bi-quote display-3 text-gold opacity-50 mb-2"></i>
             <blockquote class="blockquote mb-3">
               <p class="serif-font text-dark fs-5 fst-italic mb-0">
-                "<?php echo htmlspecialchars($item['quote']); ?>"
+                "<?php echo htmlspecialchars($quote['quote']); ?>"
               </p>
             </blockquote>
-            <figcaption class="blockquote-footer mt-2 mb-0 fw-bold text-dark">
-              <?php echo htmlspecialchars($item['name']); ?>
-              <cite title="Source Title" class="d-block text-secondary font-sans fw-normal fs-6"><?php echo htmlspecialchars($item['title']); ?></cite>
+            <figcaption class="blockquote-footer mt-3 mb-0 fw-bold text-primary-green fs-6">
+              &mdash; <?php echo htmlspecialchars($quote['source']); ?>
             </figcaption>
           </div>
         </div>
       <?php endforeach; ?>
     </div>
+  </div>
+</section>
 
-    <!-- Submit Endorsement Box -->
-    <div class="card border-0 bg-primary-soft p-4 p-lg-5 rounded-4 mt-5">
+<!-- Organization & Newspaper Endorsements -->
+<section class="py-5">
+  <div class="container py-lg-4">
+    <div class="text-center max-w-700 mx-auto mb-5">
+      <span class="text-primary-green fw-bold text-uppercase tracking-wider">Organizational Backing</span>
+      <h2 class="serif-font display-5 fw-bold text-dark">Endorsing Organizations & Unions</h2>
+    </div>
+
+    <div class="row g-4">
+      <?php foreach ($ORGANIZATION_ENDORSEMENTS as $org): ?>
+        <div class="col-lg-6">
+          <div class="d-flex align-items-center p-4 bg-white border border-success border-opacity-25 rounded-4 shadow-sm h-100">
+            <div class="issue-icon-box mb-0 me-4 bg-primary-soft text-primary-green flex-shrink-0">
+              <i class="bi bi-check-circle-fill"></i>
+            </div>
+            <div>
+              <h4 class="serif-font fw-bold text-dark mb-1"><?php echo htmlspecialchars($org['name']); ?></h4>
+              <p class="text-secondary small mb-0"><?php echo htmlspecialchars($org['type']); ?></p>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<!-- Individual Community Voices Roster -->
+<section class="py-5 bg-primary-soft">
+  <div class="container py-lg-4">
+    <div class="text-center max-w-700 mx-auto mb-5">
+      <span class="text-primary-green fw-bold text-uppercase tracking-wider">North Carolina Voices</span>
+      <h2 class="serif-font display-5 fw-bold text-dark">Community Leaders & Elected Officials</h2>
+      <p class="lead text-secondary">A broad coalition of leaders standing with Dimple Ajmera for Charlotte City Council At-Large.</p>
+    </div>
+
+    <div class="row g-3">
+      <?php foreach ($INDIVIDUAL_ENDORSEMENTS as $ind): ?>
+        <div class="col-lg-4 col-md-6">
+          <div class="p-3 bg-white rounded-3 border border-secondary border-opacity-10 h-100 d-flex align-items-center">
+            <i class="bi bi-person-check-fill text-gold me-3 fs-4"></i>
+            <div>
+              <h6 class="fw-bold text-dark mb-0"><?php echo htmlspecialchars($ind['name']); ?></h6>
+              <span class="small text-secondary"><?php echo htmlspecialchars($ind['title']); ?></span>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+
+    <!-- Submit Endorsement Card -->
+    <div class="card border-0 bg-primary-dark text-white p-4 p-lg-5 rounded-4 mt-5 shadow">
       <div class="row align-items-center">
         <div class="col-lg-8">
-          <h3 class="serif-font fw-bold text-primary-green mb-2">Endorse Council Member Dimple Ajmera</h3>
-          <p class="text-secondary mb-0">
-            Are you a local resident, business owner, or community organization leader who supports Dimple’s campaign? We would love to feature your endorsement!
+          <h3 class="serif-font fw-bold text-white mb-2">Endorse Council Member Dimple Ajmera</h3>
+          <p class="text-white-50 mb-0">
+            Are you a local resident, business owner, or community organization leader who supports Dimple’s campaign? We would love to include your name in our official endorsement roster!
           </p>
         </div>
         <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-          <a href="mailto:<?php echo CAMPAIGN_EMAIL; ?>?subject=Endorsement%20For%20Dimple%20Ajmera" class="btn btn-primary-green btn-lg">
-            <i class="bi bi-envelope-check-fill me-2"></i> Submit Endorsement
+          <a href="mailto:<?php echo CAMPAIGN_EMAIL; ?>?subject=Endorsement%20For%20Dimple%20Ajmera" class="btn btn-gold btn-lg">
+            <i class="bi bi-envelope-check-fill me-2"></i> Submit Your Endorsement
           </a>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
