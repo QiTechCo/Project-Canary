@@ -3,16 +3,16 @@ $pageTitle = 'Delivering Results for All of Charlotte';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 2.0 Hero Section -->
+<!-- 2.0 Hero Section (Halo Style Glow & Radiant Portrait Card) -->
 <section class="hero-2-0" id="top">
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-7">
         <div class="hero-badge-pill">
-          <i class="bi bi-star-fill text-gold"></i> <?php echo CAMPAIGN_SLOGAN; ?>
+          <i class="bi bi-star-fill text-gold-halo"></i> <?php echo CAMPAIGN_SLOGAN; ?>
         </div>
         <h1 class="hero-headline serif-font">
-          Delivering Results for <span class="gold-highlight">All of Charlotte</span>
+          Delivering Results for <span class="text-gradient-halo">All of Charlotte</span>
         </h1>
         <p class="hero-description">
           Fiscal discipline, clean water preservation, workforce housing, and safe streets for every neighborhood across Charlotte.
@@ -38,19 +38,19 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- Impact Statistics Counter Bar -->
+<!-- Impact Statistics Halo Counter Bar -->
 <div class="container">
   <div class="stats-counter-bar">
     <div class="row text-center g-4">
-      <div class="col-6 col-md-3 border-end border-secondary border-opacity-10">
+      <div class="col-6 col-md-3 border-end border-secondary border-opacity-25">
         <div class="stat-number" data-target="4" data-suffix="">4</div>
         <div class="stat-label">Terms Elected At-Large</div>
       </div>
-      <div class="col-6 col-md-3 border-md-end border-secondary border-opacity-10">
+      <div class="col-6 col-md-3 border-md-end border-secondary border-opacity-25">
         <div class="stat-number" data-target="50" data-prefix="$" data-suffix="M+">$50M+</div>
         <div class="stat-label">Housing Bonds Passed</div>
       </div>
-      <div class="col-6 col-md-3 border-end border-secondary border-opacity-10">
+      <div class="col-6 col-md-3 border-end border-secondary border-opacity-25">
         <div class="stat-number" data-target="100" data-suffix="%">100%</div>
         <div class="stat-label">Environment Voting Record</div>
       </div>
@@ -62,21 +62,21 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </div>
 
-<!-- 1. Environment Town Hall Section -->
+<!-- 1. Environment Town Hall Section (Pencil Halo Event Hub) -->
 <section id="event-townhall" class="py-5 mt-4">
   <div class="container">
     <div class="event-banner-card p-4 p-lg-5">
       <div class="row align-items-center g-4">
         <div class="col-lg-7">
           <span class="event-badge mb-2"><i class="bi bi-geo-alt-fill me-1"></i> August 20th Town Hall</span>
-          <h2 class="serif-font text-white display-5 fw-bold mb-3">State of Our Environment: Data Centers, Water & Charlotte’s Future</h2>
+          <h2 class="serif-font text-gradient-halo display-5 fw-bold mb-3">State of Our Environment: Data Centers, Water & Charlotte’s Future</h2>
           <p class="text-white-50 fs-5 mb-4">
             Join Council Member Dimple Ajmera and local environmental leaders to discuss protecting our natural water supply, green infrastructure, and smart policies for data center expansion.
           </p>
           <div class="d-flex flex-wrap gap-4 text-white">
-            <div><i class="bi bi-calendar3 me-2 text-gold"></i> <strong>August 20th, 2026</strong></div>
-            <div><i class="bi bi-clock me-2 text-gold"></i> <strong>6:00 p.m. – 8:00 p.m.</strong></div>
-            <div><i class="bi bi-building me-2 text-gold"></i> <strong>Project 658 (3646 Central Ave)</strong></div>
+            <div><i class="bi bi-calendar3 me-2 text-gold-halo"></i> <strong>August 20th, 2026</strong></div>
+            <div><i class="bi bi-clock me-2 text-gold-halo"></i> <strong>6:00 p.m. – 8:00 p.m.</strong></div>
+            <div><i class="bi bi-building me-2 text-gold-halo"></i> <strong>Project 658 (3646 Central Ave)</strong></div>
           </div>
         </div>
         
@@ -100,31 +100,31 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 2. About Section -->
-<section id="about" class="py-5 bg-light">
+<!-- 2. About Section (Halo Glassmorphism) -->
+<section id="about" class="py-5">
   <div class="container py-lg-4">
     <div class="row align-items-center g-5 mb-5">
       <div class="col-lg-6">
-        <span class="text-primary-green fw-bold text-uppercase tracking-wider">Meet Council Member Ajmera</span>
-        <h2 class="serif-font display-5 fw-bold text-dark mb-4">A Proven Track Record of Public Service & Fiscal Integrity</h2>
-        <p class="lead text-secondary">
+        <span class="text-emerald-halo fw-bold text-uppercase tracking-wider">Meet Council Member Ajmera</span>
+        <h2 class="serif-font display-5 fw-bold text-white mb-4">A Proven Track Record of Public Service & Fiscal Integrity</h2>
+        <p class="lead text-white-50">
           Dimple Ajmera is a Working Mother, four-term Charlotte City Councilwoman, and Certified Public Accountant (CPA).
         </p>
-        <p class="text-secondary">
+        <p class="text-white-50">
           Dimple immigrated to the United States with her family at age 16. Overcoming language barriers, she learned English, graduated from Southern High School in Durham, earned her accounting degree from the University of Southern California, and became a Certified Public Accountant managing multi-million dollar budgets at major corporate institutions including Deloitte and TIAA.
         </p>
-        <p class="text-secondary">
+        <p class="text-white-50">
           Driven by public service values, Dimple left corporate finance to serve Charlotte. On City Council, she has championed public safety, CMPD officer family healthcare benefits, workforce housing bonds, clean water policies, and small business support.
         </p>
       </div>
       <div class="col-lg-6">
-        <div class="p-4 p-lg-5 bg-white rounded-4 border border-success border-opacity-25 shadow-sm">
-          <h3 class="serif-font text-primary-emerald mb-4"><i class="bi bi-award-fill text-gold me-2"></i> Honors & Awards</h3>
+        <div class="feature-card-2">
+          <h3 class="serif-font text-gradient-halo mb-4"><i class="bi bi-award-fill text-gold-halo me-2"></i> Honors & Awards</h3>
           <ul class="list-unstyled mb-0">
             <?php foreach ($AWARDS as $award): ?>
-              <li class="d-flex align-items-start mb-3 pb-2 border-bottom border-secondary border-opacity-10">
-                <i class="bi bi-star-fill text-gold me-3 mt-1"></i>
-                <div><strong class="text-dark"><?php echo htmlspecialchars($award); ?></strong></div>
+              <li class="d-flex align-items-start mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+                <i class="bi bi-star-fill text-gold-halo me-3 mt-1"></i>
+                <div><strong class="text-white"><?php echo htmlspecialchars($award); ?></strong></div>
               </li>
             <?php endforeach; ?>
           </ul>
@@ -134,30 +134,30 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- Original High-Res Campaign Photo Gallery Grid -->
     <div class="text-center mb-4">
-      <h3 class="serif-font text-dark fw-bold">Community & Leadership Gallery</h3>
+      <h3 class="serif-font text-white fw-bold">Community & Leadership Gallery</h3>
     </div>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="photo-gallery-card">
           <img src="assets/images/Dimple_Ajmera_Charlotte_Councilmember_2025.jpg" alt="Dimple Ajmera Speaking at Community Event">
-          <div class="p-3 bg-white text-center">
-            <span class="fw-bold text-dark">Dimple Ajmera at Community Forum</span>
+          <div class="p-3 text-center">
+            <span class="fw-bold text-white">Dimple Ajmera at Community Forum</span>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="photo-gallery-card">
           <img src="assets/images/Dimple_Hugh_McColl.jpg" alt="Dimple Ajmera with Hugh McColl">
-          <div class="p-3 bg-white text-center">
-            <span class="fw-bold text-dark">With Hugh McColl, Former CEO of Bank of America</span>
+          <div class="p-3 text-center">
+            <span class="fw-bold text-white">With Hugh McColl, Former CEO of Bank of America</span>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="photo-gallery-card">
           <img src="assets/images/Susan_Dimple_Susan.jpg" alt="Dimple Ajmera with Susan Rodriguez McDowell">
-          <div class="p-3 bg-white text-center">
-            <span class="fw-bold text-dark">With Commissioner Susan Rodriguez McDowell</span>
+          <div class="p-3 text-center">
+            <span class="fw-bold text-white">With Commissioner Susan Rodriguez McDowell</span>
           </div>
         </div>
       </div>
@@ -170,9 +170,9 @@ require_once __DIR__ . '/includes/header.php';
 <section id="media" class="py-5">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
-      <span class="text-primary-green fw-bold text-uppercase tracking-wider">Video & Media Clips</span>
-      <h2 class="serif-font display-5 fw-bold text-dark">Dimple in Action</h2>
-      <p class="lead text-secondary">Watch Council Member Dimple Ajmera discuss water demand policies, data centers, and traffic safety.</p>
+      <span class="text-emerald-halo fw-bold text-uppercase tracking-wider">Video & Media Clips</span>
+      <h2 class="serif-font display-5 fw-bold text-white">Dimple in Action</h2>
+      <p class="lead text-white-50">Watch Council Member Dimple Ajmera discuss water demand policies, data centers, and traffic safety.</p>
     </div>
 
     <div class="row g-4">
@@ -182,7 +182,7 @@ require_once __DIR__ . '/includes/header.php';
             <source src="assets/images/Clip 1 - Data Center Wave.mp4" type="video/mp4">
           </video>
           <div class="p-4">
-            <span class="badge bg-gold text-dark mb-2">Policy Video</span>
+            <span class="badge bg-gold-halo text-dark mb-2">Policy Video</span>
             <h5 class="serif-font text-white mb-2">Data Center Expansion & Water Demand</h5>
             <p class="text-white-50 small mb-0">Dimple outlines policies to protect Charlotte's municipal water supply.</p>
           </div>
@@ -195,7 +195,7 @@ require_once __DIR__ . '/includes/header.php';
             <source src="assets/images/Clip 2 - Policies for Water Demand.mp4" type="video/mp4">
           </video>
           <div class="p-4">
-            <span class="badge bg-gold text-dark mb-2">Environmental Leadership</span>
+            <span class="badge bg-gold-halo text-dark mb-2">Environmental Leadership</span>
             <h5 class="serif-font text-white mb-2">Proactive Environmental Stewardship</h5>
             <p class="text-white-50 small mb-0">Championing smart, resilient infrastructure for future generations.</p>
           </div>
@@ -208,7 +208,7 @@ require_once __DIR__ . '/includes/header.php';
             <source src="assets/images/One bad decision at a red light can change a life forever.We’ve seen too many crashes—and too ma.mp4" type="video/mp4">
           </video>
           <div class="p-4">
-            <span class="badge bg-gold text-dark mb-2">Public Safety</span>
+            <span class="badge bg-gold-halo text-dark mb-2">Public Safety</span>
             <h5 class="serif-font text-white mb-2">Safe Streets & Red Light Safety</h5>
             <p class="text-white-50 small mb-0">Addressing traffic crashes and investing in safer pedestrian crossings.</p>
           </div>
@@ -219,11 +219,11 @@ require_once __DIR__ . '/includes/header.php';
 </section>
 
 <!-- 4. Key Priorities Grid Section -->
-<section id="priorities" class="py-5 bg-light">
+<section id="priorities" class="py-5">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
-      <span class="text-primary-green fw-bold text-uppercase tracking-wider">Priorities</span>
-      <h2 class="serif-font display-5 fw-bold text-dark">Dimple’s Core Platform</h2>
+      <span class="text-emerald-halo fw-bold text-uppercase tracking-wider">Priorities</span>
+      <h2 class="serif-font display-5 fw-bold text-white">Dimple’s Core Platform</h2>
     </div>
 
     <div class="row g-4">
@@ -233,8 +233,8 @@ require_once __DIR__ . '/includes/header.php';
             <div class="feature-icon-wrapper">
               <i class="bi <?php echo $issue['icon']; ?>"></i>
             </div>
-            <h3 class="serif-font h4 fw-bold text-dark mb-3"><?php echo htmlspecialchars($issue['title']); ?></h3>
-            <p class="text-secondary mb-0"><?php echo htmlspecialchars($issue['full_desc']); ?></p>
+            <h3 class="serif-font h4 fw-bold text-white mb-3"><?php echo htmlspecialchars($issue['title']); ?></h3>
+            <p class="text-white-50 mb-0"><?php echo htmlspecialchars($issue['full_desc']); ?></p>
           </div>
         </div>
       <?php endforeach; ?>
@@ -246,18 +246,18 @@ require_once __DIR__ . '/includes/header.php';
 <section class="py-5">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
-      <span class="text-primary-green fw-bold text-uppercase tracking-wider">Endorsements</span>
-      <h2 class="serif-font display-5 fw-bold text-dark">Proudly Endorsed By Community Leaders</h2>
+      <span class="text-emerald-halo fw-bold text-uppercase tracking-wider">Endorsements</span>
+      <h2 class="serif-font display-5 fw-bold text-white">Proudly Endorsed By Community Leaders</h2>
     </div>
 
     <div class="row g-4 mb-5">
       <?php foreach ($SPOTLIGHT_QUOTES as $quote): ?>
         <div class="col-lg-6">
           <div class="quote-card-2">
-            <p class="serif-font fs-5 fst-italic text-dark mb-3">
+            <p class="serif-font fs-5 fst-italic text-white mb-3">
               "<?php echo htmlspecialchars($quote['quote']); ?>"
             </p>
-            <div class="fw-bold text-primary-green">&mdash; <?php echo htmlspecialchars($quote['source']); ?></div>
+            <div class="fw-bold text-emerald-halo">&mdash; <?php echo htmlspecialchars($quote['source']); ?></div>
           </div>
         </div>
       <?php endforeach; ?>
