@@ -3,20 +3,19 @@ $pageTitle = 'Delivering Results for All of Charlotte';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- SPLC Webby Winner Style Hero Stage with Slowly Moving Background Photo Slideshow -->
+<!-- SPLC Webby Winner Style Hero Stage with Cropped Photo Background Slideshow -->
 <section class="splc-hero-stage" id="top">
   <div class="splc-hero-slideshow">
-    <div class="splc-slide-img active" style="background-image: url('assets/images/pxl_cover.jpg');"></div>
+    <div class="splc-slide-img active" style="background-image: url('assets/images/dimple_newest_crop.jpg');"></div>
     <div class="splc-slide-img" style="background-image: url('assets/images/hero_slide_1.jpg');"></div>
     <div class="splc-slide-img" style="background-image: url('assets/images/hero_slide_2.jpg');"></div>
     <div class="splc-slide-img" style="background-image: url('assets/images/hero_slide_4.jpg');"></div>
     <div class="splc-slide-img" style="background-image: url('assets/images/hero_slide_6.jpg');"></div>
-    <div class="splc-slide-img" style="background-image: url('assets/images/hero_slide_8.jpg');"></div>
   </div>
   <div class="splc-hero-vignette"></div>
 
   <div class="splc-hero-content">
-    <!-- Master Logo Overlay -->
+    <!-- Master Logo Overlay - A Tiny Bit Smaller -->
     <div class="hero-giant-logo-container">
       <img src="assets/images/DimpleMainLogo.png" alt="<?php echo CANDIDATE_NAME; ?> Master Campaign Logo" class="hero-giant-logo">
     </div>
@@ -104,7 +103,7 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 2. About Section & Expanded High-Res Photo Gallery -->
+<!-- 2. About Section & Photo Gallery -->
 <section id="about" class="py-5 bg-off-white">
   <div class="container py-lg-4">
     <div class="row align-items-center g-5 mb-5">
@@ -136,12 +135,20 @@ require_once __DIR__ . '/includes/header.php';
       </div>
     </div>
 
-    <!-- Expanded High-Res Campaign Photography Gallery Grid -->
+    <!-- High-Res Campaign Photography Gallery Grid -->
     <div class="text-center mb-4">
       <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">On The Ground in Charlotte</span>
       <h3 class="serif-font text-dark display-6 fw-bold">Community & Activism Photo Gallery</h3>
     </div>
     <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="photo-gallery-card">
+          <img src="assets/images/dimple_newest_crop.jpg" alt="Dimple Ajmera Latest Campaign Photo">
+          <div class="p-3 text-center bg-white">
+            <span class="fw-bold text-dark">Charlotte Campaign Portrait</span>
+          </div>
+        </div>
+      </div>
       <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
           <img src="assets/images/hero_slide_1.jpg" alt="Dimple Ajmera Community Event">
@@ -179,14 +186,6 @@ require_once __DIR__ . '/includes/header.php';
           <img src="assets/images/hero_slide_8.jpg" alt="Dimple Ajmera Town Hall Meeting">
           <div class="p-3 text-center bg-white">
             <span class="fw-bold text-dark">Environmental & Water Policy Forum</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/hero_slide_10.jpg" alt="Dimple Ajmera Business Forum">
-          <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Small Business & Fiscal Governance</span>
           </div>
         </div>
       </div>

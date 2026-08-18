@@ -1,8 +1,12 @@
-/* DimpleAjmera.com 3.5 - Restored Full Top Navigation with Header Logo & Hero Slideshow */
+/* DimpleAjmera.com 3.6 - Unified 2-Font System & Cropped Newest Photo Background */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
+  /* Unified 2-Font System Max */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
   --bg-white: #ffffff;
   --bg-off-white: #f8fafc;
   --bg-subtle-blue: #f1f5f9;
@@ -21,17 +25,21 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   color: var(--text-dark);
   background-color: var(--bg-white);
   line-height: 1.65;
   overflow-x: hidden;
 }
 
-/* Typography Overrides */
-h1, h2, h3, h4, .serif-font {
-  font-family: 'Playfair Display', Georgia, serif;
+/* Strict 2-Font Enforcement Across All Elements */
+h1, h2, h3, h4, h5, h6, .serif-font, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: var(--font-serif) !important;
   letter-spacing: -0.02em;
+}
+
+p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge {
+  font-family: var(--font-sans);
 }
 
 .text-patriot-red {
@@ -58,7 +66,7 @@ h1, h2, h3, h4, .serif-font {
   background-color: var(--navy-dark) !important;
 }
 
-/* Restored & Enhanced Top Navigation Header */
+/* Navigation Header */
 .navbar-campaign {
   background-color: rgba(255, 255, 255, 0.98) !important;
   backdrop-filter: blur(16px);
@@ -94,6 +102,7 @@ h1, h2, h3, h4, .serif-font {
   padding: 0.65rem 1.1rem !important;
   transition: all 0.25s ease;
   position: relative;
+  font-family: var(--font-sans);
 }
 
 .navbar-campaign .nav-link::after {
@@ -118,16 +127,16 @@ h1, h2, h3, h4, .serif-font {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* SPLC Webby Winner Hero Stage with Background Photo Slideshow */
+/* SPLC Webby Winner Hero Stage with Cropped Photo Background Slideshow */
 .splc-hero-stage {
   position: relative;
-  min-height: 82vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f8fafc;
   overflow: hidden;
-  padding: 4.5rem 0 5.5rem;
+  padding: 4rem 0 5rem;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -142,23 +151,23 @@ h1, h2, h3, h4, .serif-font {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background-size: cover;
-  background-position: center 30%;
-  filter: brightness(0.88) contrast(1.05);
+  background-position: center 25%;
+  filter: brightness(0.9) contrast(1.05);
   opacity: 0;
   transform: scale(1.02);
   transition: opacity 2s ease-in-out, transform 8s ease-out;
 }
 
 .splc-slide-img.active {
-  opacity: 0.28;
+  opacity: 0.32;
   transform: scale(1.08);
 }
 
 .splc-hero-vignette {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.78) 0%, rgba(248, 250, 252, 0.95) 75%, #f8fafc 100%),
-              linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, transparent 40%, #f8fafc 100%);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.75) 0%, rgba(248, 250, 252, 0.95) 75%, #f8fafc 100%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, transparent 40%, #f8fafc 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -167,21 +176,21 @@ h1, h2, h3, h4, .serif-font {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 980px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1.5rem;
 }
 
-/* Master Logo Overlay */
+/* Master Logo Overlay - A Tiny Bit Smaller (440px max-width) */
 .hero-giant-logo-container {
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   display: inline-block;
   position: relative;
 }
 
 .hero-giant-logo {
   width: 100%;
-  max-width: 580px;
+  max-width: 440px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.12));
@@ -193,18 +202,20 @@ h1, h2, h3, h4, .serif-font {
 }
 
 .splc-hero-headline {
-  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-family: var(--font-serif) !important;
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1.25rem;
+  line-height: 1.12;
+  margin-bottom: 1.15rem;
   color: var(--navy-dark);
 }
 
 .splc-hero-subtitle {
-  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  font-family: var(--font-sans);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
   color: var(--text-muted);
-  max-width: 740px;
-  margin: 0 auto 2.5rem;
+  max-width: 720px;
+  margin: 0 auto 2.25rem;
   font-weight: 500;
 }
 
@@ -221,7 +232,7 @@ h1, h2, h3, h4, .serif-font {
 }
 
 .stat-number {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif) !important;
   font-size: clamp(2.25rem, 4vw, 3.25rem);
   font-weight: 800;
   color: var(--navy-dark);
@@ -229,6 +240,7 @@ h1, h2, h3, h4, .serif-font {
 }
 
 .stat-label {
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--text-muted);
@@ -247,6 +259,7 @@ h1, h2, h3, h4, .serif-font {
   border: none;
   box-shadow: 0 6px 20px rgba(237, 28, 36, 0.3);
   transition: all 0.25s ease;
+  font-family: var(--font-sans);
 }
 
 .btn-red-patriot:hover {
@@ -265,6 +278,7 @@ h1, h2, h3, h4, .serif-font {
   border: none;
   box-shadow: 0 6px 20px rgba(27, 54, 93, 0.25);
   transition: all 0.25s ease;
+  font-family: var(--font-sans);
 }
 
 .btn-blue-patriot:hover {
@@ -282,6 +296,7 @@ h1, h2, h3, h4, .serif-font {
   border: none;
   box-shadow: 0 6px 20px rgba(201, 154, 87, 0.3);
   transition: all 0.25s ease;
+  font-family: var(--font-sans);
 }
 
 .btn-gold-2:hover {
@@ -340,6 +355,7 @@ h1, h2, h3, h4, .serif-font {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: var(--font-sans);
 }
 
 .countdown-box {
@@ -352,7 +368,7 @@ h1, h2, h3, h4, .serif-font {
 }
 
 .countdown-num {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif) !important;
   font-size: 1.75rem;
   font-weight: 800;
   color: #ffffff;
@@ -360,6 +376,7 @@ h1, h2, h3, h4, .serif-font {
 }
 
 .countdown-lbl {
+  font-family: var(--font-sans);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -451,10 +468,11 @@ h1, h2, h3, h4, .serif-font {
   letter-spacing: 0.5px;
   background: rgba(237, 28, 36, 0.1);
   color: #ffffff;
+  font-family: var(--font-sans);
 }
 
 @media (max-width: 768px) {
   .hero-giant-logo {
-    max-width: 320px;
+    max-width: 300px;
   }
 }
