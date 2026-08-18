@@ -3,7 +3,7 @@ $pageTitle = 'Delivering Results for All of Charlotte';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- SPLC Webby Winner Style Full-Bleed Hero Stage with Massive Master Logo Overlay -->
+<!-- SPLC Webby Winner Style Full-Bleed Hero Stage (Clean White / Light Theme) -->
 <section class="splc-hero-stage" id="top">
   <div class="splc-hero-bg"></div>
   <div class="splc-hero-vignette"></div>
@@ -15,7 +15,7 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <h1 class="splc-hero-headline serif-font">
-      Delivering Results for <span class="text-gradient-red-white-blue">All of Charlotte</span>
+      Delivering Results for <span class="text-patriot-red">All of Charlotte</span>
     </h1>
     <p class="splc-hero-subtitle">
       Fiscal discipline, clean water preservation, workforce housing, and safe streets for every neighborhood across Charlotte.
@@ -66,7 +66,7 @@ require_once __DIR__ . '/includes/header.php';
       <div class="row align-items-center g-4">
         <div class="col-lg-7">
           <span class="event-badge mb-2"><i class="bi bi-geo-alt-fill me-1"></i> August 20th Town Hall</span>
-          <h2 class="serif-font text-gradient-red-white-blue display-5 fw-bold mb-3">State of Our Environment: Data Centers, Water & Charlotte’s Future</h2>
+          <h2 class="serif-font text-white display-5 fw-bold mb-3">State of Our Environment: Data Centers, Water & Charlotte’s Future</h2>
           <p class="text-white-50 fs-5 mb-4">
             Join Council Member Dimple Ajmera and local environmental leaders to discuss protecting our natural water supply, green infrastructure, and smart policies for data center expansion.
           </p>
@@ -88,7 +88,7 @@ require_once __DIR__ . '/includes/header.php';
           <a href="<?php echo TOWN_HALL_RSVP_URL; ?>" target="_blank" rel="noopener" class="btn btn-red-patriot btn-lg w-100 mb-2">
             <i class="bi bi-box-arrow-up-right me-2"></i> RSVP Required (Seats Limited)
           </a>
-          <a href="https://www.google.com/maps/search/?api=1&query=Project%20658%2C%203646%20Central%20Ave.%2C%20Charlotte%2C%20NC%2028205" target="_blank" rel="noopener" class="btn btn-blue-patriot btn-sm w-100">
+          <a href="https://www.google.com/maps/search/?api=1&query=Project%20658%2C%203646%20Central%20Ave.%2C%20Charlotte%2C%20NC%2028205" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm w-100">
             <i class="bi bi-map me-1"></i> Open Google Maps Location
           </a>
         </div>
@@ -97,31 +97,31 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 2. About Section -->
-<section id="about" class="py-5">
+<!-- 2. About Section (White Background) -->
+<section id="about" class="py-5 bg-off-white">
   <div class="container py-lg-4">
     <div class="row align-items-center g-5 mb-5">
       <div class="col-lg-6">
         <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">Meet Council Member Ajmera</span>
-        <h2 class="serif-font display-5 fw-bold text-white mb-4">A Proven Track Record of Public Service & Fiscal Integrity</h2>
-        <p class="lead text-white-50">
+        <h2 class="serif-font display-5 fw-bold text-dark mb-4">A Proven Track Record of Public Service & Fiscal Integrity</h2>
+        <p class="lead text-secondary">
           Dimple Ajmera is a Working Mother, four-term Charlotte City Councilwoman, and Certified Public Accountant (CPA).
         </p>
-        <p class="text-white-50">
+        <p class="text-secondary">
           Dimple immigrated to the United States with her family at age 16. Overcoming language barriers, she learned English, graduated from Southern High School in Durham, earned her accounting degree from the University of Southern California, and became a Certified Public Accountant managing multi-million dollar budgets at major corporate institutions including Deloitte and TIAA.
         </p>
-        <p class="text-white-50">
+        <p class="text-secondary">
           Driven by public service values, Dimple left corporate finance to serve Charlotte. On City Council, she has championed public safety, CMPD officer family healthcare benefits, workforce housing bonds, clean water policies, and small business support.
         </p>
       </div>
       <div class="col-lg-6">
         <div class="feature-card-2">
-          <h3 class="serif-font text-gradient-red-white-blue mb-4"><i class="bi bi-award-fill text-gold-accent me-2"></i> Honors & Awards</h3>
+          <h3 class="serif-font text-navy-dark mb-4"><i class="bi bi-award-fill text-gold-accent me-2"></i> Honors & Awards</h3>
           <ul class="list-unstyled mb-0">
             <?php foreach ($AWARDS as $award): ?>
               <li class="d-flex align-items-start mb-3 pb-2 border-bottom border-secondary border-opacity-25">
                 <i class="bi bi-star-fill text-gold-accent me-3 mt-1"></i>
-                <div><strong class="text-white"><?php echo htmlspecialchars($award); ?></strong></div>
+                <div><strong class="text-dark"><?php echo htmlspecialchars($award); ?></strong></div>
               </li>
             <?php endforeach; ?>
           </ul>
@@ -132,54 +132,54 @@ require_once __DIR__ . '/includes/header.php';
     <!-- High-Res Campaign Photography Gallery Grid -->
     <div class="text-center mb-4">
       <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">On The Ground in Charlotte</span>
-      <h3 class="serif-font text-white display-6 fw-bold">Community & Activism Gallery</h3>
+      <h3 class="serif-font text-dark display-6 fw-bold">Community & Activism Gallery</h3>
     </div>
     <div class="row g-4">
       <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
           <img src="assets/images/campaign_photo_1.jpg" alt="Dimple Ajmera Community Leadership">
-          <div class="p-3 text-center">
-            <span class="fw-bold text-white">Community & Civic Leadership</span>
+          <div class="p-3 text-center bg-white">
+            <span class="fw-bold text-dark">Community & Civic Leadership</span>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
           <img src="assets/images/campaign_photo_2.jpg" alt="Dimple Ajmera Speaking at City Event">
-          <div class="p-3 text-center">
-            <span class="fw-bold text-white">Addressing Charlotte Families</span>
+          <div class="p-3 text-center bg-white">
+            <span class="fw-bold text-dark">Addressing Charlotte Families</span>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
           <img src="assets/images/campaign_photo_3.jpg" alt="Dimple Ajmera Action Photo">
-          <div class="p-3 text-center">
-            <span class="fw-bold text-white">Working Mother & Civic Leader</span>
+          <div class="p-3 text-center bg-white">
+            <span class="fw-bold text-dark">Working Mother & Civic Leader</span>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
           <img src="assets/images/Dimple_Hugh_McColl.jpg" alt="Dimple Ajmera with Hugh McColl">
-          <div class="p-3 text-center">
-            <span class="fw-bold text-white">With Hugh McColl, Former CEO Bank of America</span>
+          <div class="p-3 text-center bg-white">
+            <span class="fw-bold text-dark">With Hugh McColl, Former CEO Bank of America</span>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
           <img src="assets/images/Susan_Dimple_Susan.jpg" alt="Dimple Ajmera with Susan Rodriguez McDowell">
-          <div class="p-3 text-center">
-            <span class="fw-bold text-white">With Commissioner Susan Rodriguez McDowell</span>
+          <div class="p-3 text-center bg-white">
+            <span class="fw-bold text-dark">With Commissioner Susan Rodriguez McDowell</span>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
           <img src="assets/images/Dimple_Ajmera_Charlotte_Councilmember_2025.jpg" alt="Council Member Dimple Ajmera">
-          <div class="p-3 text-center">
-            <span class="fw-bold text-white">Official Council Member Portrait</span>
+          <div class="p-3 text-center bg-white">
+            <span class="fw-bold text-dark">Official Council Member Portrait</span>
           </div>
         </div>
       </div>
@@ -188,13 +188,13 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 3. Media, Speech Clips & Live Socials (Instagram & LinkedIn) -->
-<section id="media" class="py-5">
+<!-- 3. Media, Speech Clips & Live Socials (White Background) -->
+<section id="media" class="py-5 bg-white">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
       <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">Media & Live Socials</span>
-      <h2 class="serif-font display-5 fw-bold text-white">Dimple in Action & Live Social Feeds</h2>
-      <p class="lead text-white-50">Watch Council Member Dimple Ajmera discuss city policy and follow her live updates on Instagram & LinkedIn.</p>
+      <h2 class="serif-font display-5 fw-bold text-dark">Dimple in Action & Live Social Feeds</h2>
+      <p class="lead text-secondary">Watch Council Member Dimple Ajmera discuss city policy and follow her live updates on Instagram & LinkedIn.</p>
     </div>
 
     <!-- Video Clips Grid -->
@@ -204,10 +204,10 @@ require_once __DIR__ . '/includes/header.php';
           <video controls poster="assets/images/Dimple_Ajmera_Charlotte_Councilmember_2025.jpg">
             <source src="assets/images/Clip 1 - Data Center Wave.mp4" type="video/mp4">
           </video>
-          <div class="p-4">
+          <div class="p-4 bg-white">
             <span class="badge bg-danger text-white mb-2">Policy Video</span>
-            <h5 class="serif-font text-white mb-2">Data Center Expansion & Water Demand</h5>
-            <p class="text-white-50 small mb-0">Dimple outlines policies to protect Charlotte's municipal water supply.</p>
+            <h5 class="serif-font text-dark mb-2">Data Center Expansion & Water Demand</h5>
+            <p class="text-secondary small mb-0">Dimple outlines policies to protect Charlotte's municipal water supply.</p>
           </div>
         </div>
       </div>
@@ -217,10 +217,10 @@ require_once __DIR__ . '/includes/header.php';
           <video controls poster="assets/images/dimple-ajmera-portrait.png">
             <source src="assets/images/Clip 2 - Policies for Water Demand.mp4" type="video/mp4">
           </video>
-          <div class="p-4">
+          <div class="p-4 bg-white">
             <span class="badge bg-success text-white mb-2">Environmental Leadership</span>
-            <h5 class="serif-font text-white mb-2">Proactive Environmental Stewardship</h5>
-            <p class="text-white-50 small mb-0">Championing smart, resilient infrastructure for future generations.</p>
+            <h5 class="serif-font text-dark mb-2">Proactive Environmental Stewardship</h5>
+            <p class="text-secondary small mb-0">Championing smart, resilient infrastructure for future generations.</p>
           </div>
         </div>
       </div>
@@ -230,53 +230,53 @@ require_once __DIR__ . '/includes/header.php';
           <video controls poster="assets/images/dimple-ajmera-event-photo.jpg">
             <source src="assets/images/One bad decision at a red light can change a life forever.We’ve seen too many crashes—and too ma.mp4" type="video/mp4">
           </video>
-          <div class="p-4">
+          <div class="p-4 bg-white">
             <span class="badge bg-primary text-white mb-2">Public Safety</span>
-            <h5 class="serif-font text-white mb-2">Safe Streets & Red Light Safety</h5>
-            <p class="text-white-50 small mb-0">Addressing traffic crashes and investing in safer pedestrian crossings.</p>
+            <h5 class="serif-font text-dark mb-2">Safe Streets & Red Light Safety</h5>
+            <p class="text-secondary small mb-0">Addressing traffic crashes and investing in safer pedestrian crossings.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Live Social Cards Section (Instagram & LinkedIn) -->
+    <!-- Live Social Cards Section -->
     <div class="row g-4">
       <div class="col-lg-6">
-        <div class="social-feed-card p-4 h-100">
+        <div class="social-feed-card p-4 h-100 bg-white">
           <div class="d-flex align-items-center mb-3">
-            <div class="feature-icon-wrapper mb-0 me-3 bg-danger bg-opacity-25 text-danger">
+            <div class="feature-icon-wrapper mb-0 me-3 bg-danger bg-opacity-10 text-danger">
               <i class="bi bi-instagram"></i>
             </div>
             <div>
-              <h4 class="serif-font fw-bold text-white mb-0">Live Instagram Feed</h4>
-              <span class="small text-white-50">@dimpleajmeranc</span>
+              <h4 class="serif-font fw-bold text-dark mb-0">Live Instagram Feed</h4>
+              <span class="small text-secondary">@dimpleajmeranc</span>
             </div>
           </div>
-          <p class="text-white-50 small mb-3">
+          <p class="text-secondary small mb-3">
             Follow Council Member Dimple Ajmera’s daily community visits, town hall highlights, and behind-the-scenes updates in Charlotte.
           </p>
-          <a href="https://www.instagram.com/dimpleajmeranc/" target="_blank" rel="noopener" class="btn btn-outline-light w-100">
-            <i class="bi bi-instagram me-2 text-danger"></i> View Official Instagram Profile
+          <a href="https://www.instagram.com/dimpleajmeranc/" target="_blank" rel="noopener" class="btn btn-outline-danger w-100">
+            <i class="bi bi-instagram me-2"></i> View Official Instagram Profile
           </a>
         </div>
       </div>
 
       <div class="col-lg-6">
-        <div class="social-feed-card p-4 h-100">
+        <div class="social-feed-card p-4 h-100 bg-white">
           <div class="d-flex align-items-center mb-3">
-            <div class="feature-icon-wrapper mb-0 me-3 bg-primary bg-opacity-25 text-primary">
+            <div class="feature-icon-wrapper mb-0 me-3 bg-primary bg-opacity-10 text-primary">
               <i class="bi bi-linkedin"></i>
             </div>
             <div>
-              <h4 class="serif-font fw-bold text-white mb-0">LinkedIn Leadership Portal</h4>
-              <span class="small text-white-50">in/dimpleajmera</span>
+              <h4 class="serif-font fw-bold text-dark mb-0">LinkedIn Leadership Portal</h4>
+              <span class="small text-secondary">in/dimpleajmera</span>
             </div>
           </div>
-          <p class="text-white-50 small mb-3">
+          <p class="text-secondary small mb-3">
             Connect with Dimple Ajmera for professional economic policy statements, municipal finance reports, and fiscal governance posts.
           </p>
-          <a href="https://www.linkedin.com/in/dimpleajmera" target="_blank" rel="noopener" class="btn btn-outline-light w-100">
-            <i class="bi bi-linkedin me-2 text-primary"></i> Connect on LinkedIn
+          <a href="https://www.linkedin.com/in/dimpleajmera" target="_blank" rel="noopener" class="btn btn-outline-primary w-100">
+            <i class="bi bi-linkedin me-2"></i> Connect on LinkedIn
           </a>
         </div>
       </div>
@@ -285,8 +285,8 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- Substack Subscribe & Stay Connected Portal (From Original Site) -->
-<section class="py-5">
+<!-- Substack Subscribe & Stay Connected Portal -->
+<section class="py-5 bg-off-white">
   <div class="container py-lg-4">
     <div class="substack-portal-card text-center text-lg-start">
       <div class="row align-items-center g-4">
@@ -313,12 +313,12 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 4. Key Priorities Grid Section -->
-<section id="priorities" class="py-5">
+<!-- 4. Key Priorities Grid Section (White Background) -->
+<section id="priorities" class="py-5 bg-white">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
       <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">Priorities</span>
-      <h2 class="serif-font display-5 fw-bold text-white">Dimple’s Core Platform</h2>
+      <h2 class="serif-font display-5 fw-bold text-dark">Dimple’s Core Platform</h2>
     </div>
 
     <div class="row g-4">
@@ -328,8 +328,8 @@ require_once __DIR__ . '/includes/header.php';
             <div class="feature-icon-wrapper">
               <i class="bi <?php echo $issue['icon']; ?>"></i>
             </div>
-            <h3 class="serif-font h4 fw-bold text-white mb-3"><?php echo htmlspecialchars($issue['title']); ?></h3>
-            <p class="text-white-50 mb-0"><?php echo htmlspecialchars($issue['full_desc']); ?></p>
+            <h3 class="serif-font h4 fw-bold text-dark mb-3"><?php echo htmlspecialchars($issue['title']); ?></h3>
+            <p class="text-secondary mb-0"><?php echo htmlspecialchars($issue['full_desc']); ?></p>
           </div>
         </div>
       <?php endforeach; ?>
@@ -337,19 +337,19 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 5. Endorsements Showcase Section -->
-<section class="py-5">
+<!-- 5. Endorsements Showcase Section (White Background) -->
+<section class="py-5 bg-off-white">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
       <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">Endorsements</span>
-      <h2 class="serif-font display-5 fw-bold text-white">Proudly Endorsed By Community Leaders</h2>
+      <h2 class="serif-font display-5 fw-bold text-dark">Proudly Endorsed By Community Leaders</h2>
     </div>
 
     <div class="row g-4 mb-5">
       <?php foreach ($SPOTLIGHT_QUOTES as $quote): ?>
         <div class="col-lg-6">
           <div class="quote-card-2">
-            <p class="serif-font fs-5 fst-italic text-white mb-3">
+            <p class="serif-font fs-5 fst-italic text-dark mb-3">
               "<?php echo htmlspecialchars($quote['quote']); ?>"
             </p>
             <div class="fw-bold text-patriot-red">&mdash; <?php echo htmlspecialchars($quote['source']); ?></div>
