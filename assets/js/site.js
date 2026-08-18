@@ -1,9 +1,43 @@
 /**
- * DimpleAjmera.com 2.0 - Interactive Scripting & Event Countdown
+ * DimpleAjmera.com 3.1 - Interactive Navigation ScrollSpy & Live Substack Handler
  */
 
 document.addEventListener('DOMContentLoaded', function () {
   
+  // Animated ScrollSpy Navigation Marker Underline
+  const sections = document.querySelectorAll('section[id], header[id]');
+  const navLinks = document.querySelectorAll('.navbar-campaign .nav-link');
+
+  function activateNavMarker() {
+    let scrollPosition = window.scrollY + 200;
+
+    sections.forEach(section => {
+      const targetId = section.getAttribute('id');
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').includes('#' + targetId)) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', activateNavMarker);
+  activateNavMarker();
+
+  // Smooth Scroll Trigger with Instant Active State Update
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      navLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
   // Live Event Countdown Timer (August 20, 2026 18:00:00 EST)
   const eventDate = new Date('August 20, 2026 18:00:00').getTime();
   
@@ -32,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  // Animated Stats Counter on Scroll
+  // Animated Impact Statistics Counter
   const statNumbers = document.querySelectorAll('.stat-number[data-target]');
   let animated = false;
 
@@ -66,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', checkScrollStats);
   checkScrollStats();
 
-  // Volunteer Form Submission Handler
+  // Volunteer & Substack Form Handlers
   const volunteerForm = document.getElementById('volunteerForm');
   if (volunteerForm) {
     volunteerForm.addEventListener('submit', function (e) {
