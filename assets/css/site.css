@@ -1,262 +1,322 @@
-/* Dimple Ajmera Campaign Website Stylesheet */
+/* DimpleAjmera.com 2.0 - High-Impact Editorial Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --primary: rgb(0, 120, 80);
-  --primary-dark: rgb(0, 82, 55);
-  --primary-soft: rgb(229, 244, 238);
-  --logo-red: #ed1c24;
-  --logo-blue: #3f4ea1;
+  --primary-emerald: #004d40;
+  --primary-green: #007850;
+  --primary-dark: #00362f;
+  --primary-soft: #eaf6f2;
   --gold: #c99a57;
   --gold-dark: #a87431;
-  --ink: #173f3a;
+  --gold-light: #f5e8d3;
+  --logo-red: #ed1c24;
+  --logo-blue: #3f4ea1;
+  --ink: #0f172a;
+  --text-muted: #475569;
   --light-bg: #f8faf9;
   --white: #ffffff;
 }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #2b303a;
-  background-color: #ffffff;
-  line-height: 1.6;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background-color: var(--white);
+  line-height: 1.65;
+  overflow-x: hidden;
 }
 
 /* Typography Overrides */
-h1, h2, h3, .serif-font {
-  font-family: Georgia, "Times New Roman", serif;
+h1, h2, h3, h4, .serif-font {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.02em;
 }
 
-.text-primary-green {
-  color: var(--primary) !important;
+.text-gold {
+  color: var(--gold) !important;
 }
 
-.bg-primary-green {
-  background-color: var(--primary) !important;
+.text-emerald {
+  color: var(--primary-emerald) !important;
+}
+
+.bg-emerald {
+  background-color: var(--primary-emerald) !important;
+}
+
+.bg-emerald-dark {
+  background-color: var(--primary-dark) !important;
 }
 
 .bg-primary-soft {
   background-color: var(--primary-soft) !important;
 }
 
-/* Navigation Bar */
+/* Luxury Header Navigation */
 .navbar-campaign {
-  background-color: var(--white);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 77, 64, 0.08);
+  padding: 0.85rem 0;
   transition: all 0.3s ease;
-  padding: 0.75rem 0;
 }
 
 .navbar-campaign .nav-link {
   color: var(--ink);
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  transition: color 0.2s ease;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.1rem;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
 .navbar-campaign .nav-link:hover,
 .navbar-campaign .nav-link.active {
-  color: var(--primary);
+  color: var(--primary-emerald);
 }
 
-.navbar-brand img {
-  height: 48px;
-  width: auto;
+.navbar-campaign .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.1rem;
+  right: 1.1rem;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--primary-green));
+  border-radius: 99px;
+}
+
+/* 2.0 Hero Section - Editorial Split */
+.hero-2-0 {
+  background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary-emerald) 60%, #002e26 100%);
+  color: var(--white);
+  padding: 5rem 0 6rem;
+  position: relative;
+}
+
+.hero-2-0::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(201, 154, 87, 0.15), transparent 40%);
+  pointer-events: none;
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--gold);
+  background: rgba(201, 154, 87, 0.1);
+  color: var(--gold);
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero-headline {
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  margin-bottom: 1.25rem;
+  color: var(--white);
+}
+
+.hero-headline span.gold-highlight {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero-description {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  max-width: 620px;
+}
+
+.hero-portrait-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.hero-portrait-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Impact Statistics Counter Bar */
+.stats-counter-bar {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 77, 64, 0.08);
+  margin-top: -3rem;
+  position: relative;
+  z-index: 10;
+  padding: 2rem 2.5rem;
+  border: 1px solid rgba(0, 77, 64, 0.08);
+}
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 800;
+  color: var(--primary-emerald);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
 }
 
 /* Buttons */
-.btn-primary-green {
-  background-color: var(--primary);
+.btn-gold-2 {
+  background: linear-gradient(135deg, #d4a35f 0%, var(--gold-dark) 100%);
   color: var(--white);
-  border: 2px solid var(--primary);
   font-weight: 700;
-  padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  transition: all 0.2s ease-in-out;
+  padding: 0.85rem 1.8rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 6px 20px rgba(168, 116, 49, 0.3);
+  transition: all 0.25s ease;
 }
 
-.btn-primary-green:hover,
-.btn-primary-green:focus {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
+.btn-gold-2:hover {
+  background: linear-gradient(135deg, var(--gold) 0%, #8e6024 100%);
   color: var(--white);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(168, 116, 49, 0.4);
 }
 
-.btn-gold {
-  background-color: var(--gold-dark);
+.btn-emerald-2 {
+  background: var(--primary-emerald);
   color: var(--white);
-  border: 2px solid var(--gold-dark);
   font-weight: 700;
-  padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  transition: all 0.2s ease-in-out;
+  padding: 0.85rem 1.8rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0, 77, 64, 0.25);
+  transition: all 0.25s ease;
 }
 
-.btn-gold:hover {
-  background-color: var(--gold);
-  border-color: var(--gold);
+.btn-emerald-2:hover {
+  background: var(--primary-dark);
   color: var(--white);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-.btn-outline-green {
-  background-color: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  font-weight: 700;
-  padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  transition: all 0.2s ease-in-out;
-}
-
-.btn-outline-green:hover {
-  background-color: var(--primary);
-  color: var(--white);
-}
-
-/* Campaign Hero Section */
-.hero-section {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-  color: var(--white);
-  padding: 4rem 0 5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-section .badge-pill {
-  display: inline-block;
-  border: 2px solid var(--gold);
-  color: var(--gold);
-  border-radius: 999px;
-  padding: 6px 18px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  color: var(--primary-soft);
-  margin-bottom: 2rem;
-  font-weight: 400;
-}
-
-.hero-img-container img {
-  border-radius: 16px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
-  border: 4px solid rgba(255, 255, 255, 0.15);
-}
-
-/* Featured Event Banner */
-.event-banner-card {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--ink) 100%);
-  color: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 61, 53, 0.15);
-  overflow: hidden;
-  border-left: 6px solid var(--gold);
-}
-
-.event-badge {
-  background-color: var(--gold-dark);
-  color: var(--white);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 4px;
-  display: inline-block;
-}
-
-/* Cards & Priority Icons */
-.issue-card {
-  background-color: var(--white);
-  border: 1px solid rgba(0, 120, 80, 0.12);
-  border-radius: 12px;
-  padding: 2rem;
+/* High-Impact Feature Cards */
+.feature-card-2 {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 2.25rem;
+  border: 1px solid rgba(0, 77, 64, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
   height: 100%;
 }
 
-.issue-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 120, 80, 0.1);
-  border-color: var(--primary);
+.feature-card-2:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 77, 64, 0.12);
+  border-color: var(--primary-green);
 }
 
-.issue-icon-box {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  background-color: var(--primary-soft);
-  color: var(--primary);
+.feature-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--primary-soft);
+  color: var(--primary-emerald);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.75rem;
-  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Endorsement Card */
-.endorsement-card {
-  background: var(--light-bg);
-  border-left: 4px solid var(--primary);
-  border-radius: 0 12px 12px 0;
-  padding: 1.5rem;
+/* Event Countdown Timer */
+.countdown-box {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  min-width: 75px;
+}
+
+.countdown-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.countdown-lbl {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Media & Video Player Cards */
+.video-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--white);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  display: block;
+}
+
+/* Endorsement Quote Block 2.0 */
+.quote-card-2 {
+  background: var(--white);
+  border-left: 6px solid var(--gold);
+  border-radius: 0 16px 16px 0;
+  padding: 2.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   height: 100%;
 }
 
-/* Footer Section */
-.footer-campaign {
-  background-color: var(--primary-dark);
+/* Footer 2.0 */
+.footer-2-0 {
+  background-color: #00241f;
   color: var(--white);
-  padding: 4rem 0 2rem;
+  padding: 5rem 0 2.5rem;
 }
 
-.footer-campaign a {
-  color: var(--primary-soft);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer-campaign a:hover {
-  color: var(--gold);
-}
-
-.campaign-disclaimer-box {
+.disclaimer-pill {
   border: 2px solid var(--gold);
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  padding: 1.25rem 2rem;
   text-align: center;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
-  margin-top: 2rem;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 2.5rem 0 3.5rem;
-    text-align: center;
-  }
-  
-  .hero-img-container {
-    margin-top: 2rem;
-  }
-
-  .campaign-disclaimer-box {
-    font-size: 0.85rem;
-    padding: 0.75rem 1rem;
-  }
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--gold-light);
 }
