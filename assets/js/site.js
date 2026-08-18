@@ -1,9 +1,22 @@
 /**
- * DimpleAjmera.com 3.1 - Interactive Navigation ScrollSpy & Live Substack Handler
+ * DimpleAjmera.com 3.4 - Interactive Hero Background Slideshow & Navigation ScrollSpy
  */
 
 document.addEventListener('DOMContentLoaded', function () {
   
+  // Hero Stage Slowly Moving Background Slideshow
+  const heroSlides = document.querySelectorAll('.splc-slide-img');
+  if (heroSlides.length > 0) {
+    let currentSlide = 0;
+    heroSlides[0].classList.add('active');
+
+    setInterval(() => {
+      heroSlides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % heroSlides.length;
+      heroSlides[currentSlide].classList.add('active');
+    }, 6000); // Crossfades every 6 seconds slowly
+  }
+
   // Animated ScrollSpy Navigation Marker Underline
   const sections = document.querySelectorAll('section[id], header[id]');
   const navLinks = document.querySelectorAll('.navbar-campaign .nav-link');
