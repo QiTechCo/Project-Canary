@@ -3,37 +3,34 @@ $pageTitle = 'Delivering Results for All of Charlotte';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 2.0 Hero Section (Halo Style Glow & Radiant Portrait Card) -->
-<section class="hero-2-0" id="top">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-7">
-        <div class="hero-badge-pill">
-          <i class="bi bi-star-fill text-gold-halo"></i> <?php echo CAMPAIGN_SLOGAN; ?>
-        </div>
-        <h1 class="hero-headline serif-font">
-          Delivering Results for <span class="text-gradient-halo">All of Charlotte</span>
-        </h1>
-        <p class="hero-description">
-          Fiscal discipline, clean water preservation, workforce housing, and safe streets for every neighborhood across Charlotte.
-        </p>
-        <div class="d-flex flex-wrap gap-3">
-          <a href="volunteer.php" class="btn btn-gold-2 btn-lg">
-            <i class="bi bi-people-fill me-2"></i> Join Team Dimple
-          </a>
-          <a href="#event-townhall" class="btn btn-outline-light btn-lg">
-            <i class="bi bi-calendar-event me-2"></i> Environment Town Hall
-          </a>
-          <a href="<?php echo DONATE_URL; ?>" target="_blank" rel="noopener" class="btn btn-emerald-2 btn-lg">
-            <i class="bi bi-credit-card-fill me-2"></i> Contribute
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-5">
-        <div class="hero-portrait-card">
-          <img src="assets/images/Dimple_Ajmera_Charlotte_Councilmember_2025.jpg" alt="<?php echo CANDIDATE_NAME; ?>" class="img-fluid w-100">
-        </div>
-      </div>
+<!-- SPLC Webby Winner Style Full-Bleed Hero Stage with Large Transparent Logo Overlay -->
+<section class="splc-hero-stage" id="top">
+  <div class="splc-hero-bg"></div>
+  <div class="splc-hero-vignette"></div>
+
+  <div class="splc-hero-content">
+    <!-- Massive Transparent Candidate Master Logo Overlay -->
+    <div class="hero-giant-logo-container">
+      <img src="assets/images/DimpleHzLogo2025.png" alt="<?php echo CANDIDATE_NAME; ?> Master Campaign Logo" class="hero-giant-logo">
+    </div>
+
+    <h1 class="splc-hero-headline serif-font">
+      Delivering Results for <span class="text-gradient-halo">All of Charlotte</span>
+    </h1>
+    <p class="splc-hero-subtitle">
+      Fiscal discipline, clean water preservation, workforce housing, and safe streets for every neighborhood across Charlotte.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <a href="volunteer.php" class="btn btn-gold-2 btn-lg">
+        <i class="bi bi-people-fill me-2"></i> Join Team Dimple
+      </a>
+      <a href="#event-townhall" class="btn btn-outline-light btn-lg">
+        <i class="bi bi-calendar-event me-2"></i> Environment Town Hall
+      </a>
+      <a href="<?php echo DONATE_URL; ?>" target="_blank" rel="noopener" class="btn btn-emerald-2 btn-lg">
+        <i class="bi bi-credit-card-fill me-2"></i> Contribute
+      </a>
     </div>
   </div>
 </section>
@@ -62,7 +59,7 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </div>
 
-<!-- 1. Environment Town Hall Section (Pencil Halo Event Hub) -->
+<!-- 1. Environment Town Hall Section -->
 <section id="event-townhall" class="py-5 mt-4">
   <div class="container">
     <div class="event-banner-card p-4 p-lg-5">
@@ -100,7 +97,7 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- 2. About Section (Halo Glassmorphism) -->
+<!-- 2. About Section -->
 <section id="about" class="py-5">
   <div class="container py-lg-4">
     <div class="row align-items-center g-5 mb-5">
@@ -132,32 +129,57 @@ require_once __DIR__ . '/includes/header.php';
       </div>
     </div>
 
-    <!-- Original High-Res Campaign Photo Gallery Grid -->
+    <!-- High-Res Campaign Photography Gallery Grid (Using Downloads Photos) -->
     <div class="text-center mb-4">
-      <h3 class="serif-font text-white fw-bold">Community & Leadership Gallery</h3>
+      <span class="text-emerald-halo fw-bold text-uppercase tracking-wider">On The Ground in Charlotte</span>
+      <h3 class="serif-font text-white display-6 fw-bold">Community & Activism Gallery</h3>
     </div>
     <div class="row g-4">
-      <div class="col-md-4">
+      <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
-          <img src="assets/images/Dimple_Ajmera_Charlotte_Councilmember_2025.jpg" alt="Dimple Ajmera Speaking at Community Event">
+          <img src="assets/images/campaign_photo_1.jpg" alt="Dimple Ajmera Community Leadership">
           <div class="p-3 text-center">
-            <span class="fw-bold text-white">Dimple Ajmera at Community Forum</span>
+            <span class="fw-bold text-white">Community & Civic Leadership</span>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="photo-gallery-card">
+          <img src="assets/images/campaign_photo_2.jpg" alt="Dimple Ajmera Speaking at City Event">
+          <div class="p-3 text-center">
+            <span class="fw-bold text-white">Addressing Charlotte Families</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="photo-gallery-card">
+          <img src="assets/images/campaign_photo_3.jpg" alt="Dimple Ajmera Action Photo">
+          <div class="p-3 text-center">
+            <span class="fw-bold text-white">Working Mother & Civic Leader</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
           <img src="assets/images/Dimple_Hugh_McColl.jpg" alt="Dimple Ajmera with Hugh McColl">
           <div class="p-3 text-center">
-            <span class="fw-bold text-white">With Hugh McColl, Former CEO of Bank of America</span>
+            <span class="fw-bold text-white">With Hugh McColl, Former CEO Bank of America</span>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-lg-4 col-md-6">
         <div class="photo-gallery-card">
           <img src="assets/images/Susan_Dimple_Susan.jpg" alt="Dimple Ajmera with Susan Rodriguez McDowell">
           <div class="p-3 text-center">
             <span class="fw-bold text-white">With Commissioner Susan Rodriguez McDowell</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="photo-gallery-card">
+          <img src="assets/images/Dimple_Ajmera_Charlotte_Councilmember_2025.jpg" alt="Council Member Dimple Ajmera">
+          <div class="p-3 text-center">
+            <span class="fw-bold text-white">Official Council Member Portrait</span>
           </div>
         </div>
       </div>

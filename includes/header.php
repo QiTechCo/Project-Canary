@@ -21,19 +21,19 @@ $currentPage = basename($_SERVER['PHP_SELF']);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- Custom Campaign Styles -->
+  <!-- SPLC Webby Winner Style + Pencil Halo Styles -->
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body>
+<body id="top">
 
-<!-- Navigation Header (Ordered strictly to match page scroll sequence) -->
+<!-- Minimalist Top Navigation Header -->
 <nav class="navbar navbar-expand-lg navbar-campaign sticky-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.php">
-      <img src="assets/images/DimpleHzLogo2025.png" alt="<?php echo CANDIDATE_NAME; ?> Full Master Logo" class="me-2" style="height:82px; max-height:95px;">
+    <a class="navbar-brand d-flex align-items-center text-white fw-bold serif-font fs-4" href="index.php">
+      <span class="text-gold-halo me-2">★</span> Dimple Ajmera
     </a>
 
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCampaignNav" aria-controls="navbarCampaignNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCampaignNav" aria-controls="navbarCampaignNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
