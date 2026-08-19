@@ -29,7 +29,7 @@ require_once __DIR__ . '/config.php';
 <nav class="navbar navbar-expand-lg navbar-campaign sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.php">
-      <img src="assets/images/DimpleMainLogo.png" alt="<?php echo CANDIDATE_NAME; ?>" style="height: 52px; width: auto;" class="me-2">
+      <img src="assets/images/whiteboard_9_navlogo.png" alt="<?php echo CANDIDATE_NAME; ?>" style="height: 60px; width: auto;" class="me-2">
     </a>
 
     <button class="navbar-toggler border-0 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCampaignNav" aria-controls="navbarCampaignNav" aria-expanded="false" aria-label="Toggle navigation">
