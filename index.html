@@ -36,7 +36,7 @@
     <div class="collapse navbar-collapse" id="navbarCampaignNav">
       <ul class="navbar-nav ms-auto me-lg-3 mb-2 mb-lg-0 align-items-lg-center">
         <li class="nav-item">
-          <a class="nav-link active" href="index.html#top">Home</a>
+          <a class="nav-link active" href="#top">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#event-townhall">Town Hall</a>
@@ -136,15 +136,15 @@
     <div class="event-banner-card p-4 p-lg-5">
       <div class="row align-items-center g-4">
         <div class="col-lg-7">
-          <span class="event-badge mb-2"><i class="bi bi-geo-alt-fill me-1"></i> August 20th Town Hall</span>
+          <span class="event-badge mb-3"><i class="bi bi-geo-alt-fill me-1"></i> August 20th Town Hall</span>
           <h2 class="serif-font text-white display-5 fw-bold mb-3">State of Our Environment: Data Centers, Water & Charlotte’s Future</h2>
-          <p class="text-white-50 fs-5 mb-4">
+          <p class="text-white text-opacity-90 fs-5 mb-4">
             Join Council Member Dimple Ajmera and local environmental leaders to discuss protecting our natural water supply, green infrastructure, and smart policies for data center expansion.
           </p>
-          <div class="d-flex flex-wrap gap-4 text-white">
-            <div><i class="bi bi-calendar3 me-2 text-gold-accent"></i> <strong>August 20th, 2026</strong></div>
-            <div><i class="bi bi-clock me-2 text-gold-accent"></i> <strong>6:00 p.m. – 8:00 p.m.</strong></div>
-            <div><i class="bi bi-building me-2 text-gold-accent"></i> <strong>Project 658 (3646 Central Ave)</strong></div>
+          <div class="d-flex flex-wrap gap-2 text-white">
+            <div class="event-meta-pill"><i class="bi bi-calendar3 me-2 text-white"></i> <strong>August 20th, 2026</strong></div>
+            <div class="event-meta-pill"><i class="bi bi-clock me-2 text-white"></i> <strong>6:00 p.m. – 8:00 p.m.</strong></div>
+            <div class="event-meta-pill"><i class="bi bi-building me-2 text-white"></i> <strong>Project 658 (3646 Central Ave)</strong></div>
           </div>
         </div>
         
@@ -168,12 +168,38 @@
             </div>
           </div>
 
-          <a href="https://charlottenc.seamlessdocs.com/ng/fa/rjotkfzz0tct" target="_blank" rel="noopener" class="btn btn-red-patriot btn-lg w-100 mb-2">
-            <i class="bi bi-box-arrow-up-right me-2"></i> RSVP Required (Seats Limited)
-          </a>
-          <a href="https://www.google.com/maps/search/?api=1&query=Project%20658%2C%203646%20Central%20Ave.%2C%20Charlotte%2C%20NC%2028205" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm w-100">
-            <i class="bi bi-map me-1"></i> Open Google Maps Location
-          </a>
+          <!-- Event Action Buttons -->
+          <div class="d-flex flex-column gap-2">
+            <a href="https://charlottenc.seamlessdocs.com/ng/fa/rjotkfzz0tct" target="_blank" rel="noopener" class="btn btn-red-patriot btn-lg w-100">
+              <i class="bi bi-box-arrow-up-right me-2"></i> RSVP Required (Seats Limited)
+            </a>
+
+            <!-- Add to Calendar Dropdown Button -->
+            <div class="btn-group w-100">
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=State+of+Our+Environment%3A+Data+Centers%2C+Water+%26+Charlotte%E2%80%99s+Future&dates=20260820T220000Z%2F20260821T000000Z&details=Join+Council+Member+Dimple+Ajmera+and+local+environmental+leaders+to+discuss+protecting+our+natural+water+supply%2C+green+infrastructure%2C+and+smart+policies+for+data+center+expansion.&location=Project+658%2C+3646+Central+Ave%2C+Charlotte%2C+NC+28205" target="_blank" rel="noopener" class="btn btn-light bg-white text-emerald-accent fw-bold btn-lg">
+                <i class="bi bi-calendar-plus-fill text-emerald-accent me-2"></i> Add to Calendar
+              </a>
+              <button type="button" class="btn btn-light bg-white text-emerald-accent dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Calendar Dropdown</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow-lg rounded-3 border-0">
+                <li>
+                  <a class="dropdown-item py-2" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=State+of+Our+Environment%3A+Data+Centers%2C+Water+%26+Charlotte%E2%80%99s+Future&dates=20260820T220000Z%2F20260821T000000Z&details=Join+Council+Member+Dimple+Ajmera+and+local+environmental+leaders+to+discuss+protecting+our+natural+water+supply%2C+green+infrastructure%2C+and+smart+policies+for+data+center+expansion.&location=Project+658%2C+3646+Central+Ave%2C+Charlotte%2C+NC+28205" target="_blank" rel="noopener">
+                    <i class="bi bi-google text-danger me-2"></i> Google Calendar
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2" href="#" id="downloadIcsBtn">
+                    <i class="bi bi-apple text-dark me-2"></i> Apple / Outlook (iCal .ics)
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Project%20658%2C%203646%20Central%20Ave.%2C%20Charlotte%2C%20NC%2028205" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm w-100">
+              <i class="bi bi-map me-1"></i> Open Google Maps Location
+            </a>
+          </div>
         </div>
       </div>
     </div>
