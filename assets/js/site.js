@@ -46,15 +46,34 @@ document.addEventListener('DOMContentLoaded', function () {
   // Smooth Scroll Trigger with Instant Active State Update & Auto-Collapse on Mobile
   const navbarCollapse = document.getElementById('navbarCampaignNav');
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-      navLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#' || targetId === '') return;
 
-      // Auto roll/collapse the mobile hamburger menu when a link is clicked
-      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
-        bsCollapse.hide();
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const headerOffset = 80;
+        const elementPosition = targetEl.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+
+        // Update active class on nav links
+        navLinks.forEach(l => l.classList.remove('active'));
+        if (this.classList.contains('nav-link')) {
+          this.classList.add('active');
+        }
+
+        // Auto roll/collapse the mobile hamburger menu when a link is clicked
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+          bsCollapse.hide();
+        }
       }
     });
   });
@@ -69,6 +88,42 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // Add to Calendar - Instant .ics File Download for Apple / Outlook
+  const downloadIcsBtn = document.getElementById('downloadIcsBtn');
+  if (downloadIcsBtn) {
+    downloadIcsBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const icsData = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Dimple Ajmera for Charlotte//Town Hall Event//EN',
+        'CALSCALE:GREGORIAN',
+        'METHOD:PUBLISH',
+        'BEGIN:VEVENT',
+        'UID:townhall-20260820@dimpleajmera.com',
+        'DTSTAMP:20260819T180000Z',
+        'DTSTART:20260820T220000Z',
+        'DTEND:20260821T000000Z',
+        'SUMMARY:State of Our Environment: Data Centers, Water & Charlotte’s Future',
+        'DESCRIPTION:Join Council Member Dimple Ajmera and local environmental leaders to discuss protecting our natural water supply, green infrastructure, and smart policies for data center expansion.\\n\\nRSVP: https://charlottenc.seamlessdocs.com/ng/fa/rjotkfzz0tct',
+        'LOCATION:Project 658, 3646 Central Ave, Charlotte, NC 28205',
+        'STATUS:CONFIRMED',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const tempLink = document.createElement('a');
+      tempLink.href = url;
+      tempLink.setAttribute('download', 'Dimple_Ajmera_Environment_Town_Hall.ics');
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+      URL.revokeObjectURL(url);
+    });
+  }
 
   // Live Event Countdown Timer (August 20, 2026 18:00:00 EST)
   const eventDate = new Date('August 20, 2026 18:00:00').getTime();
