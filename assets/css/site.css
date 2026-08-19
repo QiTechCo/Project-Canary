@@ -878,8 +878,27 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
 }
 
 /* ========================================================
-   Substack Styles & Outline Button
+   Social Feed Cards & Unified Button Pills
    ======================================================== */
+.social-card-btn {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  min-height: 44px;
+  border-width: 1.5px;
+}
+
+.social-card-btn:hover {
+  transform: translateY(-2px);
+}
+
 .text-substack {
   color: #ff6719 !important;
 }
@@ -892,15 +911,7 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   color: #ff6719;
   border: 1.5px solid #ff6719;
   background-color: transparent;
-  font-weight: 700;
-  border-radius: 10px;
-  padding: 0.55rem 1rem;
-  transition: all 0.25s ease;
   font-family: var(--font-sans);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .btn-outline-substack:hover {
@@ -908,7 +919,6 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   color: #ffffff !important;
   border-color: #ff6719;
   box-shadow: 0 4px 15px rgba(255, 103, 25, 0.35);
-  transform: translateY(-2px);
 }
 
 .substack-article-card {
