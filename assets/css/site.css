@@ -390,6 +390,36 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   to { opacity: 1; transform: translateX(0); }
 }
 
+.endorsement-logo-box {
+  width: 80px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
+}
+
+.endorsement-logo-box img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.endorsement-leader-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--emerald-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 991.98px) {
   .navbar-campaign .navbar-nav {
     flex-wrap: wrap;
