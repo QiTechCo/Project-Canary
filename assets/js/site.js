@@ -132,4 +132,79 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // ========================================================
+  // Photo Gallery High-Resolution Fullscreen Lightbox Engine
+  // ========================================================
+  const galleryItems = document.querySelectorAll('.gallery-lightbox-trigger');
+  const lightboxModal = document.getElementById('campaignLightbox');
+  
+  if (galleryItems.length > 0 && lightboxModal) {
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTag = document.getElementById('lightboxTag');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDesc = document.getElementById('lightboxDesc');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    const closeBtn = document.getElementById('lightboxClose');
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
+    const backdrop = document.querySelector('.campaign-lightbox-backdrop');
+
+    let currentIndex = 0;
+    const totalItems = galleryItems.length;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const item = galleryItems[currentIndex];
+      const src = item.getAttribute('data-src') || item.querySelector('img').getAttribute('src');
+      const title = item.getAttribute('data-title') || item.querySelector('.gallery-title')?.innerText || 'Campaign Photo';
+      const desc = item.getAttribute('data-desc') || 'Council Member Dimple Ajmera on the campaign trail in Charlotte.';
+      const tag = item.getAttribute('data-tag') || 'Community Event';
+
+      if (lightboxImg) lightboxImg.src = src;
+      if (lightboxTag) lightboxTag.innerText = tag;
+      if (lightboxTitle) lightboxTitle.innerText = title;
+      if (lightboxDesc) lightboxDesc.innerText = desc;
+      if (lightboxCounter) lightboxCounter.innerText = `${currentIndex + 1} of ${totalItems}`;
+
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % totalItems;
+      openLightbox(currentIndex);
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      openLightbox(currentIndex);
+    }
+
+    // Attach click listeners to all gallery trigger cards
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        openLightbox(index);
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (backdrop) backdrop.addEventListener('click', closeLightbox);
+    if (nextBtn) nextBtn.addEventListener('click', showNext);
+    if (prevBtn) prevBtn.addEventListener('click', showPrev);
+
+    // Keyboard navigation (Escape to close, Left/Right arrows)
+    document.addEventListener('keydown', function (e) {
+      if (!lightboxModal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrev();
+    });
+  }
 });

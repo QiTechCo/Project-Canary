@@ -22,11 +22,11 @@
 </head>
 <body id="top">
 
-<!-- Top Navigation with Whiteboard 8 Logo & Volunteer Login -->
+<!-- Top Navigation with Whiteboard 9 Logo & Volunteer Login (Single-Line Fit) -->
 <nav class="navbar navbar-expand-lg navbar-campaign sticky-top">
-  <div class="container">
+  <div class="container-fluid px-lg-4 px-xl-5">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="assets/images/whiteboard_9_navlogo.png" alt="Dimple Ajmera for Charlotte City Council At-Large" style="height: 60px; width: auto;" class="me-2">
+      <img src="assets/images/whiteboard_9_navlogo.png" alt="Dimple Ajmera for Charlotte City Council At-Large" style="height: 48px; width: auto;" class="me-2">
     </a>
 
     <button class="navbar-toggler border-0 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCampaignNav" aria-controls="navbarCampaignNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,31 +34,34 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarCampaignNav">
-      <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 align-items-lg-center">
+      <ul class="navbar-nav ms-auto me-lg-3 mb-2 mb-lg-0 align-items-lg-center">
         <li class="nav-item">
           <a class="nav-link active" href="index.html#top">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#event-townhall">Environment Town Hall</a>
+          <a class="nav-link" href="#event-townhall">Town Hall</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">About Dimple</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#media">Media & Socials</a>
+          <a class="nav-link" href="#gallery">Photos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#priorities">Key Priorities</a>
+          <a class="nav-link" href="#media">Media</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#priorities">Priorities</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="endorsements.html">Endorsements</a>
         </li>
         <li class="nav-item d-flex align-items-center">
-          <a class="nav-link pe-1" href="volunteer.html">Get Involved</a>
+          <a class="nav-link pe-1" href="volunteer.html">Volunteer</a>
           <a href="portal.html" class="nav-login-hyperscript" title="Volunteer Portal Login"><i class="bi bi-lock-fill"></i> Login</a>
         </li>
       </ul>
-      <div class="d-flex gap-2">
+      <div class="d-flex align-items-center">
         <a href="https://secure.actblue.com/donate/dimple-ajmera-for-city-council-1" target="_blank" rel="noopener" class="btn btn-red-patriot">
           <i class="bi bi-heart-fill me-1"></i> Donate
         </a>
@@ -231,81 +234,189 @@
       </div>
     </div>
 
-    <!-- High-Res Campaign Photography Gallery Grid -->
-    <div class="text-center mb-4">
+    <!-- High-Res Campaign Photography Gallery Grid with Fullscreen Lightbox -->
+    <div id="gallery" class="text-center mb-4 pt-3">
       <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">On The Ground in Charlotte</span>
       <h3 class="serif-font text-dark display-6 fw-bold">Community & Activism Photo Gallery</h3>
+      <p class="text-muted small">Click any photo to open in high-resolution full-screen view with event details.</p>
     </div>
     <div class="row g-4">
+      <!-- 1 -->
       <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/dimple_newest_crop.jpg" alt="Dimple Ajmera Latest Campaign Photo">
+        <div class="photo-gallery-card gallery-lightbox-trigger" 
+             data-src="assets/images/dimple_newest_crop.jpg" 
+             data-title="Charlotte Campaign Portrait" 
+             data-tag="Official Campaign" 
+             data-desc="Council Member Dimple Ajmera portrait representing fiscal discipline, sustainability, and dedicated leadership for all Charlotte residents.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/dimple_newest_crop.jpg" alt="Dimple Ajmera Latest Campaign Photo">
+            <div class="gallery-zoom-overlay">
+              <div class="gallery-zoom-btn"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+          </div>
           <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Charlotte Campaign Portrait</span>
+            <span class="gallery-event-tag">Official Campaign</span>
+            <div class="fw-bold text-dark gallery-title">Charlotte Campaign Portrait</div>
           </div>
         </div>
       </div>
+
+      <!-- 2 -->
       <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/hero_slide_1.jpg" alt="Dimple Ajmera Community Event">
+        <div class="photo-gallery-card gallery-lightbox-trigger" 
+             data-src="assets/images/hero_slide_1.jpg" 
+             data-title="Civic Outreach & Community Meetings" 
+             data-tag="Civic Engagement" 
+             data-desc="Dimple meeting with neighborhood leaders and Charlotte residents to hear frontline concerns on street safety, transit, and city services.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/hero_slide_1.jpg" alt="Dimple Ajmera Community Event">
+            <div class="gallery-zoom-overlay">
+              <div class="gallery-zoom-btn"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+          </div>
           <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Civic Outreach & Community Meetings</span>
+            <span class="gallery-event-tag">Civic Engagement</span>
+            <div class="fw-bold text-dark gallery-title">Civic Outreach & Community Meetings</div>
           </div>
         </div>
       </div>
+
+      <!-- 3 -->
       <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/hero_slide_2.jpg" alt="Dimple Ajmera Speaking at City Event">
+        <div class="photo-gallery-card gallery-lightbox-trigger" 
+             data-src="assets/images/hero_slide_2.jpg" 
+             data-title="Addressing Charlotte Families" 
+             data-tag="Town Hall" 
+             data-desc="Delivering remarks on municipal budget allocations, neighborhood investment funds, and family health benefits across Mecklenburg County.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/hero_slide_2.jpg" alt="Dimple Ajmera Speaking at City Event">
+            <div class="gallery-zoom-overlay">
+              <div class="gallery-zoom-btn"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+          </div>
           <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Addressing Charlotte Families</span>
+            <span class="gallery-event-tag">Town Hall</span>
+            <div class="fw-bold text-dark gallery-title">Addressing Charlotte Families</div>
           </div>
         </div>
       </div>
+
+      <!-- 4 -->
       <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/hero_slide_4.jpg" alt="Dimple Ajmera Community Action">
+        <div class="photo-gallery-card gallery-lightbox-trigger" 
+             data-src="assets/images/hero_slide_4.jpg" 
+             data-title="Neighborhood Safety & Infrastructure" 
+             data-tag="Public Safety" 
+             data-desc="Inspecting infrastructure improvements and walking corridors alongside local advocates to implement safer pedestrian crossings and lighting.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/hero_slide_4.jpg" alt="Dimple Ajmera Community Action">
+            <div class="gallery-zoom-overlay">
+              <div class="gallery-zoom-btn"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+          </div>
           <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Neighborhood Safety & Infrastructure</span>
+            <span class="gallery-event-tag">Public Safety</span>
+            <div class="fw-bold text-dark gallery-title">Neighborhood Safety & Infrastructure</div>
           </div>
         </div>
       </div>
+
+      <!-- 5 -->
       <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/hero_slide_6.jpg" alt="Dimple Ajmera Youth & Education">
+        <div class="photo-gallery-card gallery-lightbox-trigger" 
+             data-src="assets/images/hero_slide_6.jpg" 
+             data-title="Youth & Community Opportunities" 
+             data-tag="Youth Programs" 
+             data-desc="Supporting after-school mentoring programs, recreation centers, and STEM opportunities for Charlotte youth and working families.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/hero_slide_6.jpg" alt="Dimple Ajmera Youth & Education">
+            <div class="gallery-zoom-overlay">
+              <div class="gallery-zoom-btn"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+          </div>
           <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Youth & Community Opportunities</span>
+            <span class="gallery-event-tag">Youth Programs</span>
+            <div class="fw-bold text-dark gallery-title">Youth & Community Opportunities</div>
           </div>
         </div>
       </div>
+
+      <!-- 6 -->
       <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/hero_slide_8.jpg" alt="Dimple Ajmera Town Hall Meeting">
+        <div class="photo-gallery-card gallery-lightbox-trigger" 
+             data-src="assets/images/hero_slide_8.jpg" 
+             data-title="Environmental & Water Policy Forum" 
+             data-tag="Sustainability" 
+             data-desc="Convening clean water advocates and conservation experts to establish proactive guidelines regarding industrial water usage and tree canopies.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/hero_slide_8.jpg" alt="Dimple Ajmera Town Hall Meeting">
+            <div class="gallery-zoom-overlay">
+              <div class="gallery-zoom-btn"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+          </div>
           <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Environmental & Water Policy Forum</span>
+            <span class="gallery-event-tag">Sustainability</span>
+            <div class="fw-bold text-dark gallery-title">Environmental & Water Policy Forum</div>
           </div>
         </div>
       </div>
+
+      <!-- 7 -->
       <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/gallery_community_1.jpg" alt="Dimple Ajmera Community Engagement">
+        <div class="photo-gallery-card gallery-lightbox-trigger" 
+             data-src="assets/images/gallery_community_1.jpg" 
+             data-title="Community Engagement & Grassroots Action" 
+             data-tag="Grassroots Action" 
+             data-desc="Connecting directly with volunteers and grassroots organizers to mobilize voter participation across all Charlotte districts.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery_community_1.jpg" alt="Dimple Ajmera Community Engagement">
+            <div class="gallery-zoom-overlay">
+              <div class="gallery-zoom-btn"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+          </div>
           <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Community Engagement & Outreach</span>
+            <span class="gallery-event-tag">Grassroots Action</span>
+            <div class="fw-bold text-dark gallery-title">Community Engagement & Grassroots Action</div>
           </div>
         </div>
       </div>
+
+      <!-- 8 -->
       <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/gallery_community_2.jpg" alt="Dimple Ajmera Leadership Event">
+        <div class="photo-gallery-card gallery-lightbox-trigger" 
+             data-src="assets/images/gallery_community_2.jpg" 
+             data-title="Leadership in Public Service" 
+             data-tag="Public Service" 
+             data-desc="Council Member Ajmera speaking on fiscal accountability, ethics in public governance, and expanding access for local small businesses.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery_community_2.jpg" alt="Dimple Ajmera Leadership Event">
+            <div class="gallery-zoom-overlay">
+              <div class="gallery-zoom-btn"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+          </div>
           <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Leadership in Action</span>
+            <span class="gallery-event-tag">Public Service</span>
+            <div class="fw-bold text-dark gallery-title">Leadership in Public Service</div>
           </div>
         </div>
       </div>
+
+      <!-- 9 -->
       <div class="col-lg-4 col-md-6">
-        <div class="photo-gallery-card">
-          <img src="assets/images/gallery_community_3.jpg" alt="Dimple Ajmera Charlotte Neighborhood Visit">
+        <div class="photo-gallery-card gallery-lightbox-trigger" 
+             data-src="assets/images/gallery_community_3.jpg" 
+             data-title="Charlotte Neighborhood Visits" 
+             data-tag="Neighborhood Listening" 
+             data-desc="Visiting local business corridors and community centers to promote equitable growth and affordable workforce housing solutions.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery_community_3.jpg" alt="Dimple Ajmera Charlotte Neighborhood Visit">
+            <div class="gallery-zoom-overlay">
+              <div class="gallery-zoom-btn"><i class="bi bi-arrows-fullscreen"></i></div>
+            </div>
+          </div>
           <div class="p-3 text-center bg-white">
-            <span class="fw-bold text-dark">Charlotte Neighborhood Visits</span>
+            <span class="gallery-event-tag">Neighborhood Listening</span>
+            <div class="fw-bold text-dark gallery-title">Charlotte Neighborhood Visits</div>
           </div>
         </div>
       </div>
@@ -365,45 +476,137 @@
       </div>
     </div>
 
-    <!-- Live Social Cards Section -->
-    <div class="row g-4">
-      <div class="col-lg-6">
+    <!-- Live Social Cards Section (Updated URLs) -->
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4 col-md-6">
         <div class="social-feed-card p-4 h-100 bg-white">
           <div class="d-flex align-items-center mb-3">
             <div class="feature-icon-wrapper mb-0 me-3 bg-danger bg-opacity-10 text-danger">
               <i class="bi bi-instagram"></i>
             </div>
             <div>
-              <h4 class="serif-font fw-bold text-dark mb-0">Live Instagram Feed</h4>
-              <span class="small text-secondary">@dimpleajmeranc</span>
+              <h4 class="serif-font fw-bold text-dark mb-0">Live Instagram</h4>
+              <span class="small text-secondary">@dimpleajmeraclt</span>
             </div>
           </div>
           <p class="text-secondary small mb-3">
             Follow Council Member Dimple Ajmera’s daily community visits, town hall highlights, and behind-the-scenes updates in Charlotte.
           </p>
-          <a href="https://www.instagram.com/dimpleajmeranc/" target="_blank" rel="noopener" class="btn btn-outline-danger w-100">
-            <i class="bi bi-instagram me-2"></i> View Official Instagram Profile
+          <a href="https://www.instagram.com/dimpleajmeraclt/" target="_blank" rel="noopener" class="btn btn-outline-danger w-100">
+            <i class="bi bi-instagram me-2"></i> View Instagram Profile
           </a>
         </div>
       </div>
 
-      <div class="col-lg-6">
+      <div class="col-lg-4 col-md-6">
         <div class="social-feed-card p-4 h-100 bg-white">
           <div class="d-flex align-items-center mb-3">
             <div class="feature-icon-wrapper mb-0 me-3 bg-primary bg-opacity-10 text-primary">
               <i class="bi bi-linkedin"></i>
             </div>
             <div>
-              <h4 class="serif-font fw-bold text-dark mb-0">LinkedIn Leadership Portal</h4>
-              <span class="small text-secondary">in/dimpleajmera</span>
+              <h4 class="serif-font fw-bold text-dark mb-0">LinkedIn Leadership</h4>
+              <span class="small text-secondary">in/dimple-ajmera</span>
             </div>
           </div>
           <p class="text-secondary small mb-3">
             Connect with Dimple Ajmera for professional economic policy statements, municipal finance reports, and fiscal governance posts.
           </p>
-          <a href="https://www.linkedin.com/in/dimpleajmera" target="_blank" rel="noopener" class="btn btn-outline-primary w-100">
+          <a href="https://www.linkedin.com/in/dimple-ajmera/" target="_blank" rel="noopener" class="btn btn-outline-primary w-100">
             <i class="bi bi-linkedin me-2"></i> Connect on LinkedIn
           </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <div class="social-feed-card p-4 h-100 bg-white border-start border-4 border-warning">
+          <div class="d-flex align-items-center mb-3">
+            <div class="feature-icon-wrapper mb-0 me-3 bg-warning bg-opacity-10 text-warning">
+              <i class="bi bi-newspaper"></i>
+            </div>
+            <div>
+              <h4 class="serif-font fw-bold text-dark mb-0">Substack Publications</h4>
+              <span class="small text-secondary">@dimpleajmera</span>
+            </div>
+          </div>
+          <p class="text-secondary small mb-3">
+            Read in-depth policy analyses, city council meeting recaps, and direct updates on Charlotte's growth and sustainability.
+          </p>
+          <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="btn btn-gold-2 w-100">
+            <i class="bi bi-box-arrow-up-right me-2"></i> Visit Substack Channel
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest 3 Substack Posts Grid -->
+    <div class="mb-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+        <div>
+          <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">Substack Dispatch</span>
+          <h3 class="serif-font text-dark display-6 fw-bold mb-0">Latest Articles from @dimpleajmera</h3>
+        </div>
+        <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm mt-2 mt-md-0">
+          <i class="bi bi-substack me-1"></i> View All Posts on Substack <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Post 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="substack-article-card">
+            <div>
+              <span class="substack-article-badge"><i class="bi bi-droplet-fill me-1"></i> Environment & Water</span>
+              <h4 class="serif-font substack-article-title">Protecting Charlotte's Water Supply: Policy Directives for Data Center Growth</h4>
+              <p class="substack-article-excerpt">
+                Why we need rigorous guardrails on industrial water consumption and energy loads to preserve our regional reservoirs and green canopy for the next fifty years.
+              </p>
+            </div>
+            <div class="substack-article-footer">
+              <span><i class="bi bi-calendar3 me-1"></i> Recent Analysis</span>
+              <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="fw-bold text-patriot-red text-decoration-none">
+                Read Article <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="substack-article-card">
+            <div>
+              <span class="substack-article-badge"><i class="bi bi-house-door-fill me-1"></i> Workforce Housing</span>
+              <h4 class="serif-font substack-article-title">Delivering Results: Expanding Down-Payment Assistance for Charlotte Families</h4>
+              <p class="substack-article-excerpt">
+                Breaking down how municipal housing bonds and targeted equity funds are helping nurses, teachers, and municipal workers build generational homeownership.
+              </p>
+            </div>
+            <div class="substack-article-footer">
+              <span><i class="bi bi-calendar3 me-1"></i> Policy Brief</span>
+              <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="fw-bold text-patriot-red text-decoration-none">
+                Read Article <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="col-lg-4 col-md-12">
+          <div class="substack-article-card">
+            <div>
+              <span class="substack-article-badge"><i class="bi bi-shield-check me-1"></i> Public Safety</span>
+              <h4 class="serif-font substack-article-title">Standing with First Responders: Healthcare Coverage for CMPD Officer Families</h4>
+              <p class="substack-article-excerpt">
+                A personal look at our unanimous city council victory securing lifetime healthcare benefits for the families of fallen officers killed in the line of duty.
+              </p>
+            </div>
+            <div class="substack-article-footer">
+              <span><i class="bi bi-calendar3 me-1"></i> Council Update</span>
+              <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="fw-bold text-patriot-red text-decoration-none">
+                Read Article <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -424,14 +627,14 @@
           </p>
         </div>
         <div class="col-lg-5">
-          <form action="https://dimpleajmera.substack.com" method="get" target="_blank" class="p-3 bg-dark bg-opacity-50 rounded-4 border border-secondary border-opacity-25">
+          <form action="https://substack.com/@dimpleajmera" method="get" target="_blank" class="p-3 bg-dark bg-opacity-50 rounded-4 border border-secondary border-opacity-25">
             <div class="mb-3 text-start">
-              <label class="form-label text-white small fw-bold">Enter Your Email Address</label>
+              <label class="form-label text-white small fw-bold">Follow & Subscribe on Substack</label>
               <input type="email" class="form-control bg-dark text-white border-secondary" placeholder="name@example.com" required>
             </div>
-            <button type="submit" class="btn btn-red-patriot w-100 btn-lg">
-              <i class="bi bi-envelope-check-fill me-2"></i> Subscribe on Substack
-            </button>
+            <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="btn btn-red-patriot w-100 btn-lg">
+              <i class="bi bi-envelope-check-fill me-2"></i> Join @dimpleajmera on Substack
+            </a>
           </form>
         </div>
       </div>
@@ -538,10 +741,10 @@
         </p>
         <div class="d-flex gap-3 fs-5 mt-3">
           <a href="https://www.facebook.com/DimpleAjmeraNC/" target="_blank" rel="noopener" class="text-white-50" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/dimpleajmeranc/" target="_blank" rel="noopener" class="text-white-50" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.instagram.com/dimpleajmeraclt/" target="_blank" rel="noopener" class="text-white-50" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <a href="https://twitter.com/dimpleajmera" target="_blank" rel="noopener" class="text-white-50" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://www.linkedin.com/in/dimpleajmera" target="_blank" rel="noopener" class="text-white-50" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          <a href="https://dimpleajmera.substack.com" target="_blank" rel="noopener" class="text-white-50" aria-label="Substack"><i class="bi bi-newspaper"></i></a>
+          <a href="https://www.linkedin.com/in/dimple-ajmera/" target="_blank" rel="noopener" class="text-white-50" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="text-white-50" aria-label="Substack"><i class="bi bi-newspaper"></i></a>
         </div>
       </div>
 
@@ -551,7 +754,8 @@
           <li class="mb-2"><a href="index.html#top" class="text-white-50">Home</a></li>
           <li class="mb-2"><a href="#event-townhall" class="text-white-50">Environment Town Hall</a></li>
           <li class="mb-2"><a href="#about" class="text-white-50">About Dimple</a></li>
-          <li class="mb-2"><a href="#media" class="text-white-50">Media & Socials</a></li>
+          <li class="mb-2"><a href="#gallery" class="text-white-50">Photo Gallery</a></li>
+          <li class="mb-2"><a href="#media" class="text-white-50">Media & Substack</a></li>
           <li class="mb-2"><a href="#priorities" class="text-white-50">Key Priorities</a></li>
           <li class="mb-2"><a href="endorsements.html" class="text-white-50">Endorsements</a></li>
           <li class="mb-2"><a href="volunteer.html" class="text-white-50">Volunteer & Join Us</a></li>
@@ -561,16 +765,13 @@
       <div class="col-lg-5 col-md-12">
         <h5 class="text-white fw-bold mb-3">Stay Connected</h5>
         <p class="text-white-50 small mb-3">
-          Subscribe to Dimple's newsletter for official city updates, town hall announcements, and community reports.
+          Subscribe to Dimple's newsletter on Substack for official city updates, town hall announcements, and community reports.
         </p>
-        <form action="https://dimpleajmera.substack.com" method="get" target="_blank" class="row g-2">
-          <div class="col-8">
-            <input type="email" class="form-control bg-dark text-white border-secondary" placeholder="Enter your email address" required>
-          </div>
-          <div class="col-4">
-            <button type="submit" class="btn btn-red-patriot w-100">Subscribe</button>
-          </div>
-        </form>
+        <div class="d-flex gap-2">
+          <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="btn btn-red-patriot w-100">
+            <i class="bi bi-newspaper me-2"></i> Follow @dimpleajmera on Substack
+          </a>
+        </div>
       </div>
     </div>
 
@@ -587,11 +788,32 @@
         &copy; 2026 Committee to Elect Dimple Ajmera. All rights reserved.
       </div>
       <div class="col-md-6 text-center text-md-end">
-        DimpleAjmera.com 3.6 Refinement
+        DimpleAjmera.com 3.7 Single-Line Navigation
       </div>
     </div>
   </div>
 </footer>
+
+<!-- Fullscreen Photo Gallery Lightbox Modal -->
+<div id="campaignLightbox" class="campaign-lightbox-modal" role="dialog" aria-modal="true" aria-label="Campaign Photo Viewer">
+  <div class="campaign-lightbox-backdrop"></div>
+  <div class="campaign-lightbox-container">
+    <button id="lightboxClose" class="campaign-lightbox-close" aria-label="Close photo view"><i class="bi bi-x-lg"></i></button>
+    <button id="lightboxPrev" class="campaign-lightbox-nav-btn campaign-lightbox-prev" aria-label="Previous photo"><i class="bi bi-chevron-left"></i></button>
+    <button id="lightboxNext" class="campaign-lightbox-nav-btn campaign-lightbox-next" aria-label="Next photo"><i class="bi bi-chevron-right"></i></button>
+    <div class="campaign-lightbox-img-wrapper">
+      <img id="lightboxImg" class="campaign-lightbox-img" src="" alt="High resolution campaign view">
+    </div>
+    <div class="campaign-lightbox-caption">
+      <div class="d-flex justify-content-between align-items-center mb-1">
+        <span id="lightboxTag" class="gallery-event-tag">Event Tag</span>
+        <span id="lightboxCounter" class="badge bg-secondary opacity-75">1 of 9</span>
+      </div>
+      <h4 id="lightboxTitle" class="serif-font fw-bold text-dark mb-2">Photo Title</h4>
+      <p id="lightboxDesc" class="text-secondary small mb-0">Detailed event description goes here.</p>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/site.js"></script>
