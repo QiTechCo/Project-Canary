@@ -127,6 +127,35 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   transform: translateX(-50%) scaleX(1);
 }
 
+/* Hyperscript Volunteer Login Link (Compact space-saving indicator) */
+.nav-login-hyperscript {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--navy-medium) !important;
+  text-decoration: none;
+  vertical-align: super;
+  padding: 2px 7px;
+  border-radius: 99px;
+  background: rgba(27, 54, 93, 0.08);
+  border: 1px solid rgba(27, 54, 93, 0.18);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.nav-login-hyperscript:hover {
+  background: var(--patriot-red);
+  color: #ffffff !important;
+  border-color: var(--patriot-red);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(237, 28, 36, 0.25);
+}
+
 /* SPLC Webby Winner Hero Stage with Cropped Photo Background Slideshow */
 .splc-hero-stage {
   position: relative;
