@@ -1,44 +1,100 @@
 {
   "fop_lodge_9": {
-    "url": "https://www.fop9.org/",
-    "title": "Fraternal Order of Police Dewey R. Stokes Capital City Lodge #9",
-    "meta_description": "Lodge #9 is a labor union, charitable organization and advocacy group that proudly serves as the voice of more than 4,500 law enforcement officers across 29 agencies in Franklin County, Ohio.",
-    "sample_text": "Fraternal Order of Police Dewey R. Stokes Capital City Lodge #9 Capital City Lodge #9 proudly protects and advances the interests of our members and the communities they serve. Read More Lodge #9 is a labor union, charitable organization and advocacy group that proudly serves as the voice of more than 4,500 law enforcement officers across 29 agencies in Franklin County, Ohio. We are committed to improving the working conditions, benefits and professional rights of our members through education, "
+    "name": "Charlotte-Mecklenburg Fraternal Order of Police Lodge #9",
+    "category": "Labor Union & Law Enforcement",
+    "image": "assets/images/endorsements/fop_lodge_9.png",
+    "url": "https://www.ncfoplodge9.com/",
+    "description": "The largest FOP lodge in North Carolina, serving as the voice of more than 4,500 active and retired law enforcement officers, deputy sheriffs, detention officers, state troopers, and administrative professionals across Charlotte-Mecklenburg."
   },
   "moms_demand_action": {
-    "url": "https://momsdemandaction.org/about/",
-    "title": "About | Moms Demand Action",
-    "meta_description": "Moms Demand Action is a grassroots movement of Americans fighting for public safety measures that can protect people from gun violence.",
-    "sample_text": "Moms Demand Action is a grassroots movement of Americans fighting for public safety measures that can protect people from gun violence. We pass stronger gun laws and work to close the loopholes that jeopardize the safety of our families. We also work in our own communities and with business leaders to encourage a culture of responsible gun ownership. We know that gun violence is preventable, and we\u2019re committed to doing what it takes to keep families safe. The day after the Sandy Hook tragedy in"
+    "name": "Moms Demand Action for Gun Sense in America",
+    "category": "Gun Safety & Public Safety Advocacy",
+    "image": "assets/images/endorsements/moms_demand_action.png",
+    "url": "https://momsdemandaction.org/",
+    "description": "A grassroots movement of Americans fighting for public safety measures that can protect people from gun violence, passing stronger gun laws, closing loopholes, and encouraging a culture of responsible gun ownership."
   },
-  "cwa_workers": {
-    "url": "https://cwa-union.org/about",
-    "title": "About CWA | Communications Workers of America",
-    "meta_description": "Information about CWA membership, leadership, districts, sectors and industries.",
-    "sample_text": "Members of the Communications Workers of America are part of one of America\u2019s largest and most diverse unions. We work not just in the communications and information industries, but also in the news media, the airlines, broadcast and cable television, public service, higher education and health care, manufacturing, high tech, video games, and more. CWA's top elected officers are President Claude Cummings Jr. and Secretary-Treasurer Ameenah Salaam . CWA's Executive Board governs the union between"
+  "secrc_carpenters": {
+    "name": "Southeastern Carpenters Regional Council (Southern RCC)",
+    "category": "Labor Union & Building Trades",
+    "image": "assets/images/endorsements/secrc_carpenters.png",
+    "url": "https://southernrcc.org/",
+    "description": "Affiliated with the United Brotherhood of Carpenters, representing thousands of skilled union carpenters, millwrights, and pile drivers across the Southeast, championing fair wages, workplace safety, and professional apprentice training."
   },
-  "ncaat_in_action": {
-    "url": "https://ncaatinaction.org/",
-    "title": "North Carolina Asian Americans Together in Action (NCAATIA)",
-    "meta_description": "",
-    "sample_text": "Defending Democracy for North Carolina, for All. Asian Americans are key to the coalition to build towards a better future for North Carolina. Real change takes real work \u2013 and we\u2019re getting it done together. Get involved in targeted action. Want to contribute to our work? Your donation will go towards programming that supports our mission!"
+  "seiu_airport_workers": {
+    "name": "SEIU Airport Workers Rising (Airport Workers United)",
+    "category": "Labor Union & Service Workers",
+    "image": "assets/images/endorsements/seiu_airport_workers.jpg",
+    "url": "https://airportworkersunited.org/",
+    "description": "A movement led by 32BJ SEIU organizing baggage handlers, cabin cleaners, wheelchair agents, fuelers, and janitors demanding living wages, affordable healthcare, and safe working conditions at Charlotte Douglas International Airport."
   },
-  "indian_american_impact": {
-    "url": "https://iaimpact.org/about/",
-    "title": "About - Indian American Impact",
-    "meta_description": "",
-    "sample_text": "Indian American Impact empowers South Asian and Indian American communities \u2014 some of the fastest growing voter populations \u2014 through community engagement, civic partnerships, candidate support, and data & research in order to encourage a pro-democracy government that uplifts all people. Indian and South Asian Americans are a powerful and crucially important force for progressive change. We\u2019re the fastest-growing racial voting bloc in America, we\u2019re likely to vote, and we hold progressive values"
+  "charlotte_firefighters": {
+    "name": "Charlotte Fire Fighters Association (IAFF Local 660)",
+    "category": "Labor Union & First Responders",
+    "image": "assets/images/endorsements/charlotte_firefighters_iaff.jpeg",
+    "url": "https://charlottefirefighters.org/",
+    "description": "Representing the dedicated professional firefighters and emergency responders protecting the City of Charlotte, advocating for public safety, firefighter wellness, safety equipment, and fair working conditions."
   },
   "equality_nc": {
-    "url": "https://equalitync.org/about/",
-    "title": "About Equality North Carolina | Equality North Carolina",
-    "meta_description": "Equality North Carolina (ENC) is the nation's oldest statewide organization committed to securing rights and protections for the LGBTQ community. We aim to ensure that every North Carolinian sees themselves reflected in this movement, working together to create a safer, more equitable world for all marginalized individuals. Together, we can build a better North Carolina. [\u2026]",
-    "sample_text": "Goal met: Thanks to your support, we hit our $25K end-of-year fundraising goal! Equality North Carolina (ENC) is the nation's oldest statewide organization committed to securing rights and protections for the LGBTQ community. We aim to ensure that every North Carolinian sees themselves reflected in this movement, working together to create a safer, more equitable world for all marginalized individuals. Together, we can build a better North Carolina. Our long-term goal is to achieve comprehensive"
+    "name": "Equality North Carolina",
+    "category": "Civil Rights & Advocacy Organization",
+    "image": "assets/images/endorsements/equality_nc.jpg",
+    "url": "https://equalitync.org/",
+    "description": "The nation's oldest statewide organization committed to securing full rights, non-discrimination protections, and equality for LGBTQ+ individuals and marginalized communities across North Carolina."
   },
-  "young_democrats": {
-    "url": "https://ydnc.org/about/",
-    "title": "About the Young Democrats of North Carolina",
-    "meta_description": "Learn about the Young Democrats of North Carolina, our mission, leadership, and how we empower young people to organize, lead, and elect Democrats across the state.",
-    "sample_text": "The Young Democrats of North Carolina (YDNC) serve as the official youth arm of the North Carolina Democratic Party (NCDP). The vision of the Young Democrats of North Carolina is to make North Carolina a better place by promoting its issues, its young people, and the spirit of the Democratic Party. The YDNC President and YDNC's two Young Democrats of America (YDA) National Committee Representatives serve on the State Executive Council of the NCDP, its highest governing body. The current (86th) P"
+  "ncaat_in_action": {
+    "name": "North Carolina Asian Americans Together in Action (NCAATIA)",
+    "category": "Civic Engagement & Political Advocacy",
+    "image": "assets/images/endorsements/ncaat_in_action.jpeg",
+    "url": "https://ncaatinaction.org/",
+    "description": "Dedicated to building towards a better future for North Carolina by engaging Asian Americans in targeted civic action, defending democracy, and promoting equitable policies across the state."
+  },
+  "indian_american_impact": {
+    "name": "Indian American Impact",
+    "category": "National Civic & Leadership Organization",
+    "image": "assets/images/endorsements/indian_american_impact.png",
+    "url": "https://iaimpact.org/",
+    "description": "Empowering South Asian and Indian American communities through civic engagement, partnerships, candidate support, and data & research in order to encourage a pro-democracy government that uplifts all people."
+  },
+  "charlotte_post": {
+    "name": "The Charlotte Post",
+    "category": "News & Media Publication",
+    "image": "assets/images/endorsements/charlotte_post_endorses.png",
+    "url": "https://www.thecharlottepost.com/",
+    "description": "Serving as a dominant voice in educating, empowering, and enlightening Charlotte's African American community for over 147 years, tracing its roots back to 1878."
+  },
+  "sierra_club": {
+    "name": "Sierra Club \u2014 North Carolina Chapter",
+    "category": "Environmental & Conservation Organization",
+    "image": "assets/images/endorsements/sierra_club.png",
+    "url": "https://www.sierraclub.org/north-carolina",
+    "description": "Advocating for a clean, healthy environment and the well-being of all who live in North Carolina from the mountains to the coast, focusing on climate action, clean energy transition, pollution control, and public land preservation."
+  },
+  "black_political_caucus": {
+    "name": "Black Political Caucus of Charlotte-Mecklenburg",
+    "category": "Civic & Political Advocacy Organization",
+    "image": "assets/images/endorsements/black_political_caucus.png",
+    "url": "https://bpc-charlotte.com/",
+    "description": "Established in the early 1970s to provide a unified voice for the Black community in local politics, increasing political awareness, advocating for equity and justice, and evaluating candidates across Mecklenburg County."
+  },
+  "unite_here": {
+    "name": "UNITE HERE!",
+    "category": "Labor Union & Hospitality Workers",
+    "image": "assets/images/endorsements/unite_here.png",
+    "url": "https://unitehere.org/",
+    "description": "A North American labor union representing over 300,000 working people in hotel, gaming, food service, manufacturing, laundry, and airport concession industries fighting for good union jobs."
+  },
+  "charlotte_observer": {
+    "name": "The Charlotte Observer",
+    "category": "News & Media Publication",
+    "image": "assets/images/endorsements/charlotte_observer.png",
+    "url": "https://www.charlotteobserver.com/",
+    "description": "The major daily newspaper and primary regional news source for the Charlotte metropolitan area and the Carolinas since 1886."
+  },
+  "dimple_ajmera_campaign": {
+    "name": "Dimple Ajmera for Charlotte City Council At-Large",
+    "category": "Official Campaign",
+    "image": "assets/images/endorsements/dimple_ajmera_sign.png",
+    "url": "https://dimpleajmera.com",
+    "description": "Official campaign for Council Member Dimple Ajmera, working mother, Certified Public Accountant, and dedicated public servant fighting for Charlotte families."
   }
 }
