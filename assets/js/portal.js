@@ -62,13 +62,27 @@ document.addEventListener("DOMContentLoaded", async function () {
               <i class="bi bi-check-circle-fill text-success fs-5"></i>
               <strong class="text-dark">Magic Link Dispatched!</strong>
             </div>
-            <p class="small mb-3 text-secondary">A secure login link has been sent to <strong>${email}</strong>. You can also proceed directly into your volunteer dashboard.</p>
+            <p class="small mb-3 text-secondary">A secure login link was requested for <strong>${email}</strong>. You can click the email link or enter the dashboard directly below.</p>
             <a href="dashboard.html" class="btn btn-sm btn-dark text-white fw-bold w-100">
-              Enter Volunteer Dashboard <i class="bi bi-arrow-right ms-1"></i>
+              Enter Volunteer Dashboard &rarr;
             </a>
           </div>
         `;
       }
+    });
+  }
+
+  // Quick Test / Demo Login Handler
+  const quickTestLoginBtn = document.getElementById("quickTestLoginBtn");
+  if (quickTestLoginBtn) {
+    quickTestLoginBtn.addEventListener("click", function () {
+      localStorage.setItem("canary_volunteer_email", "test@dimpleajmera.com");
+      localStorage.setItem("canary_volunteer_session", JSON.stringify({
+        email: "test@dimpleajmera.com",
+        user_id: "c2b05918-ec66-40d0-a3c0-33e28b70df40",
+        timestamp: new Date().toISOString()
+      }));
+      window.location.href = "dashboard.html";
     });
   }
 });
