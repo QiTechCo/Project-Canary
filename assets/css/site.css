@@ -38,6 +38,15 @@ h1, h2, h3, h4, h5, h6, .serif-font, .display-1, .display-2, .display-3, .displa
   letter-spacing: -0.02em;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+section[id], header[id], div[id] {
+  scroll-margin-top: 100px;
+}
+
 p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge {
   font-family: var(--font-sans);
 }

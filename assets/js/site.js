@@ -43,8 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', activateNavMarker);
   activateNavMarker();
 
-  // Smooth Scroll Trigger with Instant Active State Update & Auto-Collapse on Mobile
+  // Smooth Scroll Trigger with Dynamic Offset Calculation & Auto-Collapse on Mobile
   const navbarCollapse = document.getElementById('navbarCampaignNav');
+  const navbarCampaign = document.querySelector('.navbar-campaign');
 
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
@@ -54,12 +55,20 @@ document.addEventListener('DOMContentLoaded', function () {
       const targetEl = document.querySelector(targetId);
       if (targetEl) {
         e.preventDefault();
-        const headerOffset = 80;
+        
+        // Auto roll/collapse the mobile hamburger menu first so offset calculation is accurate
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+          bsCollapse.hide();
+        }
+
+        // Calculate dynamic offset (navbar height + 20px padding buffer)
+        const headerOffset = (navbarCampaign ? 76 : 80) + 20; // 96px total offset
         const elementPosition = targetEl.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
-          top: offsetPosition,
+          top: Math.max(0, offsetPosition),
           behavior: 'smooth'
         });
 
@@ -67,12 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
         navLinks.forEach(l => l.classList.remove('active'));
         if (this.classList.contains('nav-link')) {
           this.classList.add('active');
-        }
-
-        // Auto roll/collapse the mobile hamburger menu when a link is clicked
-        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
-          bsCollapse.hide();
         }
       }
     });
