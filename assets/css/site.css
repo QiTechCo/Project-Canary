@@ -106,27 +106,31 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   font-weight: 700;
   font-size: 0.88rem;
   padding: 0.45rem 0.65rem !important;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
   position: relative;
   font-family: var(--font-sans);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
+/* Shorter Emerald Accent Highlight Bar Under the Word */
 .navbar-campaign .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   left: 50%;
   transform: translateX(-50%) scaleX(0);
-  width: 80%;
+  width: 22px; /* Much shorter highlight bar, centered strictly under the word */
   height: 3px;
-  background: linear-gradient(90deg, var(--patriot-red), var(--navy-medium), var(--emerald-accent));
+  background-color: var(--emerald-accent);
   border-radius: 99px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(0, 120, 80, 0.35);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar-campaign .nav-link:hover {
-  color: var(--patriot-red) !important;
+  color: var(--emerald-accent) !important;
 }
 
 .navbar-campaign .nav-link:hover::after,
@@ -378,6 +382,36 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
 }
 
 @media (max-width: 991.98px) {
+  .navbar-campaign .navbar-nav {
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding: 0.85rem 0.5rem 0.5rem;
+  }
+
+  .navbar-campaign .nav-item {
+    width: 100%;
+  }
+
+  .navbar-campaign .nav-link {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.4rem 0.25rem !important;
+    font-size: 1rem;
+  }
+
+  .navbar-campaign .nav-link::after {
+    left: 0.25rem;
+    transform: scaleX(0);
+    transform-origin: left center;
+    width: 22px; /* Short green highlight bar directly under the word on mobile */
+    bottom: 0;
+  }
+
+  .navbar-campaign .nav-link:hover::after,
+  .navbar-campaign .nav-link.active::after {
+    transform: scaleX(1);
+  }
+
   .hero-split {
     padding: 3rem 0 2rem;
     text-align: center;
