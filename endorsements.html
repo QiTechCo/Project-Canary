@@ -123,117 +123,207 @@
 </section>
 
 <!-- Organization & Newspaper Endorsements Gallery -->
-<section class="py-5 bg-off-white">
+<section class="py-5 bg-white border-top border-light">
   <div class="container py-lg-4">
     <div class="text-center max-w-700 mx-auto mb-5">
       <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">Organizational Backing</span>
       <h2 class="serif-font display-5 fw-bold text-dark mb-2">Endorsing Organizations & Unions</h2>
-      <p class="lead text-secondary">Trusted by first responders, labor unions, civic organizations, and local media.</p>
+      <p class="lead text-secondary">Trusted by first responders, labor unions, civic organizations, and local media. Click any logo to view high-resolution details and official websites.</p>
     </div>
 
     <!-- Responsive Logo Image Gallery -->
     <div class="row g-3 g-md-4 justify-content-center">
       <!-- FOP Lodge 9 -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Charlotte-Mecklenburg FOP Lodge 9">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Charlotte-Mecklenburg Fraternal Order of Police (FOP Lodge 9)"
+             data-category="Public Safety & First Responders"
+             data-img="assets/images/endorsements/fop_lodge_9.png"
+             data-desc="Representing over 2,000 active and retired law enforcement professionals across Charlotte-Mecklenburg. Endorsed Councilwoman Dimple Ajmera for championing lifetime healthcare benefits for families of fallen officers."
+             data-url="https://www.fop9.org/"
+             title="Click to view Charlotte-Mecklenburg FOP Lodge 9">
           <img src="assets/images/endorsements/fop_lodge_9.png" alt="Charlotte-Mecklenburg FOP Lodge 9">
         </div>
       </div>
 
       <!-- Moms Demand Action -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Moms Demand Action Gun Sense Candidate">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Moms Demand Action for Gun Sense in America"
+             data-category="Gun Safety Advocacy"
+             data-img="assets/images/endorsements/moms_demand_action.png"
+             data-desc="Awarded the 2025 Moms Demand Action Gun Sense Candidate distinction for proven leadership on community violence prevention, youth safety initiatives, and common-sense gun safety reforms."
+             data-url="https://momsdemandaction.org/"
+             title="Click to view Moms Demand Action">
           <img src="assets/images/endorsements/moms_demand_action.png" alt="Moms Demand Action Gun Sense Candidate">
         </div>
       </div>
 
       <!-- Sierra Club -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Sierra Club">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Sierra Club (North Carolina Chapter)"
+             data-category="Conservation & Clean Water"
+             data-img="assets/images/endorsements/sierra_club.png"
+             data-desc="The nation's largest grassroots environmental organization. Standing with Dimple Ajmera for her fight to protect Charlotte's drinking water, tree canopy, and climate sustainability."
+             data-url="https://www.sierraclub.org/north-carolina"
+             title="Click to view Sierra Club">
           <img src="assets/images/endorsements/sierra_club.png" alt="Sierra Club">
         </div>
       </div>
 
       <!-- Black Political Caucus -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Black Political Caucus of Charlotte-Mecklenburg">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Black Political Caucus of Charlotte-Mecklenburg"
+             data-category="Civic & Political Leadership"
+             data-img="assets/images/endorsements/black_political_caucus.png"
+             data-desc="Founded in 1965 to promote political, economic, and educational equality for all residents across Charlotte-Mecklenburg."
+             data-url="https://www.blackpoliticalcaucus.org/"
+             title="Click to view Black Political Caucus">
           <img src="assets/images/endorsements/black_political_caucus.png" alt="Black Political Caucus of Charlotte-Mecklenburg">
         </div>
       </div>
 
       <!-- SECRC Carpenters -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Southeastern Carpenters Regional Council (SECRC)">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Southeastern Carpenters Regional Council (SECRC)"
+             data-category="Labor & Building Trades"
+             data-img="assets/images/endorsements/secrc_carpenters.png"
+             data-desc="Representing skilled commercial and industrial carpenters, millwrights, and pile drivers across the Southeast. Supporting Dimple Ajmera for fair wages and workforce development."
+             data-url="https://www.secrc.org/"
+             title="Click to view Southeastern Carpenters">
           <img src="assets/images/endorsements/secrc_carpenters.png" alt="Southeastern Carpenters Regional Council">
         </div>
       </div>
 
       <!-- SEIU Airport Workers -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="SEIU Airport Workers Rising">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="SEIU Airport Workers Rising"
+             data-category="Aviation & Service Workers Union"
+             data-img="assets/images/endorsements/seiu_airport_workers.jpg"
+             data-desc="Uniting thousands of contracted airport service workers at Charlotte Douglas International Airport fighting for living wages, affordable healthcare, and workplace dignity."
+             data-url="https://airportworkersunited.org/"
+             title="Click to view SEIU Airport Workers">
           <img src="assets/images/endorsements/seiu_airport_workers.jpg" alt="SEIU Airport Workers Rising">
         </div>
       </div>
 
       <!-- CWA Workers -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Communications Workers of America (CWA)">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Communications Workers of America (CWA)"
+             data-category="Telecommunications & Labor Union"
+             data-img="assets/images/endorsements/cwa_workers.jpeg"
+             data-desc="Representing working men and women in telecommunications, customer service, media, and public sectors across the Carolinas."
+             data-url="https://cwa-union.org/"
+             title="Click to view Communications Workers of America">
           <img src="assets/images/endorsements/cwa_workers.jpeg" alt="Communications Workers of America">
         </div>
       </div>
 
       <!-- Plumbers & Pipefitters UA -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Plumbers & Pipefitters UA Local">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="United Association of Plumbers & Pipefitters (UA)"
+             data-category="Skilled Trades & Infrastructure"
+             data-img="assets/images/endorsements/plumbers_pipefitters_ua.jpg"
+             data-desc="Representing highly skilled piping professionals building Charlotte's water systems, commercial facilities, and clean energy infrastructure."
+             data-url="https://ua.org/"
+             title="Click to view Plumbers & Pipefitters UA">
           <img src="assets/images/endorsements/plumbers_pipefitters_ua.jpg" alt="Plumbers & Pipefitters UA Local">
         </div>
       </div>
 
       <!-- NCAAT in Action -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="NCAAT in Action">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="NCAAT in Action (NC Asian Americans Together)"
+             data-category="Civic Engagement & Representation"
+             data-img="assets/images/endorsements/ncaat_in_action.jpeg"
+             data-desc="Dedicated to building civic empowerment, voter turnout, and political representation for Asian American communities across North Carolina."
+             data-url="https://ncaatinaction.org/"
+             title="Click to view NCAAT in Action">
           <img src="assets/images/endorsements/ncaat_in_action.jpeg" alt="NCAAT in Action">
         </div>
       </div>
 
       <!-- IMPACT PAC -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Indian American Impact Fund (IMPACT)">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Indian American Impact Fund (IMPACT)"
+             data-category="National Civic Leadership"
+             data-img="assets/images/endorsements/indian_american_impact.png"
+             data-desc="Leading national organization inspiring, engaging, and electing Indian American and South Asian leaders to state and local office across the country."
+             data-url="https://iaimpact.org/"
+             title="Click to view Indian American Impact Fund">
           <img src="assets/images/endorsements/indian_american_impact.png" alt="Indian American Impact Fund">
         </div>
       </div>
 
       <!-- The Charlotte Post -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="The Charlotte Post Endorsement">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="The Charlotte Post Editorial Board"
+             data-category="Historic Community Newspaper"
+             data-img="assets/images/endorsements/charlotte_post_endorses.png"
+             data-desc="Voice of the Black community in the Carolinas since 1878. Endorsing Dimple Ajmera for her unwavering commitment to equity, affordable housing, and small business empowerment."
+             data-url="https://www.thecharlottepost.com/"
+             title="Click to view The Charlotte Post">
           <img src="assets/images/endorsements/charlotte_post_endorses.png" alt="The Charlotte Post">
         </div>
       </div>
 
       <!-- Equality NC -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Equality NC">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Equality North Carolina"
+             data-category="Civil Rights & Equality"
+             data-img="assets/images/endorsements/equality_nc.png"
+             data-desc="The largest and oldest statewide organization dedicated to securing full equality and non-discrimination protections for all North Carolinians."
+             data-url="https://equalitync.org/"
+             title="Click to view Equality NC">
           <img src="assets/images/endorsements/equality_nc.png" alt="Equality NC">
         </div>
       </div>
 
       <!-- Young Democrats -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Young Democrats of Mecklenburg County">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Young Democrats of Mecklenburg County"
+             data-category="Youth & Progressive Leadership"
+             data-img="assets/images/endorsements/young_democrats.png"
+             data-desc="Engaging, empowering, and mobilizing young voters, organizers, and leaders under 36 across Mecklenburg County."
+             data-url="https://ydnc.org/"
+             title="Click to view Young Democrats">
           <img src="assets/images/endorsements/young_democrats.png" alt="Young Democrats of Mecklenburg County">
         </div>
       </div>
 
       <!-- North Carolina Voices -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="North Carolina Voices">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="North Carolina Voices"
+             data-category="Statewide Progressive Coalition"
+             data-img="assets/images/endorsements/north_carolina_voices.png"
+             data-desc="A broad-based coalition of community leaders, organizers, and working families advocating for economic justice and civic participation."
+             data-url="https://www.ncvoices.org/"
+             title="Click to view North Carolina Voices">
           <img src="assets/images/endorsements/north_carolina_voices.png" alt="North Carolina Voices">
         </div>
       </div>
 
       <!-- Campaign Yard Sign -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="endorsement-gallery-card" title="Dimple Ajmera for Charlotte City Council">
+        <div class="endorsement-gallery-card" role="button" tabindex="0" onclick="openEndorsementModal(this)"
+             data-title="Dimple Ajmera for Charlotte City Council At-Large"
+             data-category="Official Campaign"
+             data-img="assets/images/endorsements/dimple_ajmera_sign.png"
+             data-desc="Join thousands of Charlotte residents, families, and community leaders standing with Dimple Ajmera for Charlotte City Council At-Large."
+             data-url="https://dimpleajmera.com"
+             title="Click to view Dimple Ajmera Campaign">
           <img src="assets/images/endorsements/dimple_ajmera_sign.png" alt="Dimple Ajmera Campaign Sign">
         </div>
       </div>
@@ -465,7 +555,67 @@
   </div>
 </footer>
 
+<!-- Endorsement Detail Lightbox Modal -->
+<div class="modal fade" id="endorsementModal" tabindex="-1" aria-labelledby="endorsementModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+      <div class="modal-header border-0 bg-light px-4 py-3 align-items-center">
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge bg-success text-white text-uppercase px-2 py-1" id="endorsementModalCategory" style="font-size: 0.75rem; letter-spacing: 0.5px;">Endorsement</span>
+          <span class="text-muted small">Official Community Partner</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 text-center">
+        <!-- Logo Container with crisp white background -->
+        <div class="p-4 bg-white rounded-4 border border-light shadow-sm d-flex align-items-center justify-content-center mb-4 mx-auto" style="min-height: 200px; max-height: 300px; max-width: 480px;">
+          <img src="" id="endorsementModalImg" alt="" class="img-fluid" style="max-height: 220px; max-width: 100%; object-fit: contain;">
+        </div>
+        
+        <h3 class="serif-font fw-bold text-dark mb-2" id="endorsementModalTitle">Organization Name</h3>
+        <p class="text-secondary fs-6 mb-4 max-w-700 mx-auto" id="endorsementModalDescription" style="line-height: 1.6;">Organization Description</p>
+        
+        <div class="d-flex flex-wrap gap-2 justify-content-center pt-3 border-top border-light">
+          <a href="#" target="_blank" rel="noopener" id="endorsementModalWebsiteBtn" class="btn btn-red-patriot px-4 py-2 fw-bold">
+            <i class="bi bi-box-arrow-up-right me-2"></i> Visit Official Website
+          </a>
+          <button type="button" class="btn btn-outline-secondary px-4 py-2" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/site.js"></script>
+<script>
+  function openEndorsementModal(el) {
+    const title = el.getAttribute('data-title') || 'Endorsing Organization';
+    const category = el.getAttribute('data-category') || 'Official Endorsement';
+    const img = el.getAttribute('data-img') || '';
+    const desc = el.getAttribute('data-desc') || '';
+    const url = el.getAttribute('data-url') || '#';
+
+    document.getElementById('endorsementModalTitle').innerText = title;
+    document.getElementById('endorsementModalCategory').innerText = category;
+    document.getElementById('endorsementModalDescription').innerText = desc;
+    
+    const modalImg = document.getElementById('endorsementModalImg');
+    modalImg.src = img;
+    modalImg.alt = title;
+
+    const webBtn = document.getElementById('endorsementModalWebsiteBtn');
+    webBtn.href = url;
+    if (url === '#' || !url) {
+      webBtn.style.display = 'none';
+    } else {
+      webBtn.style.display = 'inline-flex';
+    }
+
+    const modalEl = document.getElementById('endorsementModal');
+    const modalInstance = new bootstrap.Modal(modalEl);
+    modalInstance.show();
+  }
+</script>
 </body>
 </html>
