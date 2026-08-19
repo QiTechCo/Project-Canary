@@ -43,11 +43,30 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', activateNavMarker);
   activateNavMarker();
 
-  // Smooth Scroll Trigger with Instant Active State Update
+  // Smooth Scroll Trigger with Instant Active State Update & Auto-Collapse on Mobile
+  const navbarCollapse = document.getElementById('navbarCampaignNav');
+
   navLinks.forEach(link => {
     link.addEventListener('click', function () {
       navLinks.forEach(l => l.classList.remove('active'));
       this.classList.add('active');
+
+      // Auto roll/collapse the mobile hamburger menu when a link is clicked
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+        bsCollapse.hide();
+      }
+    });
+  });
+
+  // Also close mobile menu if hyperscript login or donate button is clicked
+  const mobileNavExtraButtons = document.querySelectorAll('.navbar-campaign .nav-login-hyperscript, .navbar-campaign .btn-red-patriot');
+  mobileNavExtraButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+        bsCollapse.hide();
+      }
     });
   });
 
