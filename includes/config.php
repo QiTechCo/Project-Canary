@@ -16,7 +16,7 @@ define('CAMPAIGN_EMAIL', 'Dimple@DimpleAjmera.com');
 define('CITY_EMAIL', 'Alexis.Rojas@charlottenc.gov');
 define('CAMPAIGN_PHONE', '980-579-2721');
 
-define('DONATE_URL', 'https://www.dimpleajmera.com/donate');
+define('DONATE_URL', 'https://secure.actblue.com/donate/dimple-ajmera-for-city-council-1');
 define('SUBSTACK_URL', 'https://dimpleajmera.substack.com');
 define('TOWN_HALL_RSVP_URL', 'https://charlottenc.seamlessdocs.com/ng/fa/rjotkfzz0tct');
 
