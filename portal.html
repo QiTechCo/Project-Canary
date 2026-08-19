@@ -61,24 +61,17 @@
     }
 
     .portal-login-card .portal-logo {
-      max-width: 220px;
+      max-width: 260px;
       width: 100%;
       height: auto;
       margin-bottom: 1.5rem;
       border-radius: 50%;
-      box-shadow: 0 10px 30px rgba(15, 32, 66, 0.12);
+      box-shadow: 0 12px 35px rgba(15, 32, 66, 0.14);
       transition: transform 0.3s ease;
     }
 
     .portal-login-card .portal-logo:hover {
-      transform: scale(1.04);
-    }
-
-    .portal-login-card h2 {
-      font-family: var(--font-serif) !important;
-      font-weight: 800;
-      color: var(--navy-dark);
-      margin-bottom: 0.5rem;
+      transform: scale(1.03);
     }
 
     .portal-login-card .form-control {
@@ -110,26 +103,6 @@
       height: 1px;
       background: #e2e8f0;
     }
-
-    .portal-features {
-      list-style: none;
-      padding: 0;
-      margin: 1.5rem 0 0;
-    }
-
-    .portal-features li {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.5rem 0;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .portal-features li i {
-      color: var(--emerald-accent);
-      font-size: 1.1rem;
-    }
   </style>
 </head>
 <body>
@@ -150,8 +123,9 @@
   <div class="portal-login-card text-center">
     <img src="assets/images/volunteer_hub_logo.jpeg" alt="Volunteer Hub - Dimple Ajmera for Charlotte Campaign" class="portal-logo img-fluid">
 
-    <h2>Volunteer Portal</h2>
-    <p class="text-muted mb-4">Sign in to access your dashboard, shifts, and campaign resources.</p>
+    <p class="text-muted mb-4">
+      Enter your email address to sign in with a secure magic link, or register as a new campaign volunteer.
+    </p>
 
     <!-- Magic Link Login Form -->
     <form id="loginForm">
@@ -172,17 +146,9 @@
     <div class="portal-divider">or</div>
 
     <!-- Sign Up CTA -->
-    <a href="volunteer.html" class="btn btn-blue-patriot w-100 mb-3">
+    <a href="volunteer.html" class="btn btn-blue-patriot w-100">
       <i class="bi bi-people-fill me-2"></i> Join as a New Volunteer
     </a>
-
-    <!-- Portal Feature Highlights -->
-    <ul class="portal-features text-start">
-      <li><i class="bi bi-check-circle-fill"></i> View & sign up for campaign shifts</li>
-      <li><i class="bi bi-check-circle-fill"></i> Access the campaign wiki & talking points</li>
-      <li><i class="bi bi-check-circle-fill"></i> Browse & upload campaign photos</li>
-      <li><i class="bi bi-check-circle-fill"></i> Receive assignment notifications</li>
-    </ul>
   </div>
 </section>
 
