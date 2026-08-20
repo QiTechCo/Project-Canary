@@ -561,6 +561,28 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   transform: translateY(-2px);
 }
 
+.btn-emerald-green {
+  background: linear-gradient(135deg, #007850 0%, #009966 100%);
+  color: #ffffff !important;
+  font-weight: 800;
+  padding: 0.85rem 2rem;
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 120, 80, 0.35);
+  transition: all 0.25s ease;
+  font-family: var(--font-sans);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-emerald-green:hover {
+  background: linear-gradient(135deg, #005a3c 0%, #007850 100%);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 120, 80, 0.45);
+}
+
 .btn-gold-2 {
   background: linear-gradient(135deg, var(--gold-accent) 0%, #b89230 100%);
   color: #ffffff;
