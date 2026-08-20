@@ -1,0 +1,13 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Dependencies (this is a static site — nothing here should be committed)
+node_modules/
+
+# Local server / build scratch
+.cache/
+*.log

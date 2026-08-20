@@ -1,74 +1,120 @@
-const SUPABASE_URL = "https://cddsrrwlncudouwcmbex.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_MqhQHtDaWagamu06kpZWPg_yg_Bktye";
+/* ============================================================
+   Volunteer portal — passwordless sign-in.
 
-const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+   Fixed from the previous version, which:
+     - showed "Magic Link Dispatched!" whether or not the call
+       succeeded (the catch only console.warn'd),
+     - rendered that panel even when the Supabase library had
+       failed to load and no auth call was attempted at all,
+     - offered a direct "Enter Volunteer Dashboard" link that
+       bypassed authentication entirely,
+     - interpolated the user's email into innerHTML unescaped.
+   ============================================================ */
+(function () {
+  'use strict';
 
-document.addEventListener("DOMContentLoaded", async function () {
-  const loginForm = document.getElementById("loginForm");
-  const loginEmail = document.getElementById("loginEmail");
-  const loginBtn = document.getElementById("loginBtn");
-  const alertContainer = document.getElementById("alertContainer");
+  const RESEND_COOLDOWN_MS = 45000;
+  let lastSentAt = 0;
 
-  if (supabase) {
+  document.addEventListener('DOMContentLoaded', async function () {
+    const supabase = CANARY.client;
+    const form = document.getElementById('loginForm');
+    const emailInput = document.getElementById('loginEmail');
+    const button = document.getElementById('loginBtn');
+    const alerts = document.getElementById('alertContainer');
+
+    if (!supabase) {
+      CANARY.showAlert(alerts, 'danger', 'Sign-in unavailable',
+        'We could not load the sign-in service. Please refresh the page, or email the campaign if this continues.',
+        'bi bi-exclamation-triangle-fill');
+      if (button) button.disabled = true;
+      return;
+    }
+
+    // Already signed in? Go straight through.
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session && session.user) {
-        window.location.href = "dashboard.html";
+      const { data } = await supabase.auth.getSession();
+      if (data && data.session) {
+        window.location.replace('dashboard.html');
         return;
       }
-    } catch(e) {}
-  }
+    } catch (err) {
+      console.warn('[canary] session check failed', err);
+    }
 
-  if (loginForm) {
-    loginForm.addEventListener("submit", async function (e) {
+    if (!form) return;
+
+    const idleLabel = '<i class="bi bi-envelope-check-fill me-2" aria-hidden="true"></i> Send Magic Link';
+
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      const email = loginEmail.value.trim().toLowerCase();
-      if (!email) return;
 
-      loginBtn.disabled = true;
-      loginBtn.innerHTML = "<span class=\"spinner-border spinner-border-sm me-2\"></span> Sending magic link...";
-      if (alertContainer) alertContainer.innerHTML = "";
+      const email = (emailInput.value || '').trim().toLowerCase();
+      if (!email || !emailInput.checkValidity()) {
+        CANARY.showAlert(alerts, 'danger', 'Check your email address',
+          'Please enter a valid email address so we can send your sign-in link.',
+          'bi bi-exclamation-circle-fill');
+        emailInput.focus();
+        return;
+      }
+
+      const sinceLast = Date.now() - lastSentAt;
+      if (sinceLast < RESEND_COOLDOWN_MS) {
+        CANARY.showAlert(alerts, 'warning', 'Just a moment',
+          'We already sent a link. You can request another in ' +
+          Math.ceil((RESEND_COOLDOWN_MS - sinceLast) / 1000) + ' seconds.',
+          'bi bi-hourglass-split');
+        return;
+      }
+
+      button.disabled = true;
+      button.innerHTML = '<span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span> Sending sign-in link…';
+      if (alerts) alerts.innerHTML = '';
+
+      const redirectTo = new URL('dashboard.html', window.location.href).href;
 
       try {
-        if (supabase) {
-          const currentUrl = new URL(window.location.href);
-          const redirectPath = currentUrl.pathname.substring(0, currentUrl.pathname.lastIndexOf("/") + 1) + "dashboard.html";
-          const redirectUrl = currentUrl.origin + redirectPath;
+        const { error } = await supabase.auth.signInWithOtp({
+          email: email,
+          options: {
+            emailRedirectTo: redirectTo,
+            // Do not let an arbitrary address mint an auth user.
+            // Volunteers register through volunteer.html first.
+            shouldCreateUser: false
+          }
+        });
 
-          await supabase.auth.signInWithOtp({
-            email: email,
-            options: {
-              emailRedirectTo: redirectUrl
-            }
-          });
-        }
+        if (error) throw error;
+
+        lastSentAt = Date.now();
+
+        // Success is only reported when the call actually succeeded.
+        CANARY.showAlert(alerts, 'success', 'Check your inbox',
+          'We sent a secure sign-in link to ' + email +
+          '. It expires in one hour. If it does not arrive within a few minutes, check your spam folder.',
+          'bi bi-check-circle-fill');
+
+        form.reset();
       } catch (err) {
-        console.warn("Auth notice:", err);
-      }
+        console.warn('[canary] sign-in failed', err);
 
-      localStorage.setItem("canary_volunteer_email", email);
-      localStorage.setItem("canary_volunteer_session", JSON.stringify({
-        email: email,
-        timestamp: new Date().toISOString()
-      }));
-
-      loginBtn.disabled = false;
-      loginBtn.innerHTML = "<i class=\"bi bi-envelope-check-fill me-2\"></i> Send Magic Link";
-
-      if (alertContainer) {
-        alertContainer.innerHTML = `
-          <div class="alert alert-success text-start p-3 rounded-4 shadow-sm border-0 mb-3">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-check-circle-fill text-success fs-5"></i>
-              <strong class="text-dark">Magic Link Dispatched!</strong>
-            </div>
-            <p class="small mb-3 text-secondary">A secure login link has been sent to <strong>${email}</strong>. You can also proceed directly into your volunteer dashboard.</p>
-            <a href="dashboard.html" class="btn btn-sm btn-dark text-white fw-bold w-100">
-              Enter Volunteer Dashboard <i class="bi bi-arrow-right ms-1"></i>
-            </a>
-          </div>
-        `;
+        // A "user not found" is expected for people who have not
+        // registered yet — point them at the signup form instead.
+        const notRegistered = /signup|not found|disabled/i.test(String(err && err.message));
+        CANARY.showAlert(alerts, 'danger',
+          notRegistered ? 'We do not recognise that address' : 'We could not send your link',
+          notRegistered
+            ? 'That email is not registered as a volunteer yet. Use "Join as a New Volunteer" below to sign up first.'
+            : CANARY.friendlyError(err),
+          'bi bi-exclamation-triangle-fill');
+      } finally {
+        button.disabled = false;
+        button.innerHTML = idleLabel;
+        if (alerts) {
+          const live = alerts.querySelector('[role]');
+          if (live) live.focus && live.focus();
+        }
       }
     });
-  }
-});
+  });
+})();

@@ -1,6 +1,9 @@
 /* DimpleAjmera.com 3.6 - Unified 2-Font System & Cropped Newest Photo Background */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+/* Fonts are loaded with <link rel="preconnect"> + <link rel="stylesheet">
+   in each page's <head>. The previous @import here was render-blocking:
+   the browser could not discover the font request until it had already
+   downloaded and parsed this file, serialising two round trips. */
 
 :root {
   /* Unified 2-Font System Max */
@@ -22,6 +25,25 @@
   --border-light: rgba(15, 23, 42, 0.08);
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
   --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.12);
+
+  /* ----------------------------------------------------------------
+     Accessible text variants (WCAG 2.2 AA).
+
+     The brand colours below are correct for FILLS — white text on a
+     #ed1c24 button is fine. They are not usable as TEXT on a light
+     background: #ed1c24 on white is 4.38:1 and #ff6719 is 2.91:1,
+     both under the 4.5:1 minimum. These darker variants clear it
+     while reading as the same colour.
+
+       --patriot-red-text  #a30f15 on #ffffff  -> 7.97:1
+       --substack-text     #b8430c on #ffffff  -> 5.46:1
+     Both also clear 4.5:1 on the 10% brand tints used by badges.
+     ---------------------------------------------------------------- */
+  --patriot-red-text: #a30f15;
+  --substack: #ff6719;
+  --substack-text: #b8430c;
+
+  --focus-ring: 0 0 0 3px #ffffff, 0 0 0 6px var(--navy-medium);
 }
 
 body {
@@ -29,8 +51,76 @@ body {
   color: var(--text-dark);
   background-color: var(--bg-white);
   line-height: 1.65;
+  /* `clip` rather than `hidden`: `hidden` turns body into a scroll
+     container, which breaks `position: sticky` on descendants.
+     `clip` contains the decorative hero blobs without that side
+     effect. The fallback keeps older browsers working. */
   overflow-x: hidden;
+  overflow-x: clip;
 }
+
+/* ------------------------------------------------------------------
+   Skip link — first tab stop on every page (WCAG 2.4.1)
+   ------------------------------------------------------------------ */
+.skip-link {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -120%);
+  z-index: 2000;
+  background: var(--navy-dark);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 12px 12px;
+  text-decoration: none;
+  transition: transform 0.18s ease;
+}
+
+.skip-link:focus {
+  transform: translate(-50%, 0);
+  color: #ffffff;
+  outline: 3px solid var(--gold-accent);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------
+   Visible focus for every interactive element.
+
+   Bootstrap only styles `.btn`, so the custom controls on this site
+   (lightbox buttons, gallery cards, the login pill) previously had
+   no focus indicator at all.
+   ------------------------------------------------------------------ */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--navy-medium);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.campaign-lightbox-close:focus-visible,
+.campaign-lightbox-nav-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Never remove an outline without replacing it. */
+:focus:not(:focus-visible) { outline: none; }
+
+/* ------------------------------------------------------------------
+   Utilities the markup already used but nothing defined.
+   `tracking-wider` (12 uses), `max-w-700` (6 uses) and bare
+   `uppercase` (2 uses) are Tailwind idioms that were silently
+   no-ops in this Bootstrap project.
+   ------------------------------------------------------------------ */
+.tracking-wider { letter-spacing: 0.08em; }
+.max-w-700 { max-width: 700px; }
+.uppercase { text-transform: uppercase; }
 
 /* Strict 2-Font Enforcement Across All Elements */
 h1, h2, h3, h4, h5, h6, .serif-font, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
@@ -43,7 +133,7 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
 }
 
 .text-patriot-red {
-  color: var(--patriot-red) !important;
+  color: var(--patriot-red-text) !important;
 }
 
 .text-navy-dark {
@@ -70,8 +160,8 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
 /* Navigation Header - Optimized for Single-Line Desktop Fit */
 .navbar-campaign {
   background-color: rgba(255, 255, 255, 0.98) !important;
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border-bottom: 3px solid var(--patriot-red);
   padding: 0.4rem 0;
   transition: all 0.25s ease;
@@ -88,6 +178,10 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
 .navbar-campaign .navbar-brand img {
   height: 48px;
   width: auto;
+  /* A missing src falls back to rendering the alt text, which for
+     this logo is ~500px wide and overflowed the mobile viewport.
+     This caps it whatever happens to the asset. */
+  max-width: min(60vw, 320px);
   object-fit: contain;
   transition: transform 0.25s ease;
 }
@@ -173,97 +267,11 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   white-space: nowrap;
 }
 
-/* SPLC Webby Winner Hero Stage with Cropped Photo Background Slideshow */
-.splc-hero-stage {
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f8fafc;
-  overflow: hidden;
-  padding: 4rem 0 5rem;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.splc-hero-slideshow {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.splc-slide-img {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-size: cover;
-  background-position: center 25%;
-  filter: brightness(0.9) contrast(1.05);
-  opacity: 0;
-  transform: scale(1.02);
-  transition: opacity 2s ease-in-out, transform 8s ease-out;
-}
-
-.splc-slide-img.active {
-  opacity: 0.32;
-  transform: scale(1.08);
-}
-
-.splc-hero-vignette {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.75) 0%, rgba(248, 250, 252, 0.95) 75%, #f8fafc 100%),
-              linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, transparent 40%, #f8fafc 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.splc-hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1.5rem 1.5rem;
-}
-
-/* Master Logo Overlay - A Tiny Bit Smaller (440px max-width) */
-.hero-giant-logo-container {
-  margin-bottom: 1.75rem;
-  display: inline-block;
-  position: relative;
-}
-
-.hero-giant-logo {
-  width: 100%;
-  max-width: 440px;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.12));
-  transition: transform 0.4s ease;
-}
-
-.hero-giant-logo:hover {
-  transform: scale(1.03);
-}
-
-.splc-hero-headline {
-  font-family: var(--font-serif) !important;
-  font-size: clamp(2.4rem, 4.8vw, 4rem);
-  font-weight: 800;
-  line-height: 1.12;
-  margin-bottom: 1.15rem;
-  color: var(--navy-dark);
-}
-
-.splc-hero-subtitle {
-  font-family: var(--font-sans);
-  font-size: clamp(1.15rem, 2vw, 1.4rem);
-  color: var(--text-muted);
-  max-width: 720px;
-  margin: 0 auto 2.25rem;
-  font-weight: 500;
-}
+/* ------------------------------------------------------------------
+   Removed: ~90 lines of dead CSS for the old `.splc-hero-*` stage,
+   `.hero-giant-logo` and `.hero-kicker`. No HTML file referenced
+   any of it — the current hero is `.hero-split` below.
+   ------------------------------------------------------------------ */
 
 /* ============================================
    Split Hero: Slogan Left + Candidate Photo Right
@@ -302,18 +310,10 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   pointer-events: none;
 }
 
-.min-vh-80 {
+/* Renamed from .min-vh-80: the name said 80, the value was 70.
+   Kept at 70vh so the rendered hero height is unchanged. */
+.min-vh-70 {
   min-height: 70vh;
-}
-
-.hero-kicker {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  color: var(--emerald-accent);
-  margin-bottom: 1rem;
 }
 
 .hero-split-headline {
@@ -603,12 +603,12 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
 .countdown-box {
   background: #ffffff;
-  backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 0.75rem 1.25rem;
   text-align: center;
@@ -695,6 +695,7 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(15, 32, 66, 0.45);
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
@@ -736,7 +737,7 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   padding: 3px 10px;
   border-radius: 99px;
   background: rgba(237, 28, 36, 0.1);
-  color: var(--patriot-red);
+  color: var(--patriot-red-text);
   margin-bottom: 0.4rem;
 }
 
@@ -763,8 +764,8 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   position: absolute;
   inset: 0;
   background: rgba(10, 18, 36, 0.94);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 .campaign-lightbox-container {
@@ -806,6 +807,7 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   width: 100%;
   max-width: 850px;
   background: rgba(255, 255, 255, 0.97);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 1.25rem 1.75rem;
@@ -900,24 +902,24 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
 }
 
 .text-substack {
-  color: #ff6719 !important;
+  color: var(--substack-text) !important;
 }
 
 .bg-substack-soft {
-  background-color: rgba(255, 103, 25, 0.1) !important;
+  background-color: rgba(255, 103, 25, 0.12) !important;
 }
 
 .btn-outline-substack {
-  color: #ff6719;
-  border: 1.5px solid #ff6719;
+  color: var(--substack-text);
+  border: 1.5px solid var(--substack-text);
   background-color: transparent;
   font-family: var(--font-sans);
 }
 
 .btn-outline-substack:hover {
-  background-color: #ff6719;
+  background-color: var(--substack-text);
   color: #ffffff !important;
-  border-color: #ff6719;
+  border-color: var(--substack-text);
   box-shadow: 0 4px 15px rgba(255, 103, 25, 0.35);
 }
 
@@ -944,8 +946,8 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: #ff6719; /* Substack Orange */
-  background: rgba(255, 103, 25, 0.1);
+  color: var(--substack-text);
+  background: rgba(255, 103, 25, 0.12);
   padding: 3px 10px;
   border-radius: 99px;
   display: inline-block;
@@ -1049,4 +1051,191 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
   .footer-2-0 .disclaimer-pill {
     margin: 0 auto;
   }
+}
+
+/* ==================================================================
+   Countdown states (shown once the event starts or finishes)
+   ================================================================== */
+.countdown-state {
+  background: #ffffff;
+  color: var(--navy-dark);
+  font-weight: 800;
+  border-radius: 16px;
+  padding: 0.9rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.countdown-live {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--patriot-red);
+  box-shadow: 0 0 0 0 rgba(237, 28, 36, 0.6);
+  animation: livePulse 1.8s infinite;
+}
+
+@keyframes livePulse {
+  70%  { box-shadow: 0 0 0 12px rgba(237, 28, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(237, 28, 36, 0); }
+}
+
+/* ==================================================================
+   Form validation feedback
+   ================================================================== */
+.form-control:user-invalid,
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+  border-color: var(--patriot-red-text);
+}
+
+.field-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* The honeypot must be reachable by bots and invisible to humans,
+   including screen reader users — so it is removed from the a11y
+   tree rather than merely moved off screen. */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ==================================================================
+   Reduced motion (WCAG 2.3.3)
+
+   The site uses entrance animations, hover lifts, a rotating close
+   button and a pulsing dot. All of it is decorative, so all of it is
+   switched off for anyone who has asked their OS for less motion.
+   ================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-split-text,
+  .hero-split-photo-col,
+  .campaign-lightbox-container {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .feature-card-2:hover,
+  .photo-gallery-card:hover,
+  .video-card:hover,
+  .social-feed-card:hover,
+  .substack-article-card:hover,
+  .dashboard-card:hover,
+  .btn-red-patriot:hover,
+  .btn-blue-patriot:hover,
+  .btn-gold-2:hover,
+  .social-card-btn:hover,
+  .nav-login-hyperscript:hover {
+    transform: none !important;
+  }
+
+  .photo-gallery-card:hover img { transform: none !important; }
+  .campaign-lightbox-close:hover { transform: none !important; }
+  .countdown-live { animation: none !important; }
+}
+
+/* ==================================================================
+   Print — supporters do print event details and palm cards
+   ================================================================== */
+@media print {
+  .navbar-campaign,
+  .skip-link,
+  .campaign-lightbox-modal,
+  .footer-2-0 .d-flex,
+  .btn { display: none !important; }
+
+  body { background: #ffffff; color: #000000; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; }
+  .event-banner-card { background: #ffffff !important; color: #000000 !important; border: 2px solid #000000; }
+  .event-banner-card * { color: #000000 !important; }
+}
+
+/* Priority card "read the full plan" links */
+.priority-card-link {
+  color: var(--patriot-red-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.priority-card-link:hover,
+.priority-card-link:focus-visible {
+  color: var(--patriot-red-dark);
+  text-decoration: underline !important;
+}
+
+/* ==================================================================
+   Legal / long-form copy (privacy, accessibility)
+   ================================================================== */
+.legal-copy { max-width: 68ch; }
+
+.legal-copy h2 {
+  font-family: var(--font-serif) !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-copy h2:first-child { margin-top: 0; }
+
+.legal-copy p,
+.legal-copy li { color: var(--text-muted); }
+
+.legal-copy ul { margin-bottom: 1.25rem; }
+.legal-copy li { margin-bottom: 0.4rem; }
+
+.legal-copy a {
+  color: var(--patriot-red-text);
+  text-underline-offset: 3px;
+}
+
+/* ==================================================================
+   Gutter overflow fix
+
+   Bootstrap's `.container` pads 12px a side, but a `.row.g-5` sets
+   `--bs-gutter-x: 3rem`, giving the row -24px side margins. The
+   24px difference pushed every page using `g-5` 12px past the
+   viewport on each side — masked by `overflow-x` on <body>, but
+   still clipping content on small screens.
+
+   Below the `lg` breakpoint the columns stack anyway, so the wide
+   gutter buys nothing. Narrowing it there removes the overflow
+   without changing the desktop layout at all.
+   ================================================================== */
+@media (max-width: 991.98px) {
+  .row.g-5,
+  .row.gx-5 {
+    --bs-gutter-x: 1.5rem;
+  }
+}
+
+/* ==================================================================
+   .text-secondary contrast
+
+   Bootstrap's default (#6c757d) is 4.69:1 on white — a pass — but
+   only 4.48:1 on this site's --bg-off-white panels, which fails AA.
+   The design system already has a muted text token that clears it
+   comfortably on both (7.58:1 and 7.24:1), so use that instead.
+   ================================================================== */
+.text-secondary {
+  color: var(--text-muted) !important;
 }

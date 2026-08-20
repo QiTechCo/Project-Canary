@@ -3,17 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get Involved | Dimple Ajmera for Charlotte City Council At-Large</title>
-  <meta name="description" content="Volunteer for Dimple Ajmera for Charlotte City Council At-Large. Join our grass-roots movement.">
-  
-  <!-- Bootstrap 5 CSS -->
+  <title>Volunteer | Dimple Ajmera for Charlotte City Council At-Large</title>
+  <meta name="description" content="Join Team Dimple. Host a meet and greet, request a yard sign, canvass your neighborhood, or join us on the campaign trail in Charlotte.">
+  <link rel="canonical" href="https://www.dimpleajmera.com/volunteer.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0f2042">
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dimple Ajmera for Charlotte">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Join Team Dimple — Volunteer for Dimple Ajmera">
+  <meta property="og:description" content="Winning campaigns depend on grassroots power. Sign up to volunteer in Charlotte.">
+  <meta property="og:url" content="https://www.dimpleajmera.com/volunteer.html">
+  <meta property="og:image" content="https://www.dimpleajmera.com/assets/images/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dimple Ajmera for Charlotte City Council At-Large">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@dimpleajmera">
+  <meta name="twitter:title" content="Join Team Dimple — Volunteer for Dimple Ajmera">
+  <meta name="twitter:description" content="Winning campaigns depend on grassroots power. Sign up to volunteer in Charlotte.">
+  <meta name="twitter:image" content="https://www.dimpleajmera.com/assets/images/og-card.jpg">
+
+  <!-- Fonts: preconnect + link, so the browser can start fetching
+       immediately instead of waiting for site.css to parse an @import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+
+  <!-- Bootstrap 5 (pinned + Subresource Integrity) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- Theme Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+
+  <!-- Theme -->
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body id="top">
+
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <!-- Restored Top Navigation Header with Master Campaign Logo (Single-Line Fit) -->
 <nav class="navbar navbar-expand-lg navbar-campaign sticky-top">
@@ -51,17 +85,19 @@
         </li>
         <li class="nav-item d-flex align-items-center">
           <a class="nav-link active pe-1" href="volunteer.html">Volunteer</a>
-          <a href="portal.html" class="nav-login-hyperscript" title="Volunteer Portal Login"><i class="bi bi-lock-fill"></i> Login</a>
+          <a href="portal.html" class="nav-login-hyperscript" title="Volunteer Portal Login"><i class="bi bi-lock-fill" aria-hidden="true"></i> Login</a>
         </li>
       </ul>
       <div class="d-flex align-items-center">
         <a href="https://secure.actblue.com/donate/dimple-ajmera-for-city-council-1" target="_blank" rel="noopener" class="btn btn-red-patriot">
-          <i class="bi bi-heart-fill me-1"></i> Donate
+          <i class="bi bi-heart-fill me-1" aria-hidden="true"></i> Donate
         </a>
       </div>
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- Page Header Banner -->
 <section class="py-5 bg-off-white">
@@ -83,59 +119,109 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <div id="volunteerSuccessAlert" class="alert alert-success d-none p-4 rounded-4" role="alert">
-          <h4 class="alert-heading serif-font fw-bold"><i class="bi bi-check-circle-fill me-2"></i> Thank You for Joining Team Dimple!</h4>
-          <p class="mb-0">Your volunteer registration has been received. A campaign organizer will reach out to you shortly with upcoming events.</p>
+        <div id="volunteerSuccessAlert" class="alert alert-success d-none p-4 rounded-4" role="status">
+          <h2 class="h4 alert-heading serif-font fw-bold"><i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i> Thank you for joining Team Dimple!</h2>
+          <p class="mb-0">Your volunteer registration has been received. A campaign organizer will be in touch with upcoming events. Watch your inbox &mdash; that is also the address you will use to sign in to the <a href="portal.html" class="alert-link">volunteer portal</a>.</p>
         </div>
 
         <div id="volunteerFormCard" class="feature-card-2 p-4 p-md-5">
           <div class="text-center mb-4">
             <span class="gallery-event-tag">Grassroots Mobilization</span>
             <h2 class="serif-font fw-bold text-dark mb-2">Volunteer Registration</h2>
-            <p class="text-secondary small mb-0">Fill out your contact info and select how you'd like to get involved.</p>
+            <p class="text-secondary small mb-0">Fill out your contact details and tell us how you would like to get involved.</p>
           </div>
 
+          <div id="volunteerAlertContainer" aria-live="polite"></div>
+
           <form id="volunteerForm" class="needs-validation" novalidate>
+            <p class="field-hint mb-3"><span aria-hidden="true">*</span> indicates a required field.</p>
+
             <div class="row g-3">
               <div class="col-md-6">
-                <label class="form-label text-secondary small fw-bold">First Name *</label>
-                <input type="text" class="form-control bg-light text-dark border-secondary" required>
+                <label for="volFirstName" class="form-label text-secondary small fw-bold">
+                  First name <span class="text-patriot-red" aria-hidden="true">*</span>
+                </label>
+                <input type="text" class="form-control bg-light text-dark border-secondary"
+                       id="volFirstName" name="first_name" autocomplete="given-name"
+                       maxlength="60" required>
+                <div class="invalid-feedback">Please enter your first name.</div>
               </div>
+
               <div class="col-md-6">
-                <label class="form-label text-secondary small fw-bold">Last Name *</label>
-                <input type="text" class="form-control bg-light text-dark border-secondary" required>
+                <label for="volLastName" class="form-label text-secondary small fw-bold">
+                  Last name <span class="text-patriot-red" aria-hidden="true">*</span>
+                </label>
+                <input type="text" class="form-control bg-light text-dark border-secondary"
+                       id="volLastName" name="last_name" autocomplete="family-name"
+                       maxlength="60" required>
+                <div class="invalid-feedback">Please enter your last name.</div>
               </div>
+
               <div class="col-md-6">
-                <label class="form-label text-secondary small fw-bold">Email Address *</label>
-                <input type="email" class="form-control bg-light text-dark border-secondary" required>
+                <label for="volEmail" class="form-label text-secondary small fw-bold">
+                  Email address <span class="text-patriot-red" aria-hidden="true">*</span>
+                </label>
+                <input type="email" class="form-control bg-light text-dark border-secondary"
+                       id="volEmail" name="email" autocomplete="email"
+                       maxlength="320" required aria-describedby="volEmailHelp">
+                <div id="volEmailHelp" class="field-hint mt-1">This is also how you will sign in to the volunteer portal.</div>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
               </div>
+
               <div class="col-md-6">
-                <label class="form-label text-secondary small fw-bold">Phone Number</label>
-                <input type="tel" class="form-control bg-light text-dark border-secondary" placeholder="980-579-2721">
+                <label for="volPhone" class="form-label text-secondary small fw-bold">Phone number</label>
+                <input type="tel" class="form-control bg-light text-dark border-secondary"
+                       id="volPhone" name="phone" autocomplete="tel"
+                       placeholder="(704) 555-0142" maxlength="40">
+                <div class="field-hint mt-1">Optional. Organizers use this for day-of shift updates.</div>
               </div>
+
               <div class="col-12 mt-4">
-                <label class="form-label text-secondary small fw-bold mb-2">How Would You Like to Support? (Select all that apply)</label>
-                <div class="form-check mb-2">
-                  <input class="form-check-input" type="checkbox" id="volHost">
-                  <label class="form-check-label text-dark" for="volHost">Host a Meet & Greet in My Neighborhood</label>
-                </div>
-                <div class="form-check mb-2">
-                  <input class="form-check-input" type="checkbox" id="volDoors">
-                  <label class="form-check-label text-dark" for="volDoors">Door-to-Door Canvassing</label>
-                </div>
-                <div class="form-check mb-2">
-                  <input class="form-check-input" type="checkbox" id="volPhone">
-                  <label class="form-check-label text-dark" for="volPhone">Phone Banking & Text Outreaches</label>
-                </div>
-                <div class="form-check mb-2">
-                  <input class="form-check-input" type="checkbox" id="volSign">
-                  <label class="form-check-label text-dark" for="volSign">Request a Campaign Yard Sign</label>
-                </div>
+                <fieldset>
+                  <legend class="form-label text-secondary small fw-bold mb-2">
+                    How would you like to support? Select all that apply.
+                  </legend>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" name="skills" value="event_host" id="volHost">
+                    <label class="form-check-label text-dark" for="volHost">Host a meet &amp; greet in my neighborhood</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" name="skills" value="canvassing" id="volDoors">
+                    <label class="form-check-label text-dark" for="volDoors">Door-to-door canvassing</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" name="skills" value="phonebank" id="volPhoneBank">
+                    <label class="form-check-label text-dark" for="volPhoneBank">Phone banking &amp; text outreach</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" name="skills" value="yard_sign" id="volSign">
+                    <label class="form-check-label text-dark" for="volSign">Request a campaign yard sign</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" name="skills" value="spanish" id="volSpanish">
+                    <label class="form-check-label text-dark" for="volSpanish">Bilingual / Spanish translation</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" name="skills" value="driver" id="volDriver">
+                    <label class="form-check-label text-dark" for="volDriver">Driver / voter transportation to the polls</label>
+                  </div>
+                </fieldset>
               </div>
+
+              <!-- Honeypot: hidden from people, irresistible to bots. -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="volWebsite">Website</label>
+                <input type="text" id="volWebsite" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
               <div class="col-12 mt-4">
                 <button type="submit" class="btn btn-red-patriot btn-lg w-100">
-                  <i class="bi bi-send-fill me-2"></i> Submit Volunteer Application
+                  <i class="bi bi-send-fill me-2" aria-hidden="true"></i> Submit volunteer application
                 </button>
+                <p class="field-hint text-center mt-3 mb-0">
+                  We use your details only to coordinate campaign volunteering.
+                  See our <a href="privacy.html">privacy policy</a>.
+                </p>
               </div>
             </div>
           </form>
@@ -145,26 +231,28 @@
   </div>
 </section>
 
+</main>
+
 <!-- Campaign Footer -->
 <footer class="footer-2-0">
   <div class="container">
     <div class="row g-4 mb-5">
       <div class="col-lg-4 col-md-6">
-        <h3 class="serif-font text-white fw-bold mb-3">Dimple Ajmera</h3>
+        <h2 class="h3 serif-font text-white fw-bold mb-3">Dimple Ajmera</h2>
         <p class="text-white-50">
           Serving Charlotte as City Council Member (At-Large). Working Mother, Certified Public Accountant, and Fighter for all Charlotte families.
         </p>
         <div class="d-flex gap-3 fs-5 mt-3">
-          <a href="https://www.facebook.com/DimpleAjmeraNC/" target="_blank" rel="noopener" class="text-white-50" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/dimpleajmeraclt/" target="_blank" rel="noopener" class="text-white-50" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://twitter.com/dimpleajmera" target="_blank" rel="noopener" class="text-white-50" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://www.linkedin.com/in/dimple-ajmera/" target="_blank" rel="noopener" class="text-white-50" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="text-white-50" aria-label="Substack"><i class="bi bi-newspaper"></i></a>
+          <a href="https://www.facebook.com/DimpleAjmeraNC/" target="_blank" rel="noopener" class="text-white-50" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/dimpleajmeraclt/" target="_blank" rel="noopener" class="text-white-50" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/dimpleajmera" target="_blank" rel="noopener" class="text-white-50" aria-label="X (formerly Twitter)"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/dimple-ajmera/" target="_blank" rel="noopener" class="text-white-50" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="text-white-50" aria-label="Substack"><i class="bi bi-newspaper" aria-hidden="true"></i></a>
         </div>
       </div>
 
       <div class="col-lg-3 col-md-6">
-        <h5 class="text-white fw-bold mb-3">Navigation</h5>
+        <h2 class="h5 text-white fw-bold mb-3">Navigation</h2>
         <ul class="list-unstyled mb-0">
           <li class="mb-2"><a href="index.html#top" class="text-white-50">Home</a></li>
           <li class="mb-2"><a href="index.html#event-townhall" class="text-white-50">Environment Town Hall</a></li>
@@ -178,13 +266,13 @@
       </div>
 
       <div class="col-lg-5 col-md-12">
-        <h5 class="text-white fw-bold mb-3">Stay Connected</h5>
+        <h2 class="h5 text-white fw-bold mb-3">Stay Connected</h2>
         <p class="text-white-50 small mb-3">
           Subscribe to Dimple's newsletter on Substack for official city updates, town hall announcements, and community reports.
         </p>
         <div class="d-flex gap-2">
           <a href="https://substack.com/@dimpleajmera" target="_blank" rel="noopener" class="btn btn-red-patriot w-100">
-            <i class="bi bi-newspaper me-2"></i> Follow @dimpleajmera on Substack
+            <i class="bi bi-newspaper me-2" aria-hidden="true"></i> Follow @dimpleajmera on Substack
           </a>
         </div>
       </div>
@@ -203,13 +291,16 @@
         &copy; 2026 Committee to Elect Dimple Ajmera. All rights reserved.
       </div>
       <div class="col-md-6 text-center text-md-end">
-        DimpleAjmera.com 3.7 Single-Line Navigation
+        Paid for by the Committee to Elect Dimple Ajmera
       </div>
     </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.112.3/dist/umd/supabase.js" integrity="sha384-qafw21c/iciq0VXsi9FzkfoQv5I/V0iqE4lSNcKXPnW9/UTJLnv5CcN4FHxVLnKg" crossorigin="anonymous"></script>
+<script src="assets/js/supabase-client.js"></script>
 <script src="assets/js/site.js"></script>
+<script src="assets/js/volunteer.js"></script>
 </body>
 </html>

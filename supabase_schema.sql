@@ -2,6 +2,10 @@
 -- Project Canary: Campaign Volunteer Portal Schema
 -- Candidate: Dimple Ajmera for Charlotte City Council At-Large
 -- Database: Supabase PostgreSQL (cddsrrwlncudouwcmbex)
+--
+-- Staff-wide roster access (exports, bulk email, admin tooling)
+-- must use a service_role key from a server. Never put one in
+-- any file that is served to a browser.
 -- ========================================================
 
 -- Enable UUID extension
@@ -76,24 +80,159 @@ create table if not exists public.campaign_assets (
 
 -- ========================================================
 -- ROW LEVEL SECURITY (RLS) POLICIES
+--
+-- The previous version of this file granted
+--     for all using (true) with check (true)
+-- on `volunteers` and `shift_signups`, to the `public` role.
+-- Because the publishable API key ships in client-side JS, that
+-- let any anonymous visitor SELECT, UPDATE and DELETE every
+-- volunteer record — names, emails, phone numbers, districts.
+--
+-- The policies below are least-privilege. The publishable key is
+-- only ever as safe as these policies, so read them carefully
+-- before changing anything.
 -- ========================================================
-alter table public.volunteers enable row level security;
-alter table public.shifts enable row level security;
-alter table public.shift_signups enable row level security;
-alter table public.wiki_articles enable row level security;
+alter table public.volunteers      enable row level security;
+alter table public.shifts          enable row level security;
+alter table public.shift_signups   enable row level security;
+alter table public.wiki_articles   enable row level security;
 alter table public.campaign_assets enable row level security;
 
--- Public/Anon Read Permissions for Volunteer App
-create policy "Allow anon read of shifts" on public.shifts for select using (is_active = true);
-create policy "Allow anon read of wiki" on public.wiki_articles for select using (is_published = true);
-create policy "Allow anon read of assets" on public.campaign_assets for select using (true);
+-- Data hygiene ------------------------------------------------
+alter table public.volunteers
+  add constraint volunteers_status_check
+  check (status in ('pending','active','lead','inactive'));
 
--- Volunteer Self-Access & Signups
-create policy "Allow volunteer insert/update on signups" on public.shift_signups 
-    for all using (true) with check (true);
+create unique index if not exists volunteers_auth_id_key
+  on public.volunteers(auth_id) where auth_id is not null;
 
-create policy "Allow volunteer profile creation/view" on public.volunteers 
-    for all using (true) with check (true);
+-- VOLUNTEERS --------------------------------------------------
+-- Public signup is INSERT-only. There is deliberately no SELECT
+-- policy for `anon`, so a submitted row can never be read back
+-- from the browser. The `with check` clause also stops a caller
+-- from awarding themselves 'lead' status or pre-logged hours.
+create policy "public may submit a signup" on public.volunteers
+  for insert to anon
+  with check (
+    auth_id is null
+    and status = 'pending'
+    and coalesce(hours_logged, 0) = 0
+    and char_length(email) between 3 and 320
+    and (full_name is null or char_length(full_name) <= 120)
+    and (phone     is null or char_length(phone)     <= 40)
+  );
+
+create policy "volunteer reads own profile" on public.volunteers
+  for select to authenticated using (auth_id = auth.uid());
+
+create policy "volunteer updates own profile" on public.volunteers
+  for update to authenticated
+  using (auth_id = auth.uid())
+  with check (auth_id = auth.uid() and status <> 'lead');
+
+-- SHIFTS / WIKI / ASSETS: signed-in volunteers only -----------
+create policy "volunteers read active shifts" on public.shifts
+  for select to authenticated using (is_active = true);
+
+create policy "volunteers read published wiki" on public.wiki_articles
+  for select to authenticated using (is_published = true);
+
+create policy "volunteers read assets" on public.campaign_assets
+  for select to authenticated using (true);
+
+-- SHIFT SIGNUPS: own rows only, and no client-side DELETE -----
+create policy "volunteer reads own signups" on public.shift_signups
+  for select to authenticated using (
+    volunteer_id in (select id from public.volunteers where auth_id = auth.uid())
+  );
+
+create policy "volunteer creates own signups" on public.shift_signups
+  for insert to authenticated with check (
+    volunteer_id in (select id from public.volunteers where auth_id = auth.uid())
+    and signup_status = 'confirmed'
+    and exists (select 1 from public.shifts s
+                 where s.id = shift_id and s.is_active
+                   and s.filled_spots < s.capacity)
+  );
+
+-- Cancelling is a status change, never a delete: the audit trail stays.
+create policy "volunteer cancels own signup" on public.shift_signups
+  for update to authenticated
+  using (volunteer_id in (select id from public.volunteers where auth_id = auth.uid()))
+  with check (
+    volunteer_id in (select id from public.volunteers where auth_id = auth.uid())
+    and signup_status in ('confirmed','cancelled')
+  );
+
+-- ========================================================
+-- LINK AN AUTH USER TO THEIR VOLUNTEER RECORD
+-- Called once on dashboard load. Runs as definer so it can find
+-- the unclaimed row that RLS would otherwise hide from the user.
+-- ========================================================
+create or replace function public.claim_volunteer_profile()
+returns public.volunteers
+language plpgsql
+security definer
+set search_path = public, pg_temp
+as $$
+declare
+  v   public.volunteers;
+  uid uuid := auth.uid();
+  em  text := lower(nullif(auth.jwt() ->> 'email', ''));
+begin
+  if uid is null or em is null then
+    raise exception 'not authenticated' using errcode = '42501';
+  end if;
+
+  select * into v from public.volunteers where auth_id = uid limit 1;
+  if found then return v; end if;
+
+  update public.volunteers
+     set auth_id = uid, status = 'active', updated_at = now()
+   where lower(email) = em and auth_id is null
+   returning * into v;
+  if found then return v; end if;
+
+  insert into public.volunteers (auth_id, email, status)
+  values (uid, em, 'active')
+  returning * into v;
+  return v;
+end;
+$$;
+
+revoke all on function public.claim_volunteer_profile() from public, anon;
+grant execute on function public.claim_volunteer_profile() to authenticated;
+
+-- ========================================================
+-- filled_spots is server-maintained. Clients cannot write to
+-- public.shifts at all, so the count cannot be forged.
+-- ========================================================
+create or replace function public.sync_filled_spots()
+returns trigger
+language plpgsql
+security definer
+set search_path = public, pg_temp
+as $$
+begin
+  update public.shifts s
+     set filled_spots = (
+       select count(*) from public.shift_signups g
+        where g.shift_id = s.id and g.signup_status in ('confirmed','attended')
+     )
+   where s.id = coalesce(new.shift_id, old.shift_id);
+  return null;
+end;
+$$;
+
+drop trigger if exists trg_sync_filled_spots on public.shift_signups;
+create trigger trg_sync_filled_spots
+  after insert or update or delete on public.shift_signups
+  for each row execute function public.sync_filled_spots();
+
+-- The Supabase linter flags this platform helper as anon-callable.
+-- It is an event-trigger function and cannot usefully be invoked
+-- over RPC, but there is no reason to leave EXECUTE granted.
+revoke all on function public.rls_auto_enable() from public, anon, authenticated;
 
 -- ========================================================
 -- SEED DATA: UPCOMING CAMPAIGN SHIFTS

@@ -1,0 +1,9 @@
+# Dimple Ajmera for Charlotte City Council At-Large
+User-agent: *
+Allow: /
+
+# Volunteer portal and dashboard are private to signed-in volunteers.
+Disallow: /portal.html
+Disallow: /dashboard.html
+
+Sitemap: https://www.dimpleajmera.com/sitemap.xml
