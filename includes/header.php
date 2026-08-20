@@ -6,12 +6,12 @@ require_once __DIR__ . '/config.php';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo isset($pageTitle) ? htmlspecialchars($pageTitle) . ' | ' . CANDIDATE_NAME : CANDIDATE_NAME . ' | Charlotte City Council At-Large'; ?></title>
-  <meta name="description" content="Official campaign website for Dimple Ajmera for Charlotte City Council At-Large. Working Mother, Accountant, and Fighter for all Charlotte families.">
+  <title><?php echo isset($pageTitle) ? htmlspecialchars($pageTitle) . ' | Dimple Ajmera for Charlotte' : 'Dimple Ajmera for Charlotte'; ?></title>
+  <meta name="description" content="Official campaign website for Dimple Ajmera for Charlotte. Working Mother, Accountant, and Fighter for all Charlotte families.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Dimple Ajmera for Charlotte City Council At-Large">
+  <meta property="og:title" content="Dimple Ajmera for Charlotte">
   <meta property="og:description" content="Working Mother • Accountant • Fighter. Delivering Results for All of Charlotte.">
   <meta property="og:url" content="https://www.dimpleajmera.com">
   <meta property="og:image" content="assets/images/DimpleMainLogo.png">
@@ -32,8 +32,8 @@ require_once __DIR__ . '/config.php';
 <!-- Restored Top Navigation Header with Master Campaign Logo & Active Markers -->
 <nav class="navbar navbar-expand-lg navbar-campaign sticky-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.php">
-      <img src="assets/images/whiteboard_9_navlogo.png" alt="<?php echo CANDIDATE_NAME; ?>" style="height: 60px; width: auto;" class="me-2">
+    <a class="navbar-brand d-flex align-items-center" href="index.php" title="Dimple Ajmera for Charlotte" aria-label="Dimple Ajmera for Charlotte">
+      <img src="assets/images/whiteboard_9_navlogo.png" alt="Dimple Ajmera for Charlotte" title="Dimple Ajmera for Charlotte" style="height: 56px; width: auto;" class="me-2">
     </a>
 
     <button class="navbar-toggler border-0 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCampaignNav" aria-controls="navbarCampaignNav" aria-expanded="false" aria-label="Toggle navigation">

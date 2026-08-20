@@ -6,7 +6,7 @@
  * social media profiles, priorities, press updates, and full scraped endorsement rosters.
  */
 
-define('SITE_NAME', 'Dimple Ajmera for Charlotte City Council At-Large');
+define('SITE_NAME', 'Dimple Ajmera for Charlotte');
 define('CANDIDATE_NAME', 'Dimple Ajmera');
 define('CANDIDATE_TITLE', 'Charlotte City Council Member (At-Large)');
 define('CAMPAIGN_SLOGAN', 'Working Mother • Accountant • Fighter');
