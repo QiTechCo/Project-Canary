@@ -1239,3 +1239,44 @@ p, span, a, button, input, textarea, select, label, div, .nav-link, .btn, .badge
 .text-secondary {
   color: var(--text-muted) !important;
 }
+
+/* Endorsement Organization Logo Gallery Grid */
+.endorsement-gallery-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.endorsement-gallery-card:hover,
+.endorsement-gallery-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  border-color: var(--emerald-accent, #007850);
+}
+
+.endorsement-gallery-card img {
+  max-height: 80px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.04));
+  transition: transform 0.25s ease;
+  display: block;
+}
+
+.endorsement-gallery-card:hover img {
+  transform: scale(1.06);
+}
