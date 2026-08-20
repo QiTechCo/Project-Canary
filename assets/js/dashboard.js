@@ -205,6 +205,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
       localStorage.removeItem("canary_volunteer_email");
       localStorage.removeItem("canary_volunteer_session");
+      localStorage.removeItem("canary_volunteer_profile");
       window.location.href = "portal.html";
     });
   }
@@ -232,6 +233,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const shiftSignupBtns = document.querySelectorAll(".shift-signup-btn");
 
   function updateShiftButtonUI(btn, shiftId) {
+    if (!btn) return;
     if (registeredShifts.includes(shiftId)) {
       btn.classList.remove("btn-red-patriot");
       btn.classList.add("btn-success");
@@ -240,6 +242,61 @@ document.addEventListener("DOMContentLoaded", async function () {
       btn.classList.remove("btn-success");
       btn.classList.add("btn-red-patriot");
       btn.innerHTML = '<i class="bi bi-check-circle me-1"></i> Register for Shift';
+    }
+  }
+
+  // Sync Live Profile & Shifts with Supabase
+  if (supabase && storedEmail) {
+    try {
+      const { data: volData } = await supabase
+        .from("volunteers")
+        .select("*")
+        .eq("email", storedEmail)
+        .maybeSingle();
+
+      if (volData) {
+        if (volData.full_name && welcomeGreeting) {
+          welcomeGreeting.innerText = "Welcome back, " + volData.full_name + "!";
+        }
+        const profNameEl = document.getElementById("profName");
+        if (profNameEl && volData.full_name) profNameEl.value = volData.full_name;
+
+        const profPhoneEl = document.getElementById("profPhone");
+        if (profPhoneEl && volData.phone) profPhoneEl.value = volData.phone;
+
+        const profDistEl = document.getElementById("profDistrict");
+        if (profDistEl && volData.precinct_district) profDistEl.value = volData.precinct_district;
+
+        const profAvailEl = document.getElementById("profAvailability");
+        if (profAvailEl && volData.availability) profAvailEl.value = volData.availability;
+
+        if (volData.skills && Array.isArray(volData.skills)) {
+          volData.skills.forEach(skill => {
+            const cb = document.querySelector(`#profileForm input[value="${skill}"]`);
+            if (cb) cb.checked = true;
+          });
+        }
+      }
+
+      // Fetch live registered shifts from Supabase
+      const { data: signupData } = await supabase
+        .from("shift_signups")
+        .select("shift_id")
+        .eq("volunteer_email", storedEmail);
+
+      if (signupData && signupData.length > 0) {
+        signupData.forEach(s => {
+          if (!registeredShifts.includes(s.shift_id)) {
+            registeredShifts.push(s.shift_id);
+          }
+        });
+        localStorage.setItem("canary_registered_shifts", JSON.stringify(registeredShifts));
+        shiftSignupBtns.forEach(btn => {
+          updateShiftButtonUI(btn, btn.getAttribute("data-shift-id"));
+        });
+      }
+    } catch (e) {
+      console.warn("Supabase fetch notice:", e);
     }
   }
 
