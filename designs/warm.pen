@@ -1,0 +1,2520 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "h93G0s",
+      "x": 0,
+      "y": 0,
+      "name": "Homepage",
+      "clip": true,
+      "width": 1440,
+      "fill": "$cream",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Snuqv",
+          "name": "Nav",
+          "width": "fill_container",
+          "fill": "$cream",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "padding": [
+            20,
+            56
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "A49AG",
+              "name": "Wordmark",
+              "layout": "vertical",
+              "gap": 1,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "x0I36r",
+                  "name": "Name",
+                  "fill": "$ink",
+                  "content": "DIMPLE AJMERA",
+                  "fontFamily": "$font-body",
+                  "fontSize": 19,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.6
+                },
+                {
+                  "type": "text",
+                  "id": "N1ttYv",
+                  "name": "Office",
+                  "fill": "$accent",
+                  "content": "CHARLOTTE CITY COUNCIL · AT-LARGE",
+                  "fontFamily": "$font-body",
+                  "fontSize": 9.5,
+                  "fontWeight": "600",
+                  "letterSpacing": 1.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AmWQq",
+              "name": "Links",
+              "gap": 30,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MAXEP",
+                  "name": "About",
+                  "fill": "$ink",
+                  "content": "About",
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "y6I4o",
+                  "name": "Our Record",
+                  "fill": "$ink",
+                  "content": "Our Record",
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "kikYb",
+                  "name": "Priorities",
+                  "fill": "$ink",
+                  "content": "Priorities",
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "W32mLS",
+                  "name": "Endorsements",
+                  "fill": "$ink",
+                  "content": "Endorsements",
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "joNi4",
+                  "name": "News",
+                  "fill": "$ink",
+                  "content": "News",
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "I7f48",
+              "name": "Nav Actions",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wqbHW",
+                  "name": "Volunteer Button",
+                  "cornerRadius": 6,
+                  "stroke": "$ink",
+                  "strokeWidth": 1.25,
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MP3QL",
+                      "name": "Label",
+                      "fill": "$ink",
+                      "content": "Volunteer",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "t9uFsN",
+                  "name": "Donate Button",
+                  "fill": "$accent",
+                  "cornerRadius": 6,
+                  "padding": [
+                    10,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UCgwA",
+                      "name": "Label",
+                      "fill": "#FFFFFF",
+                      "content": "Donate",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZmkVK",
+          "name": "Hero",
+          "width": "fill_container",
+          "fill": "$cream",
+          "gap": 56,
+          "padding": [
+            76,
+            56,
+            84,
+            56
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "AuOCL",
+              "name": "Hero Copy",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 26,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "a48kIi",
+                  "name": "Eyebrow",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "C2zYcP",
+                      "name": "Rule",
+                      "fill": "$accent",
+                      "width": 34,
+                      "height": 2
+                    },
+                    {
+                      "type": "text",
+                      "id": "X8gMH",
+                      "name": "Label",
+                      "fill": "$accent",
+                      "content": "RE-ELECT · CHARLOTTE CITY COUNCIL AT-LARGE",
+                      "fontFamily": "$font-body",
+                      "fontSize": 11.5,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.5
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "ryBnS",
+                  "name": "Headline",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Experience that\nadds up.",
+                  "lineHeight": 1.02,
+                  "fontFamily": "$font-display",
+                  "fontSize": 74,
+                  "fontWeight": "600",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "Naiyy",
+                  "name": "Subhead",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Dimple Ajmera is a working mother, a Certified Public Accountant, and a four-term member of the Charlotte City Council — bringing the same discipline to the city budget that she brings to her own kitchen table.",
+                  "lineHeight": 1.62,
+                  "fontFamily": "$font-body",
+                  "fontSize": 18.5,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "pPuA0",
+                  "name": "Hero CTAs",
+                  "gap": 14,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kUBXk",
+                      "name": "Donate CTA",
+                      "fill": "$accent",
+                      "cornerRadius": 7,
+                      "padding": [
+                        16,
+                        34
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vkfKv",
+                          "name": "Label",
+                          "fill": "#FFFFFF",
+                          "content": "Chip in today",
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "z6LcE",
+                      "name": "Join CTA",
+                      "cornerRadius": 7,
+                      "stroke": "$ink",
+                      "strokeWidth": 1.4,
+                      "gap": 9,
+                      "padding": [
+                        16,
+                        30
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "I6d4eM",
+                          "name": "Label",
+                          "fill": "$ink",
+                          "content": "Join the campaign",
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "JGLNQ",
+                          "name": "Arrow",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "arrow-right",
+                          "library": "lucide",
+                          "fill": "$ink"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XbijM",
+                  "name": "Credential Chips",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KPuOR",
+                      "name": "Certified Public Accountant",
+                      "fill": "$cream-deep",
+                      "cornerRadius": 100,
+                      "stroke": "$line",
+                      "strokeWidth": 1,
+                      "gap": 7,
+                      "padding": [
+                        8,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "m67it",
+                          "name": "Icon",
+                          "width": 15,
+                          "height": 15,
+                          "icon": "calculator",
+                          "library": "lucide",
+                          "fill": "$accent"
+                        },
+                        {
+                          "type": "text",
+                          "id": "G60PDA",
+                          "name": "Label",
+                          "fill": "$ink",
+                          "content": "Certified Public Accountant",
+                          "fontFamily": "$font-body",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fcH85",
+                      "name": "Working Mother",
+                      "fill": "$cream-deep",
+                      "cornerRadius": 100,
+                      "stroke": "$line",
+                      "strokeWidth": 1,
+                      "gap": 7,
+                      "padding": [
+                        8,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "uHnPi",
+                          "name": "Icon",
+                          "width": 15,
+                          "height": 15,
+                          "icon": "heart-handshake",
+                          "library": "lucide",
+                          "fill": "$accent"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cEpta",
+                          "name": "Label",
+                          "fill": "$ink",
+                          "content": "Working Mother",
+                          "fontFamily": "$font-body",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KX7pX",
+                      "name": "Four-Term Council Member",
+                      "fill": "$cream-deep",
+                      "cornerRadius": 100,
+                      "stroke": "$line",
+                      "strokeWidth": 1,
+                      "gap": 7,
+                      "padding": [
+                        8,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "uUyeH",
+                          "name": "Icon",
+                          "width": 15,
+                          "height": 15,
+                          "icon": "landmark",
+                          "library": "lucide",
+                          "fill": "$accent"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kcKgu",
+                          "name": "Label",
+                          "fill": "$ink",
+                          "content": "Four-Term Council Member",
+                          "fontFamily": "$font-body",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "a78QiH",
+              "name": "Portrait Block",
+              "width": 512,
+              "height": 596,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": [
+                    220,
+                    220,
+                    10,
+                    10
+                  ],
+                  "id": "VrRt1",
+                  "x": 36,
+                  "y": 36,
+                  "name": "Backdrop",
+                  "fill": "$cream-deep",
+                  "width": 476,
+                  "height": 560
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": [
+                    220,
+                    220,
+                    10,
+                    10
+                  ],
+                  "id": "s8IMGQ",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Portrait",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1787256478301.png",
+                    "mode": "fill"
+                  },
+                  "width": 476,
+                  "height": 560
+                },
+                {
+                  "type": "frame",
+                  "id": "BEhwQ",
+                  "x": 0,
+                  "y": 498,
+                  "name": "Term Badge",
+                  "fill": "$navy",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 1,
+                  "padding": [
+                    16,
+                    22
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "r2ugOV",
+                      "name": "Value",
+                      "fill": "$gold",
+                      "content": "8 years",
+                      "fontFamily": "$font-display",
+                      "fontSize": 26,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "znQ6j",
+                      "name": "Label",
+                      "fill": "$on-navy-muted",
+                      "content": "serving Charlotte",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "letterSpacing": 0.4
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yfLPs",
+          "name": "Record Band",
+          "width": "fill_container",
+          "fill": "$navy",
+          "layout": "vertical",
+          "gap": 38,
+          "padding": [
+            64,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "xLSIx",
+              "name": "Record Head",
+              "width": "fill_container",
+              "gap": 56,
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "aoY8R",
+                  "name": "Head Copy",
+                  "width": 620,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xtljZ",
+                      "name": "Eyebrow",
+                      "fill": "$gold",
+                      "content": "THE RECORD",
+                      "fontFamily": "$font-body",
+                      "fontSize": 11.5,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.6
+                    },
+                    {
+                      "type": "text",
+                      "id": "cus4t",
+                      "name": "Title",
+                      "fill": "$on-navy",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Four terms of showing the math.",
+                      "lineHeight": 1.12,
+                      "fontFamily": "$font-display",
+                      "fontSize": 40,
+                      "fontWeight": "600",
+                      "letterSpacing": -0.8
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "JqkBJ",
+                  "name": "Note",
+                  "fill": "$on-navy-muted",
+                  "textGrowth": "fixed-width",
+                  "width": 420,
+                  "content": "An accountant's approach to a $3.5 billion city budget: read every line, ask what it buys, and report back to the people paying for it.",
+                  "lineHeight": 1.65,
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bal4Q",
+              "name": "Stats",
+              "width": "fill_container",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Zg7vR",
+                  "name": "Stat 1",
+                  "width": "fill_container",
+                  "stroke": "#2C3D57",
+                  "layout": "vertical",
+                  "gap": 9,
+                  "padding": [
+                    4,
+                    30,
+                    4,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iDe81",
+                      "name": "Value",
+                      "fill": "$gold",
+                      "content": "$3.5B",
+                      "fontFamily": "$font-display",
+                      "fontSize": 46,
+                      "fontWeight": "600",
+                      "letterSpacing": -1.4
+                    },
+                    {
+                      "type": "text",
+                      "id": "lbdlS",
+                      "name": "Label",
+                      "fill": "$on-navy-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "city budget stewarded with a balanced-books standard",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "N7KXi",
+                  "name": "Stat 2",
+                  "width": "fill_container",
+                  "stroke": "#2C3D57",
+                  "strokeWidth": {
+                    "left": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 9,
+                  "padding": [
+                    4,
+                    30
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Genm3",
+                      "name": "Value",
+                      "fill": "$gold",
+                      "content": "12,000+",
+                      "fontFamily": "$font-display",
+                      "fontSize": 46,
+                      "fontWeight": "600",
+                      "letterSpacing": -1.4
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZutFu",
+                      "name": "Label",
+                      "fill": "$on-navy-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "affordable housing units funded since 2017",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "an4o6",
+                  "name": "Stat 3",
+                  "width": "fill_container",
+                  "stroke": "#2C3D57",
+                  "strokeWidth": {
+                    "left": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 9,
+                  "padding": [
+                    4,
+                    30
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UE1PX",
+                      "name": "Value",
+                      "fill": "$gold",
+                      "content": "4",
+                      "fontFamily": "$font-display",
+                      "fontSize": 46,
+                      "fontWeight": "600",
+                      "letterSpacing": -1.4
+                    },
+                    {
+                      "type": "text",
+                      "id": "L98G5e",
+                      "name": "Label",
+                      "fill": "$on-navy-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "terms elected by Charlotte voters",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Gt6no",
+                  "name": "Stat 4",
+                  "width": "fill_container",
+                  "stroke": "#2C3D57",
+                  "strokeWidth": {
+                    "left": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 9,
+                  "padding": [
+                    4,
+                    30
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hhg8G",
+                      "name": "Value",
+                      "fill": "$gold",
+                      "content": "1st",
+                      "fontFamily": "$font-display",
+                      "fontSize": 46,
+                      "fontWeight": "600",
+                      "letterSpacing": -1.4
+                    },
+                    {
+                      "type": "text",
+                      "id": "yIDTQ",
+                      "name": "Label",
+                      "fill": "$on-navy-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "CPA to serve on the Charlotte City Council",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hhNOE",
+          "name": "Priorities",
+          "width": "fill_container",
+          "fill": "$cream",
+          "gap": 72,
+          "padding": [
+            92,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "B0yLjv",
+              "name": "Priorities Intro",
+              "width": 392,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "X7ZMWp",
+                  "name": "Eyebrow",
+                  "fill": "$accent",
+                  "content": "PRIORITIES",
+                  "fontFamily": "$font-body",
+                  "fontSize": 11.5,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.6
+                },
+                {
+                  "type": "text",
+                  "id": "b94uf",
+                  "name": "Title",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "What I'm working on next.",
+                  "lineHeight": 1.08,
+                  "fontFamily": "$font-display",
+                  "fontSize": 44,
+                  "fontWeight": "600",
+                  "letterSpacing": -1.2
+                },
+                {
+                  "type": "text",
+                  "id": "SQPlA",
+                  "name": "Body",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Charlotte grows by more than a hundred people a day. Growth is only good news if the people already here can still afford to stay.",
+                  "lineHeight": 1.65,
+                  "fontFamily": "$font-body",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "x9w81r",
+                  "name": "Signature Block",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    22,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LSCYZ",
+                      "name": "Signature",
+                      "fill": "$navy",
+                      "content": "Dimple Ajmera",
+                      "fontFamily": "$font-display",
+                      "fontSize": 24,
+                      "fontWeight": "500",
+                      "fontStyle": "italic"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CfW5T",
+                      "name": "Title",
+                      "fill": "$muted",
+                      "content": "Council Member, At-Large",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12.5,
+                      "fontWeight": "500",
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "RHQzO",
+              "name": "Priority List",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EZBZq",
+                  "name": "Priority 01",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 26,
+                  "padding": [
+                    0,
+                    0,
+                    30,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "svIID",
+                      "name": "Number",
+                      "fill": "$accent",
+                      "content": "01",
+                      "fontFamily": "$font-display",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cHgLN",
+                      "name": "Copy",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 9,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rL2UL",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Housing people can actually afford",
+                          "fontFamily": "$font-display",
+                          "fontSize": 27,
+                          "fontWeight": "600",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "Rapg3",
+                          "name": "Body",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Expand the Housing Trust Fund and cut the permitting delays that add cost to every unit built in this city.",
+                          "lineHeight": 1.62,
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UGigd",
+                  "name": "Priority 02",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 26,
+                  "padding": [
+                    30,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "z9ot2Z",
+                      "name": "Number",
+                      "fill": "$accent",
+                      "content": "02",
+                      "fontFamily": "$font-display",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "P07a4",
+                      "name": "Copy",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 9,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iEVqv",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Safe streets, answered calls",
+                          "fontFamily": "$font-display",
+                          "fontSize": 27,
+                          "fontWeight": "600",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "N6Z4R",
+                          "name": "Body",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Fund response times, violence-interruption programs, and the crossing signals and sidewalks that keep kids alive.",
+                          "lineHeight": 1.62,
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AX8nr",
+                  "name": "Priority 03",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 26,
+                  "padding": [
+                    30,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ccb0W",
+                      "name": "Number",
+                      "fill": "$accent",
+                      "content": "03",
+                      "fontFamily": "$font-display",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gARPY",
+                      "name": "Copy",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 9,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FpRjc",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Transit that shows up",
+                          "fontFamily": "$font-display",
+                          "fontSize": 27,
+                          "fontWeight": "600",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "UIhNz",
+                          "name": "Body",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Deliver the Silver Line and frequent bus service so a car isn't the price of admission to a Charlotte job.",
+                          "lineHeight": 1.62,
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RuE4R",
+                  "name": "Priority 04",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "gap": 26,
+                  "padding": [
+                    30,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K7Xi4",
+                      "name": "Number",
+                      "fill": "$accent",
+                      "content": "04",
+                      "fontFamily": "$font-display",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "drwzt",
+                      "name": "Copy",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 9,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "UYMJD",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Every dollar accounted for",
+                          "fontFamily": "$font-display",
+                          "fontSize": 27,
+                          "fontWeight": "600",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "Z9kOMt",
+                          "name": "Body",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "A CPA reads the budget line by line — and publishes what she finds, before the vote, not after.",
+                          "lineHeight": 1.62,
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lFzXB",
+          "name": "Story Band",
+          "width": "fill_container",
+          "fill": "$cream-deep",
+          "gap": 64,
+          "padding": [
+            80,
+            56
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "W7HmeD",
+              "name": "Story Image Wrap",
+              "width": 452,
+              "height": 404,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 10,
+                  "id": "SYA1t",
+                  "x": 14,
+                  "y": 14,
+                  "name": "Offset Frame",
+                  "width": 438,
+                  "height": 390,
+                  "stroke": "$navy",
+                  "strokeWidth": 1.25
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 10,
+                  "id": "XRIly",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Story Image",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1787256552428.png",
+                    "mode": "fill"
+                  },
+                  "width": 438,
+                  "height": 390
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Pj7EN",
+              "name": "Story Copy",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qBsXo",
+                  "name": "Eyebrow",
+                  "fill": "$accent",
+                  "content": "WHY SHE'S RUNNING",
+                  "fontFamily": "$font-body",
+                  "fontSize": 11.5,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.6
+                },
+                {
+                  "type": "text",
+                  "id": "MD5Ak",
+                  "name": "Pull Quote",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "A city budget is just a family budget with more zeroes — and someone has to read it like the rent depends on it.",
+                  "lineHeight": 1.24,
+                  "fontFamily": "$font-display",
+                  "fontSize": 36,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.7,
+                  "fontStyle": "italic"
+                },
+                {
+                  "type": "text",
+                  "id": "p8NLhJ",
+                  "name": "Body",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Dimple came to Charlotte with two suitcases and built a career as a Certified Public Accountant before her neighbors asked her to serve. She raises two children here, drives the same congested roads, and pays the same rising bills. That is the vantage point she brings to every vote: not a theory about Charlotte, but a life lived in it.",
+                  "lineHeight": 1.68,
+                  "fontFamily": "$font-body",
+                  "fontSize": 16.5,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "rz3mZ",
+                  "name": "Story Link",
+                  "gap": 9,
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ku8zU",
+                      "name": "Label",
+                      "fill": "$navy",
+                      "content": "Read her full story",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15.5,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "NzqSc",
+                      "name": "Arrow",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "arrow-right",
+                      "library": "lucide",
+                      "fill": "$navy"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Yi8zW",
+          "name": "Endorsements",
+          "width": "fill_container",
+          "fill": "$cream",
+          "layout": "vertical",
+          "gap": 52,
+          "padding": [
+            88,
+            56
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "yJlCb",
+              "name": "Endorsement Head",
+              "width": 720,
+              "layout": "vertical",
+              "gap": 14,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "IVoT2",
+                  "name": "Eyebrow",
+                  "fill": "$accent",
+                  "content": "ENDORSEMENTS",
+                  "fontFamily": "$font-body",
+                  "fontSize": 11.5,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.6
+                },
+                {
+                  "type": "text",
+                  "id": "OZkQY",
+                  "name": "Title",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Backed by the people she works for.",
+                  "lineHeight": 1.1,
+                  "textAlign": "center",
+                  "fontFamily": "$font-display",
+                  "fontSize": 42,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QGbmz",
+              "name": "Logo Row",
+              "width": "fill_container",
+              "gap": 20,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "m5jcz",
+                  "name": "Endorsement Logo 1",
+                  "width": "fill_container",
+                  "height": 70,
+                  "fill": "$cream-deep",
+                  "cornerRadius": 8,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "AcfHw",
+                      "name": "Mark",
+                      "width": 17,
+                      "height": 17,
+                      "icon": "shield-check",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gqmM4",
+                      "name": "Label",
+                      "fill": "$muted",
+                      "content": "LOGO",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "L25Ny",
+                  "name": "Endorsement Logo 2",
+                  "width": "fill_container",
+                  "height": 70,
+                  "fill": "$cream-deep",
+                  "cornerRadius": 8,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "p3zFTM",
+                      "name": "Mark",
+                      "width": 17,
+                      "height": 17,
+                      "icon": "shield-check",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZubSY",
+                      "name": "Label",
+                      "fill": "$muted",
+                      "content": "LOGO",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UZV7V",
+                  "name": "Endorsement Logo 3",
+                  "width": "fill_container",
+                  "height": 70,
+                  "fill": "$cream-deep",
+                  "cornerRadius": 8,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "roZ20",
+                      "name": "Mark",
+                      "width": 17,
+                      "height": 17,
+                      "icon": "shield-check",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aOnPF",
+                      "name": "Label",
+                      "fill": "$muted",
+                      "content": "LOGO",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "w0wasC",
+                  "name": "Endorsement Logo 4",
+                  "width": "fill_container",
+                  "height": 70,
+                  "fill": "$cream-deep",
+                  "cornerRadius": 8,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "Locor",
+                      "name": "Mark",
+                      "width": 17,
+                      "height": 17,
+                      "icon": "shield-check",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Roc50",
+                      "name": "Label",
+                      "fill": "$muted",
+                      "content": "LOGO",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XnyIw",
+                  "name": "Endorsement Logo 5",
+                  "width": "fill_container",
+                  "height": 70,
+                  "fill": "$cream-deep",
+                  "cornerRadius": 8,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "AdJxt",
+                      "name": "Mark",
+                      "width": 17,
+                      "height": 17,
+                      "icon": "shield-check",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JJQTv",
+                      "name": "Label",
+                      "fill": "$muted",
+                      "content": "LOGO",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "U9wF3",
+              "name": "Testimonials",
+              "width": "fill_container",
+              "padding": [
+                16,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "E0sYxs",
+                  "name": "Testimonial 1",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "layout": "vertical",
+                  "gap": 18,
+                  "padding": [
+                    8,
+                    34,
+                    8,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "dgFQg",
+                      "name": "Quote Mark",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "quote",
+                      "library": "lucide",
+                      "fill": "$gold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "J171ca",
+                      "name": "Quote",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "She asked how many units, at what rent, by what date. Nobody else at that table did.",
+                      "lineHeight": 1.42,
+                      "fontFamily": "$font-display",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EqC1D",
+                      "name": "Attribution",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Housing advocate, West Charlotte",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "p0EHn",
+                  "name": "Testimonial 2",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "left": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 18,
+                  "padding": [
+                    8,
+                    34
+                  ],
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "dwMHe",
+                      "name": "Quote Mark",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "quote",
+                      "library": "lucide",
+                      "fill": "$gold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o3k9kk",
+                      "name": "Quote",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "When our block asked for a crosswalk for four years, she was the one who found the money.",
+                      "lineHeight": 1.42,
+                      "fontFamily": "$font-display",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vGyaG",
+                      "name": "Attribution",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Neighborhood association president",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "J28Fqj",
+                  "name": "Testimonial 3",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "left": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 18,
+                  "padding": [
+                    8,
+                    34
+                  ],
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "a0h24",
+                      "name": "Quote Mark",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "quote",
+                      "library": "lucide",
+                      "fill": "$gold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "co0dN",
+                      "name": "Quote",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "An accountant on council is not glamorous. It is exactly what a growing city needs.",
+                      "lineHeight": 1.42,
+                      "fontFamily": "$font-display",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pJYOy",
+                      "name": "Attribution",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Small business owner, NoDa",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uENaG",
+          "name": "Get Involved",
+          "width": "fill_container",
+          "fill": "$accent",
+          "gap": 72,
+          "padding": [
+            84,
+            56
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "o0oKO",
+              "name": "Get Involved Copy",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Y9KeYH",
+                  "name": "Eyebrow",
+                  "fill": "#F6D9C9",
+                  "content": "GET INVOLVED",
+                  "fontFamily": "$font-body",
+                  "fontSize": 11.5,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.6
+                },
+                {
+                  "type": "text",
+                  "id": "TOV9S",
+                  "name": "Title",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "This one is won on doorsteps.",
+                  "lineHeight": 1.06,
+                  "fontFamily": "$font-display",
+                  "fontSize": 48,
+                  "fontWeight": "600",
+                  "letterSpacing": -1.4
+                },
+                {
+                  "type": "text",
+                  "id": "wOY8L",
+                  "name": "Body",
+                  "fill": "#F8E2D7",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Knock a shift, host a meet-and-greet, or put a sign in your yard. Every hour is another block that hears from us before Election Day.",
+                  "lineHeight": 1.62,
+                  "fontFamily": "$font-body",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "EID8L",
+                  "name": "Ways to Help",
+                  "gap": 26,
+                  "padding": [
+                    10,
+                    0,
+                    0,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "aGIVj",
+                      "name": "Canvass",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "DFHX1",
+                          "name": "Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "door-open",
+                          "library": "lucide",
+                          "fill": "#F6D9C9"
+                        },
+                        {
+                          "type": "text",
+                          "id": "VMETE",
+                          "name": "Label",
+                          "fill": "#FFFFFF",
+                          "content": "Canvass",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kaEjU",
+                      "name": "Phone bank",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "Vlhug",
+                          "name": "Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "phone-call",
+                          "library": "lucide",
+                          "fill": "#F6D9C9"
+                        },
+                        {
+                          "type": "text",
+                          "id": "K1bqQ",
+                          "name": "Label",
+                          "fill": "#FFFFFF",
+                          "content": "Phone bank",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KYrOL",
+                      "name": "Yard sign",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "j5nWRo",
+                          "name": "Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "signpost",
+                          "library": "lucide",
+                          "fill": "#F6D9C9"
+                        },
+                        {
+                          "type": "text",
+                          "id": "R87uXe",
+                          "name": "Label",
+                          "fill": "#FFFFFF",
+                          "content": "Yard sign",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xeSJk",
+              "name": "Signup Card",
+              "width": 452,
+              "fill": "$cream",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 34,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B3LYU",
+                  "name": "Form Title",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Sign up for updates",
+                  "fontFamily": "$font-display",
+                  "fontSize": 26,
+                  "fontWeight": "600",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "frame",
+                  "id": "ILBdR",
+                  "name": "Field First and last name",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 7,
+                  "stroke": "$line",
+                  "strokeWidth": 1.25,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wldBG",
+                      "name": "Placeholder",
+                      "fill": "$muted",
+                      "content": "First and last name",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jXO7P",
+                  "name": "Field Email address",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 7,
+                  "stroke": "$line",
+                  "strokeWidth": 1.25,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "W2Egg",
+                      "name": "Placeholder",
+                      "fill": "$muted",
+                      "content": "Email address",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "h6ZcM0",
+                  "name": "Field ZIP code",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 7,
+                  "stroke": "$line",
+                  "strokeWidth": 1.25,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "skXjb",
+                      "name": "Placeholder",
+                      "fill": "$muted",
+                      "content": "ZIP code",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ttHC6",
+                  "name": "Submit Button",
+                  "width": "fill_container",
+                  "fill": "$navy",
+                  "cornerRadius": 7,
+                  "padding": [
+                    15,
+                    0
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pxEmF",
+                      "name": "Label",
+                      "fill": "#FFFFFF",
+                      "content": "Count me in",
+                      "fontFamily": "$font-body",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "vwprX",
+                  "name": "Fine Print",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "We'll only reach out about the campaign. Unsubscribe anytime.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font-body",
+                  "fontSize": 12.5,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FVjJJ",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "$navy",
+          "layout": "vertical",
+          "gap": 44,
+          "padding": [
+            64,
+            56,
+            40,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "aCzxy",
+              "name": "Footer Top",
+              "width": "fill_container",
+              "gap": 80,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Oys9O",
+                  "name": "Footer Brand",
+                  "width": 330,
+                  "layout": "vertical",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VG6ow",
+                      "name": "Wordmark",
+                      "fill": "$on-navy",
+                      "content": "DIMPLE AJMERA",
+                      "fontFamily": "$font-body",
+                      "fontSize": 20,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.6
+                    },
+                    {
+                      "type": "text",
+                      "id": "w6lquL",
+                      "name": "Tagline",
+                      "fill": "$gold",
+                      "content": "Charlotte City Council · At-Large",
+                      "fontFamily": "$font-display",
+                      "fontSize": 15,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FwjnL",
+                      "name": "Social",
+                      "gap": 10,
+                      "padding": [
+                        10,
+                        0,
+                        0,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "sd2Kp",
+                          "name": "facebook",
+                          "width": 36,
+                          "height": 36,
+                          "cornerRadius": 100,
+                          "stroke": "#2C3D57",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "JPSPC",
+                              "name": "Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "facebook",
+                              "library": "lucide",
+                              "fill": "$on-navy-muted"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nZAfq",
+                          "name": "instagram",
+                          "width": 36,
+                          "height": 36,
+                          "cornerRadius": 100,
+                          "stroke": "#2C3D57",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "bIv1S",
+                              "name": "Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "instagram",
+                              "library": "lucide",
+                              "fill": "$on-navy-muted"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "l5Rlxt",
+                          "name": "twitter",
+                          "width": 36,
+                          "height": 36,
+                          "cornerRadius": 100,
+                          "stroke": "#2C3D57",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "KDlRT",
+                              "name": "Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "twitter",
+                              "library": "lucide",
+                              "fill": "$on-navy-muted"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "aesRf",
+                          "name": "youtube",
+                          "width": 36,
+                          "height": 36,
+                          "cornerRadius": 100,
+                          "stroke": "#2C3D57",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "Hr3VC",
+                              "name": "Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "youtube",
+                              "library": "lucide",
+                              "fill": "$on-navy-muted"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "x1ZRt",
+                  "name": "Column Campaign",
+                  "layout": "vertical",
+                  "gap": 13,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "f1j9E",
+                      "name": "Heading",
+                      "fill": "$gold",
+                      "content": "CAMPAIGN",
+                      "fontFamily": "$font-body",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "lhpaf",
+                      "name": "About Dimple",
+                      "fill": "$on-navy-muted",
+                      "content": "About Dimple",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CeXN2",
+                      "name": "Our Record",
+                      "fill": "$on-navy-muted",
+                      "content": "Our Record",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CjdKY",
+                      "name": "Priorities",
+                      "fill": "$on-navy-muted",
+                      "content": "Priorities",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ysJ8W",
+                      "name": "Endorsements",
+                      "fill": "$on-navy-muted",
+                      "content": "Endorsements",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g3RMm",
+                      "name": "News",
+                      "fill": "$on-navy-muted",
+                      "content": "News",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zbwKI",
+                  "name": "Column Take Action",
+                  "layout": "vertical",
+                  "gap": 13,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fobOz",
+                      "name": "Heading",
+                      "fill": "$gold",
+                      "content": "TAKE ACTION",
+                      "fontFamily": "$font-body",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZnFcf",
+                      "name": "Donate",
+                      "fill": "$on-navy-muted",
+                      "content": "Donate",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ErsuE",
+                      "name": "Volunteer",
+                      "fill": "$on-navy-muted",
+                      "content": "Volunteer",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dHcHc",
+                      "name": "Request a yard sign",
+                      "fill": "$on-navy-muted",
+                      "content": "Request a yard sign",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "b8CaYf",
+                      "name": "Host an event",
+                      "fill": "$on-navy-muted",
+                      "content": "Host an event",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ItPw7",
+                      "name": "Share your story",
+                      "fill": "$on-navy-muted",
+                      "content": "Share your story",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QhWVF",
+                  "name": "Column Vote",
+                  "layout": "vertical",
+                  "gap": 13,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "s0hFxH",
+                      "name": "Heading",
+                      "fill": "$gold",
+                      "content": "VOTE",
+                      "fontFamily": "$font-body",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "pWXiB",
+                      "name": "Check registration",
+                      "fill": "$on-navy-muted",
+                      "content": "Check registration",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cURhp",
+                      "name": "Early voting sites",
+                      "fill": "$on-navy-muted",
+                      "content": "Early voting sites",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "a1WQ8",
+                      "name": "Vote by mail",
+                      "fill": "$on-navy-muted",
+                      "content": "Vote by mail",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "S3xo1n",
+                      "name": "Election Day: Nov 3",
+                      "fill": "$on-navy-muted",
+                      "content": "Election Day: Nov 3",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yM8cZ",
+                      "name": "Contact the campaign",
+                      "fill": "$on-navy-muted",
+                      "content": "Contact the campaign",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lHBMf",
+              "name": "Footer Bottom",
+              "width": "fill_container",
+              "stroke": "#2C3D57",
+              "strokeWidth": {
+                "top": 1
+              },
+              "gap": 40,
+              "padding": [
+                26,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "IoyCI",
+                  "name": "Disclaimer",
+                  "fill": "$on-navy-muted",
+                  "content": "Paid for by Dimple Ajmera for Charlotte",
+                  "fontFamily": "$font-body",
+                  "fontSize": 12.5,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "s4jg76",
+                  "name": "Legal Links",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LmAsn",
+                      "name": "Privacy policy",
+                      "fill": "$on-navy-muted",
+                      "content": "Privacy policy",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12.5,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bk5Cx",
+                      "name": "Accessibility",
+                      "fill": "$on-navy-muted",
+                      "content": "Accessibility",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12.5,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "i6N2tg",
+                      "name": "Contact",
+                      "fill": "$on-navy-muted",
+                      "content": "Contact",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12.5,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "cream": {
+      "type": "color",
+      "value": "#FBF6EE"
+    },
+    "cream-deep": {
+      "type": "color",
+      "value": "#F2E9DA"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#171410"
+    },
+    "navy": {
+      "type": "color",
+      "value": "#14243D"
+    },
+    "accent": {
+      "type": "color",
+      "value": "#BE4429"
+    },
+    "gold": {
+      "type": "color",
+      "value": "#E3A11C"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#6B6255"
+    },
+    "on-navy": {
+      "type": "color",
+      "value": "#EDE4D6"
+    },
+    "on-navy-muted": {
+      "type": "color",
+      "value": "#A9B3C2"
+    },
+    "line": {
+      "type": "color",
+      "value": "#E2D7C5"
+    },
+    "font-display": {
+      "type": "string",
+      "value": "Fraunces"
+    },
+    "font-body": {
+      "type": "string",
+      "value": "Inter"
+    }
+  },
+  "fileToken": "201db455-007e-46b8-83b8-53ac67d94843"
+}
