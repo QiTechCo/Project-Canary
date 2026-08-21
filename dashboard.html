@@ -11,6 +11,8 @@
 
   <!-- Icons -->
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
   <!-- Open Graph -->
@@ -190,6 +192,11 @@
       </button>
     </li>
     <li class="nav-item" role="presentation">
+      <button class="nav-link" id="training-tab-btn" data-bs-toggle="pill" data-bs-target="#training-tab" type="button" role="tab">
+        <i class="bi bi-mortarboard-fill me-2" aria-hidden="true"></i> Canvassing & Field Training
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
       <button class="nav-link" id="assets-tab-btn" data-bs-toggle="pill" data-bs-target="#assets-tab" type="button" role="tab">
         <i class="bi bi-images me-2" aria-hidden="true"></i> Media & Assets Vault
       </button>
@@ -243,6 +250,149 @@
 
       <div class="row g-4" id="wikiCardsGrid" aria-live="polite">
         <div class="col-12"><p class="text-secondary small mb-0" role="status">Loading the campaign wiki&hellip;</p></div>
+      </div>
+    </div>
+
+    <!-- TAB: CANVASSING & FIELD TRAINING -->
+    <div class="tab-pane fade" id="training-tab" role="tabpanel" aria-labelledby="training-tab-btn">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+        <div>
+          <span class="badge bg-emerald text-white uppercase px-2 py-1 mb-2" style="font-size: 0.75rem; letter-spacing: 0.5px;">Field Readiness & Guides</span>
+          <h2 class="serif-font fw-bold text-dark mb-1">Canvassing Training Hub</h2>
+          <p class="text-secondary small mb-0">Field-tested scripts, door-to-door best practices, and downloadable training materials for Team Dimple volunteers.</p>
+        </div>
+      </div>
+
+      <!-- Interactive Quick-Guide Cards -->
+      <div class="row g-4 mb-5">
+        <!-- 1. The 60-Second Door Knock Flow -->
+        <div class="col-lg-4 col-md-6">
+          <div class="dashboard-card p-4 h-100 bg-white border-top border-4 border-success">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="p-3 bg-success bg-opacity-10 text-success rounded-circle">
+                <i class="bi bi-chat-heart-fill fs-4" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold text-dark mb-0">1. The 60-Second Script</h5>
+                <span class="small text-muted">Introduction & Connection</span>
+              </div>
+            </div>
+            <p class="text-secondary small mb-3">
+              "Hi, my name is [Name], and I'm a volunteer with Council Member Dimple Ajmera's campaign. We're out in [Neighborhood] talking to neighbors about tree canopy protections, clean water, and affordable housing..."
+            </p>
+            <div class="p-2 bg-light rounded small border text-dark">
+              <strong>Pro-Tip:</strong> Ask open-ended questions like <em>"What is the top issue you'd like City Council to focus on?"</em>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Handling Key Policy Questions -->
+        <div class="col-lg-4 col-md-6">
+          <div class="dashboard-card p-4 h-100 bg-white border-top border-4 border-primary">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="p-3 bg-primary bg-opacity-10 text-primary rounded-circle">
+                <i class="bi bi-shield-check fs-4" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold text-dark mb-0">2. Core Talking Points</h5>
+                <span class="small text-muted">Environment & Fiscal Record</span>
+              </div>
+            </div>
+            <ul class="text-secondary small ps-3 mb-3">
+              <li class="mb-1"><strong>Environment:</strong> Leading the fight for clean water and pausing unregulated data centers.</li>
+              <li class="mb-1"><strong>CPA Leadership:</strong> Budget committee chair protecting taxpayer dollars without cutting city services.</li>
+              <li><strong>Public Safety:</strong> Supported by first responders and FOP Lodge 9.</li>
+            </ul>
+            <div class="p-2 bg-light rounded small border text-dark">
+              <strong>Pro-Tip:</strong> Never guess! If you don't know an answer, note their email and say the campaign team will follow up.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Safety & Canvass Etiquette -->
+        <div class="col-lg-4 col-md-6">
+          <div class="dashboard-card p-4 h-100 bg-white border-top border-4 border-danger">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="p-3 bg-danger bg-opacity-10 text-danger rounded-circle">
+                <i class="bi bi-geo-alt-fill fs-4" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold text-dark mb-0">3. Field Safety & Turf</h5>
+                <span class="small text-muted">Best Practices on the Doors</span>
+              </div>
+            </div>
+            <ul class="text-secondary small ps-3 mb-3">
+              <li class="mb-1">Always canvas in pairs or check in with your shift captain.</li>
+              <li class="mb-1">Respect "No Soliciting" or gated warnings.</li>
+              <li class="mb-1">Step back 3-4 feet from the door after knocking.</li>
+              <li>Log responses immediately in the app after each house.</li>
+            </ul>
+            <div class="p-2 bg-light rounded small border text-dark">
+              <strong>Pro-Tip:</strong> Wear comfortable shoes, stay hydrated, and wear your Dimple campaign t-shirt or pin.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Training Documents & Session Downloads -->
+      <div class="dashboard-card p-4 p-lg-5 bg-white mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+          <div>
+            <h4 class="serif-font fw-bold text-dark mb-1">Training Documents & Session Materials</h4>
+            <p class="text-secondary small mb-0">Reference guides, printable walk sheets, and slide decks for upcoming training sessions.</p>
+          </div>
+          <span class="badge bg-light text-dark border px-3 py-2"><i class="bi bi-folder-check me-1 text-success"></i> 3 Available Materials</span>
+        </div>
+
+        <div class="row g-3">
+          <!-- Doc 1 -->
+          <div class="col-md-4">
+            <div class="p-3 bg-off-white rounded-3 border h-100 d-flex flex-column justify-content-between">
+              <div class="mb-3">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
+                  <span class="fw-bold text-dark small">Canvassing 101 Field Guide</span>
+                </div>
+                <p class="text-secondary small mb-0">Complete 4-page reference manual for new canvassers covering door etiquette, voter IDs, and FAQs.</p>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-dark w-100" onclick="alert('Canvassing Field Guide document ready for download.'); return false;">
+                <i class="bi bi-download me-1"></i> Download Guide (PDF)
+              </a>
+            </div>
+          </div>
+
+          <!-- Doc 2 -->
+          <div class="col-md-4">
+            <div class="p-3 bg-off-white rounded-3 border h-100 d-flex flex-column justify-content-between">
+              <div class="mb-3">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-file-earmark-text-fill text-primary fs-4"></i>
+                  <span class="fw-bold text-dark small">Official Canvass Door Script</span>
+                </div>
+                <p class="text-secondary small mb-0">Standard and bilingual (English/Spanish) conversation scripts customized for East and South Charlotte neighborhoods.</p>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-dark w-100" onclick="alert('Door Script document ready for download.'); return false;">
+                <i class="bi bi-download me-1"></i> Download Script (PDF)
+              </a>
+            </div>
+          </div>
+
+          <!-- Doc 3 -->
+          <div class="col-md-4">
+            <div class="p-3 bg-off-white rounded-3 border h-100 d-flex flex-column justify-content-between">
+              <div class="mb-3">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-easel-fill text-success fs-4"></i>
+                  <span class="fw-bold text-dark small">Training Session Slide Deck</span>
+                </div>
+                <p class="text-secondary small mb-0">Slide presentation used during our live Zoom and in-person Saturday morning volunteer training sessions.</p>
+              </div>
+              <a href="#" class="btn btn-sm btn-outline-dark w-100" onclick="alert('Training Slides ready for download.'); return false;">
+                <i class="bi bi-download me-1"></i> Download Slides (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
