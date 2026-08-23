@@ -22,8 +22,11 @@ import {
   ExternalLink,
   ChevronRight,
   Maximize2,
-  X
+  X,
+  Instagram,
+  Filter
 } from "lucide-react";
+import { InstagramFeed } from "@/components/social/InstagramFeed";
 
 export default function HomePage() {
   const [selectedPhoto, setSelectedPhoto] = useState<{
@@ -33,49 +36,102 @@ export default function HomePage() {
     desc: string;
   } | null>(null);
 
+  const [galleryFilter, setGalleryFilter] = useState<string>("all");
   const [volunteerEmail, setVolunteerEmail] = useState("");
   const [volunteerSuccess, setVolunteerSuccess] = useState(false);
 
   const DONATE_URL = "https://secure.actblue.com/donate/dimple-ajmera-for-city-council-1";
 
-  const GALLERY_PHOTOS = [
+  const ALL_GALLERY_PHOTOS = [
     {
       src: "/assets/images/dimple_newest_crop.jpg",
       title: "Official Campaign Portrait",
-      tag: "Leadership",
+      tag: "leadership",
+      tagLabel: "Leadership",
       desc: "Council Member Dimple Ajmera representing fiscal discipline, sustainability, and dedicated service for all of Charlotte."
     },
     {
       src: "/assets/images/dimple_hugh_mccoll.jpg",
       title: "With Hugh McColl (Former CEO Bank of America)",
-      tag: "Economic Leadership",
+      tag: "leadership",
+      tagLabel: "Economic Leadership",
       desc: "Discussing Charlotte's financial growth, small business expansion, and fiscal stewardship with banking legend Hugh McColl."
     },
     {
       src: "/assets/images/dimple_susan_rodriguez_mcdowell.jpg",
       title: "With Commissioner Susan Rodriguez McDowell",
-      tag: "County Collaboration",
+      tag: "leadership",
+      tagLabel: "County Collaboration",
       desc: "Collaborating with Mecklenburg County Commissioner Susan Rodriguez McDowell on regional water security and community services."
     },
     {
-      src: "/assets/images/hero_slide_1.jpg",
-      title: "Neighborhood Civic Outreach",
-      tag: "Community",
-      desc: "Meeting with neighborhood leaders to address street safety, transit connectivity, and municipal infrastructure."
+      src: "/assets/images/gallery_community_1.jpg",
+      title: "West Boulevard Corridor Business Walk",
+      tag: "community",
+      tagLabel: "Corridors of Opportunity",
+      desc: "Meeting with local entrepreneurs, small business owners, and community residents along West Boulevard."
     },
     {
-      src: "/assets/images/hero_slide_2.jpg",
-      title: "Town Hall & Council Remarks",
-      tag: "Public Forum",
-      desc: "Addressing Charlotte families on balanced municipal budgets, housing investments, and public safety."
+      src: "/assets/images/gallery_community_2.jpg",
+      title: "CMPD & Firefighter Round Table",
+      tag: "safety",
+      tagLabel: "Public Safety",
+      desc: "Discussing first responder retention bonuses, mental health clinician units, and family healthcare benefits."
     },
     {
       src: "/assets/images/hero_slide_8.jpg",
-      title: "Environmental & Water Policy Forum",
-      tag: "Sustainability",
+      title: "Catawba River Basin Environmental Forum",
+      tag: "environment",
+      tagLabel: "Sustainability",
       desc: "Convening clean water advocates and conservation experts to protect the Catawba River watershed and urban tree canopy."
+    },
+    {
+      src: "/assets/images/gallery_community_3.jpg",
+      title: "Affordable Housing Groundbreaking",
+      tag: "community",
+      tagLabel: "Affordable Housing",
+      desc: "Celebrating new deed-restricted affordable homes funded through the municipal Housing Trust Fund."
+    },
+    {
+      src: "/assets/images/gallery_community_4.jpg",
+      title: "CMS Youth Mentorship Session",
+      tag: "community",
+      tagLabel: "Education & Youth",
+      desc: "Engaging with Charlotte-Mecklenburg students on public leadership, civic engagement, and career pathways in finance."
+    },
+    {
+      src: "/assets/images/gallery_community_5.jpg",
+      title: "Grassroots Canvassing Kickoff",
+      tag: "campaign",
+      tagLabel: "Campaign Trail",
+      desc: "Launching weekend precinct door-knocking operations with neighborhood volunteers and community organizers."
+    },
+    {
+      src: "/assets/images/gallery_community_6.jpg",
+      title: "Eastland Yards Community Advisory",
+      tag: "community",
+      tagLabel: "Neighborhood Growth",
+      desc: "Reviewing East Charlotte community investments, recreational facilities, and small business retail development."
+    },
+    {
+      src: "/assets/images/gallery_community_7.jpg",
+      title: "Urban Tree Canopy Planting Initiative",
+      tag: "environment",
+      tagLabel: "Clean Energy & SEAP",
+      desc: "Planting native shade trees in urban heat-island neighborhoods as part of the City’s tree canopy expansion grant."
+    },
+    {
+      src: "/assets/images/hero_slide_1.jpg",
+      title: "Civic Outreach & Town Hall Remarks",
+      tag: "leadership",
+      tagLabel: "Public Forum",
+      desc: "Addressing Charlotte families on balanced municipal budgets, transit connectivity, and neighborhood safety."
     }
   ];
+
+  const filteredGallery = galleryFilter === "all"
+    ? ALL_GALLERY_PHOTOS
+    : ALL_GALLERY_PHOTOS.filter((p) => p.tag === galleryFilter);
 
   const PRIORITIES = [
     {
@@ -374,7 +430,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Key Priorities Grid */}
+      {/* 6. Live Instagram Feed Section */}
+      <section id="social" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-purple-100 via-rose-100 to-amber-100 dark:from-purple-950 dark:via-rose-950 dark:to-amber-950 text-rose-800 dark:text-rose-300 text-xs font-bold uppercase tracking-wider">
+            <Instagram className="w-3.5 h-3.5" /> Social Media Live Stream
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+            Follow the Campaign on Instagram
+          </h2>
+          <p className="text-sm text-slate-500">
+            Real-time updates, community meetings, council votes, and behind-the-scenes on the campaign trail.
+          </p>
+        </div>
+
+        <InstagramFeed />
+      </section>
+
+      {/* 7. Key Priorities Grid */}
       <section id="priorities" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
           <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Core Agenda</span>
@@ -419,9 +492,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Community Photo Gallery */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
+      {/* 8. Expanded Community Photo Gallery */}
+      <section id="gallery" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
           <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">On The Ground</span>
           <h2 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
             Community &amp; Activism Photo Gallery
@@ -431,8 +504,33 @@ export default function HomePage() {
           </p>
         </div>
 
+        {/* Gallery Filter Chips */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {[
+            { id: "all", label: "All Photos" },
+            { id: "leadership", label: "Leadership" },
+            { id: "community", label: "Neighborhoods & Civic" },
+            { id: "environment", label: "Environmental Action" },
+            { id: "safety", label: "Public Safety" },
+            { id: "campaign", label: "Campaign Trail" }
+          ].map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setGalleryFilter(cat.id)}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition ${
+                galleryFilter === cat.id
+                  ? "bg-emerald-700 text-white shadow"
+                  : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {GALLERY_PHOTOS.map((photo, idx) => (
+          {filteredGallery.map((photo, idx) => (
             <div
               key={idx}
               onClick={() => setSelectedPhoto(photo)}
@@ -450,7 +548,7 @@ export default function HomePage() {
               </div>
               <div className="p-4 text-center space-y-1">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-                  {photo.tag}
+                  {photo.tagLabel}
                 </span>
                 <h4 className="text-sm font-bold text-slate-900 dark:text-slate-100 line-clamp-1">
                   {photo.title}
@@ -500,7 +598,7 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* 8. Media Video Clips */}
+      {/* 9. Media Video Clips */}
       <section id="media" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
           <span className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400">Policy in Action</span>
@@ -523,7 +621,7 @@ export default function HomePage() {
             </video>
             <div className="p-6 space-y-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-rose-600 bg-rose-50 dark:bg-rose-950/40 px-2.5 py-1 rounded-full">
-                Video Briefing
+                Video Briefing 1
               </span>
               <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
                 Data Center Expansion &amp; Municipal Water Protection
@@ -534,48 +632,30 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="p-8 rounded-3xl bg-slate-900 text-white flex flex-col justify-between space-y-6">
-            <div className="space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">Follow Live Updates</span>
-              <h3 className="text-2xl font-extrabold">Connect on Social Channels</h3>
-              <p className="text-sm text-slate-300 leading-relaxed">
-                Stay updated with Dimple Ajmera's weekly council votes, committee work sessions, community town halls, and constituent services.
+          <div className="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+            <video
+              controls
+              poster="/assets/images/hero_slide_8.jpg"
+              className="w-full aspect-video bg-black object-cover"
+            >
+              <source src="/assets/images/Clip 2 - Policies for Water Demand.mp4" type="video/mp4" />
+            </video>
+            <div className="p-6 space-y-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-full">
+                Video Briefing 2
+              </span>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                Municipal Water Demand Policies &amp; Conservation
+              </h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                Deep dive into long-term infrastructure planning to secure clean drinking water for the next generation of Charlotte residents.
               </p>
-            </div>
-            <div className="space-y-3">
-              <a
-                href="https://www.linkedin.com/in/dimpleajmera"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3.5 rounded-xl bg-white/10 hover:bg-white/20 transition text-sm font-semibold"
-              >
-                <span>LinkedIn Official Profile</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.instagram.com/dimpleajmera"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3.5 rounded-xl bg-white/10 hover:bg-white/20 transition text-sm font-semibold"
-              >
-                <span>Instagram Updates</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-              <a
-                href="https://charlottenc.legistar.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3.5 rounded-xl bg-emerald-600/30 hover:bg-emerald-600/40 border border-emerald-500/30 transition text-sm font-semibold text-emerald-300"
-              >
-                <span>Granicus Legistar City Clerk Portal</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 9. Endorsements Strip */}
+      {/* 10. Endorsements Strip */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-12 rounded-3xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-6">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Broad Coalition Support</span>
@@ -596,7 +676,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10. Grassroots Volunteer Callout */}
+      {/* 11. Grassroots Volunteer Callout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-rose-700 to-red-800 text-white shadow-xl text-center space-y-6">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
