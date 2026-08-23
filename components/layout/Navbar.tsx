@@ -85,7 +85,7 @@ export function Navbar() {
                 onMouseEnter={() => setPrioritiesOpen(true)}
                 className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-700 dark:hover:text-emerald-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition"
               >
-                Priorities <ChevronDown className="w-4 h-4 text-slate-400" />
+                Priorities <ChevronDown className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </button>
 
               <div
@@ -99,7 +99,7 @@ export function Navbar() {
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold text-slate-900 dark:text-slate-100 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 hover:text-emerald-700"
                 >
-                  <Sparkles className="w-4 h-4 text-rose-600" /> All Key Priorities
+                  <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> All Key Priorities
                 </Link>
                 <div className="border-t border-slate-100 dark:border-slate-800 my-1" />
                 <Link
@@ -107,28 +107,28 @@ export function Navbar() {
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-700"
                 >
-                  <ShieldCheck className="w-4 h-4 text-rose-600" /> Public Safety &amp; Officers
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Public Safety &amp; Officers
                 </Link>
                 <Link
                   href="/priority-environment"
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-700"
                 >
-                  <TreePine className="w-4 h-4 text-emerald-600" /> Environment &amp; Clean Water
+                  <TreePine className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Environment &amp; Clean Water
                 </Link>
                 <Link
                   href="/priority-housing"
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-700"
                 >
-                  <Home className="w-4 h-4 text-blue-600" /> Affordable Housing Bonds
+                  <Home className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Affordable Housing Bonds
                 </Link>
                 <Link
                   href="/priority-economy"
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-700"
                 >
-                  <TrendingUp className="w-4 h-4 text-amber-600" /> Economy &amp; Small Business
+                  <TrendingUp className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Economy &amp; Small Business
                 </Link>
               </div>
             </div>
@@ -144,8 +144,8 @@ export function Navbar() {
                     : "text-slate-700 dark:text-slate-200 hover:text-emerald-700 dark:hover:text-emerald-400 hover:bg-slate-50 dark:hover:bg-slate-800"
                 }`}
               >
-                <Landmark className="w-4 h-4 text-emerald-600" />
-                On Council <ChevronDown className="w-4 h-4 text-slate-400" />
+                <Landmark className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                On Council <ChevronDown className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </button>
 
               <div
@@ -159,7 +159,7 @@ export function Navbar() {
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-50/50 dark:bg-emerald-950/30 hover:bg-emerald-100/60"
                 >
-                  <FileText className="w-4 h-4 text-emerald-700" />
+                  <FileText className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   <div>
                     <div>Council Hub &amp; Legislative Wiki</div>
                     <span className="text-[10px] font-normal text-slate-500">Official searchable archive &amp; votes</span>
@@ -171,21 +171,21 @@ export function Navbar() {
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-700"
                 >
-                  <Vote className="w-4 h-4 text-blue-600" /> Voting Record &amp; Roll Calls
+                  <Vote className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Voting Record &amp; Roll Calls
                 </Link>
                 <Link
                   href="/council-wiki"
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-700"
                 >
-                  <DollarSign className="w-4 h-4 text-emerald-600" /> Campaign Finance &amp; Disclosures
+                  <DollarSign className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Campaign Finance &amp; Disclosures
                 </Link>
                 <Link
                   href="/council-wiki"
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-700"
                 >
-                  <TreePine className="w-4 h-4 text-green-600" /> SEAP &amp; Climate Action Plan
+                  <TreePine className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> SEAP &amp; Climate Action Plan
                 </Link>
                 <div className="border-t border-slate-100 dark:border-slate-800 my-1" />
                 <a
@@ -194,8 +194,8 @@ export function Navbar() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-between px-4 py-2 text-[11px] font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
                 >
-                  <span className="flex items-center gap-2"><Landmark className="w-3.5 h-3.5" /> Granicus Legistar Portal</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <span className="flex items-center gap-2"><Landmark className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> Granicus Legistar Portal</span>
+                  <ExternalLink className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
                 </a>
               </div>
             </div>
@@ -222,7 +222,7 @@ export function Navbar() {
                     : "text-slate-700 dark:text-slate-200 hover:text-emerald-700 dark:hover:text-emerald-400 hover:bg-slate-50 dark:hover:bg-slate-800"
                 }`}
               >
-                Get Involved <ChevronDown className="w-4 h-4 text-slate-400" />
+                Get Involved <ChevronDown className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </button>
 
               <div
@@ -236,14 +236,14 @@ export function Navbar() {
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold text-slate-900 dark:text-slate-100 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 hover:text-emerald-700"
                 >
-                  <Users className="w-4 h-4 text-rose-600" /> Volunteer with Us
+                  <Users className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Volunteer with Us
                 </Link>
                 <Link
                   href="/portal"
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-700"
                 >
-                  <Lock className="w-4 h-4 text-slate-500" /> Volunteer Portal Login
+                  <Lock className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Volunteer Portal Login
                 </Link>
                 <div className="border-t border-slate-100 dark:border-slate-800 my-1" />
                 <Link
@@ -251,7 +251,7 @@ export function Navbar() {
                   onClick={closeAll}
                   className="flex items-center gap-2.5 px-4 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-700"
                 >
-                  <Landmark className="w-4 h-4 text-emerald-600" /> Council Legislative Wiki
+                  <Landmark className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Council Legislative Wiki
                 </Link>
               </div>
             </div>
@@ -319,7 +319,7 @@ export function Navbar() {
             onClick={closeAll}
             className="flex items-center justify-between px-3 py-2.5 rounded-lg text-base font-bold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300"
           >
-            <span className="flex items-center gap-2"><Landmark className="w-5 h-5 text-emerald-700" /> Council Hub &amp; Wiki</span>
+            <span className="flex items-center gap-2"><Landmark className="w-5 h-5 text-emerald-600 dark:text-emerald-400" /> Council Hub &amp; Wiki</span>
             <span className="text-xs bg-emerald-700 text-white px-2 py-0.5 rounded-full font-bold">Live</span>
           </Link>
           <Link

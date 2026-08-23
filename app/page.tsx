@@ -14,17 +14,14 @@ import {
   MapPin,
   Clock,
   ArrowRight,
-  Sparkles,
   CheckCircle2,
-  Play,
   Users,
   Vote,
   ExternalLink,
   ChevronRight,
   Maximize2,
   X,
-  Instagram,
-  Filter
+  Instagram
 } from "lucide-react";
 import { InstagramFeed } from "@/components/social/InstagramFeed";
 
@@ -140,9 +137,9 @@ export default function HomePage() {
       title: "Public Safety & First Responders",
       subtitle: "CMPD Retention & Community Crisis Response",
       icon: ShieldCheck,
-      color: "from-rose-600 to-red-700",
-      textColor: "text-rose-700 dark:text-rose-400",
-      bgLight: "bg-rose-50 dark:bg-rose-950/40",
+      color: "from-emerald-600 to-emerald-700",
+      textColor: "text-emerald-600 dark:text-emerald-400",
+      bgLight: "bg-emerald-50 dark:bg-emerald-950/40",
       description: "Secured competitive pay, officer recruitment bonuses, mental health crisis clinician units, and landmark family healthcare benefits for CMPD."
     },
     {
@@ -151,8 +148,8 @@ export default function HomePage() {
       title: "Clean Water & Climate (SEAP)",
       subtitle: "100% Zero-Carbon & Watershed Protection",
       icon: TreePine,
-      color: "from-emerald-600 to-green-700",
-      textColor: "text-emerald-700 dark:text-emerald-400",
+      color: "from-emerald-600 to-emerald-700",
+      textColor: "text-emerald-600 dark:text-emerald-400",
       bgLight: "bg-emerald-50 dark:bg-emerald-950/40",
       description: "Co-sponsored Charlotte's Strategic Energy Action Plan (SEAP), led municipal solar retrofits, protected Catawba water security, and expanded urban tree canopy."
     },
@@ -162,9 +159,9 @@ export default function HomePage() {
       title: "Affordable Workforce Housing",
       subtitle: "Housing Trust Fund & Anti-Displacement",
       icon: Home,
-      color: "from-blue-600 to-indigo-700",
-      textColor: "text-blue-700 dark:text-blue-400",
-      bgLight: "bg-blue-50 dark:bg-blue-950/40",
+      color: "from-emerald-600 to-emerald-700",
+      textColor: "text-emerald-600 dark:text-emerald-400",
+      bgLight: "bg-emerald-50 dark:bg-emerald-950/40",
       description: "Championed $200M+ in Housing Trust Fund bonds creating over 10,000 deed-restricted affordable homes, plus emergency rental relief programs."
     },
     {
@@ -173,9 +170,9 @@ export default function HomePage() {
       title: "Fiscal Stewardship & Small Business",
       subtitle: "5+ Years Budget Chair & Corridors of Opportunity",
       icon: TrendingUp,
-      color: "from-amber-600 to-yellow-700",
-      textColor: "text-amber-700 dark:text-amber-400",
-      bgLight: "bg-amber-50 dark:bg-amber-950/40",
+      color: "from-emerald-600 to-emerald-700",
+      textColor: "text-emerald-600 dark:text-emerald-400",
+      bgLight: "bg-emerald-50 dark:bg-emerald-950/40",
       description: "Chaired 50+ budget sessions passing balanced $4.17B city budgets without property tax rate spikes, directing millions to historic commercial corridors."
     }
   ];
@@ -197,8 +194,8 @@ export default function HomePage() {
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-300">
-              <Sparkles className="w-4 h-4 text-emerald-400" /> Working Mother • Accountant • Fighter
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-300">
+              Working Mother • Accountant • Fighter
             </div>
 
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight sm:leading-none">
@@ -216,19 +213,19 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-base shadow-xl transition transform hover:-translate-y-0.5 active:translate-y-0"
               >
-                <Heart className="w-5 h-5 fill-white" /> Donate on ActBlue
+                <Heart className="w-5 h-5 fill-white" /> Donate
               </a>
               <Link
                 href="/council-wiki"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold text-base backdrop-blur transition"
               >
-                <Landmark className="w-5 h-5 text-emerald-300" /> Council Voting Wiki
+                <Landmark className="w-5 h-5 text-emerald-400" /> Council Voting Wiki
               </Link>
               <Link
                 href="/volunteer"
                 className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-semibold text-base transition"
               >
-                <Users className="w-5 h-5 text-rose-400" /> Join Campaign
+                <Users className="w-5 h-5 text-emerald-400" /> Join Campaign
               </Link>
             </div>
           </div>
@@ -258,7 +255,7 @@ export default function HomePage() {
         <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl p-6 sm:p-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-slate-800 text-center">
             <div className="pt-4 sm:pt-0">
-              <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">4</div>
+              <div className="text-3xl sm:text-4xl font-extrabold text-emerald-700 dark:text-emerald-400 tracking-tight">4</div>
               <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Terms Elected At-Large</div>
             </div>
             <div className="pt-4 sm:pt-0 sm:pl-6">
@@ -266,11 +263,11 @@ export default function HomePage() {
               <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Housing Bonds Passed</div>
             </div>
             <div className="pt-4 sm:pt-0 sm:pl-6">
-              <div className="text-3xl sm:text-4xl font-extrabold text-teal-600 dark:text-teal-400 tracking-tight">100%</div>
+              <div className="text-3xl sm:text-4xl font-extrabold text-emerald-700 dark:text-emerald-400 tracking-tight">100%</div>
               <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Environment Voting Record</div>
             </div>
             <div className="pt-4 sm:pt-0 sm:pl-6">
-              <div className="text-3xl sm:text-4xl font-extrabold text-rose-600 dark:text-rose-400 tracking-tight">38+</div>
+              <div className="text-3xl sm:text-4xl font-extrabold text-emerald-700 dark:text-emerald-400 tracking-tight">38+</div>
               <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Key Endorsing Leaders</div>
             </div>
           </div>
@@ -283,7 +280,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider">
-                <Calendar className="w-3.5 h-3.5" /> Upcoming Town Hall
+                <Calendar className="w-3.5 h-3.5 text-emerald-400" /> Upcoming Town Hall
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
                 State of Our Environment: Data Centers, Water &amp; Charlotte’s Future
@@ -330,7 +327,7 @@ export default function HomePage() {
                 href="/council-wiki"
                 className="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-700 dark:text-emerald-400 hover:underline"
               >
-                View Full Legislative Record <ArrowRight className="w-4 h-4" />
+                View Full Legislative Record <ArrowRight className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </Link>
             </div>
           </div>
@@ -338,25 +335,25 @@ export default function HomePage() {
           <div className="lg:col-span-5">
             <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
               <h3 className="text-base font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                <Award className="w-5 h-5 text-amber-500" /> Honors &amp; Leadership Recognition
+                <Award className="w-5 h-5 text-emerald-600 dark:text-emerald-400" /> Honors &amp; Leadership Recognition
               </h3>
               <ul className="space-y-3 text-xs text-slate-600 dark:text-slate-400">
                 <li className="flex items-start gap-2.5 pb-2 border-b border-slate-100 dark:border-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900 dark:text-slate-200 block">Charlotte Business Journal 40 Under 40</strong>
                     <span>Recognized for outstanding leadership and financial management in municipal governance.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-2.5 pb-2 border-b border-slate-100 dark:border-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900 dark:text-slate-200 block">Global Service Award by Rotary International</strong>
                     <span>Honored for lifelong public service, clean water advocacy, and community dedication.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-2.5 pb-2 border-b border-slate-100 dark:border-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900 dark:text-slate-200 block">Clean Energy Champion Award</strong>
                     <span>Recognized by environmental coalitions for co-sponsoring Charlotte's Strategic Energy Action Plan.</span>
@@ -374,7 +371,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-bold uppercase tracking-wider text-emerald-300">
-                <Landmark className="w-3.5 h-3.5" /> Live Legislative Archive &amp; Wiki
+                <Landmark className="w-3.5 h-3.5 text-emerald-400" /> Live Legislative Archive &amp; Wiki
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
                 Dimple Ajmera on Council Hub
@@ -412,11 +409,11 @@ export default function HomePage() {
                 </span>
               </div>
               <div className="p-3 bg-slate-900/60 rounded-xl space-y-1">
-                <div className="text-[11px] font-bold text-amber-400 uppercase">Granicus Legistar API</div>
+                <div className="text-[11px] font-bold text-emerald-400 uppercase">Granicus Legistar API</div>
                 <p className="text-xs text-slate-200">Full Council • Zoning • Budget • SEAP Committee Work Sessions</p>
               </div>
               <div className="p-3 bg-slate-900/60 rounded-xl space-y-1">
-                <div className="text-[11px] font-bold text-rose-400 uppercase">Charlotte GOV Streams</div>
+                <div className="text-[11px] font-bold text-emerald-400 uppercase">Charlotte GOV Streams</div>
                 <p className="text-xs text-slate-200">Spoken Transcripts &amp; Direct Timecoded Jump Links</p>
               </div>
               <Link
@@ -433,8 +430,8 @@ export default function HomePage() {
       {/* 6. Live Instagram Feed Section */}
       <section id="social" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-purple-100 via-rose-100 to-amber-100 dark:from-purple-950 dark:via-rose-950 dark:to-amber-950 text-rose-800 dark:text-rose-300 text-xs font-bold uppercase tracking-wider">
-            <Instagram className="w-3.5 h-3.5" /> Social Media Live Stream
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider">
+            <Instagram className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> Social Media Live Stream
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
             Follow the Campaign on Instagram
@@ -470,7 +467,7 @@ export default function HomePage() {
               >
                 <div className="space-y-4">
                   <div className={`w-12 h-12 rounded-2xl ${p.bgLight} ${p.textColor} flex items-center justify-center`}>
-                    <Icon className="w-6 h-6" />
+                    <Icon className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
                   </div>
                   <div>
                     <span className="text-xs font-bold uppercase tracking-wider text-slate-400">{p.subtitle}</span>
@@ -484,7 +481,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-400">
                   <span>Explore Detailed Policy Plan</span>
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition text-emerald-600 dark:text-emerald-400" />
                 </div>
               </Link>
             );
@@ -543,7 +540,7 @@ export default function HomePage() {
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300"
                 />
                 <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                  <Maximize2 className="w-6 h-6 text-white" />
+                  <Maximize2 className="w-6 h-6 text-emerald-400" />
                 </div>
               </div>
               <div className="p-4 text-center space-y-1">
@@ -574,7 +571,7 @@ export default function HomePage() {
               className="absolute top-4 right-4 z-10 p-2 rounded-full bg-slate-900/60 text-white hover:bg-slate-900 transition"
               aria-label="Close photo"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 text-emerald-400" />
             </button>
             <div className="max-h-[60vh] bg-slate-950 flex items-center justify-center">
               <img
@@ -601,7 +598,7 @@ export default function HomePage() {
       {/* 9. Media Video Clips */}
       <section id="media" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400">Policy in Action</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Policy in Action</span>
           <h2 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
             Dimple in Action: Policy Briefings
           </h2>
@@ -620,7 +617,7 @@ export default function HomePage() {
               <source src="/assets/images/Clip 1 - Data Center Wave.mp4" type="video/mp4" />
             </video>
             <div className="p-6 space-y-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-rose-600 bg-rose-50 dark:bg-rose-950/40 px-2.5 py-1 rounded-full">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-full">
                 Video Briefing 1
               </span>
               <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
@@ -641,7 +638,7 @@ export default function HomePage() {
               <source src="/assets/images/Clip 2 - Policies for Water Demand.mp4" type="video/mp4" />
             </video>
             <div className="p-6 space-y-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-full">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-full">
                 Video Briefing 2
               </span>
               <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
@@ -670,7 +667,7 @@ export default function HomePage() {
               href="/endorsements"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white dark:bg-slate-100 dark:text-slate-900 font-bold text-sm shadow transition"
             >
-              View Full Endorsements Roster <ArrowRight className="w-4 h-4" />
+              View Full Endorsements Roster <ArrowRight className="w-4 h-4 text-emerald-400" />
             </Link>
           </div>
         </div>
@@ -678,11 +675,11 @@ export default function HomePage() {
 
       {/* 11. Grassroots Volunteer Callout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-rose-700 to-red-800 text-white shadow-xl text-center space-y-6">
+        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-emerald-800 via-teal-800 to-slate-900 text-white shadow-xl text-center space-y-6">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Be Part of Our Grassroots Movement
           </h2>
-          <p className="text-sm sm:text-base text-rose-100 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-emerald-100 max-w-xl mx-auto">
             From canvassing neighborhoods to hosting lawn signs and phone banks, every volunteer makes a difference for Charlotte.
           </p>
 
@@ -693,11 +690,11 @@ export default function HomePage() {
               value={volunteerEmail}
               onChange={(e) => setVolunteerEmail(e.target.value)}
               placeholder="Enter your email address..."
-              className="flex-1 px-4 py-3 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-white"
+              className="flex-1 px-4 py-3 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
             <button
               type="submit"
-              className="px-6 py-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-sm shadow transition shrink-0"
+              className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow transition shrink-0"
             >
               Sign Up
             </button>

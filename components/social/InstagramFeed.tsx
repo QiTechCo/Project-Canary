@@ -1,17 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Instagram,
   Heart,
   MessageCircle,
   ExternalLink,
-  Sparkles,
   Share2,
-  Bookmark,
   CheckCircle2,
-  RefreshCw,
-  SlidersHorizontal,
   Maximize2,
   X
 } from "lucide-react";
@@ -138,15 +134,15 @@ export function InstagramFeed() {
       <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4 text-center sm:text-left">
           <div className="relative">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-tr from-emerald-500 via-teal-500 to-emerald-700">
               <img
                 src="/assets/images/dimple_newest_crop.jpg"
                 alt="Dimple Ajmera Instagram"
                 className="w-full h-full rounded-full object-cover border-2 border-white dark:border-slate-900"
               />
             </div>
-            <div className="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-rose-600 text-white flex items-center justify-center border-2 border-white dark:border-slate-900 shadow">
-              <Instagram className="w-3 h-3" />
+            <div className="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-emerald-700 text-white flex items-center justify-center border-2 border-white dark:border-slate-900 shadow">
+              <Instagram className="w-3 h-3 text-white" />
             </div>
           </div>
 
@@ -155,7 +151,7 @@ export function InstagramFeed() {
               <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">
                 @dimpleajmera
               </h3>
-              <CheckCircle2 className="w-4 h-4 text-blue-500 fill-blue-500/20" />
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 fill-emerald-500/20" />
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400">
               Dimple Ajmera • Charlotte City Council Member At-Large • CPA • Mom • Fighter
@@ -173,9 +169,9 @@ export function InstagramFeed() {
             href="https://www.instagram.com/dimpleajmera"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-rose-600 to-amber-600 hover:opacity-95 text-white font-bold text-xs shadow-md transition transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-md transition transform hover:-translate-y-0.5"
           >
-            <Instagram className="w-4 h-4" /> Follow on Instagram
+            <Instagram className="w-4 h-4 text-white" /> Follow on Instagram
           </a>
         </div>
       </div>
@@ -195,7 +191,7 @@ export function InstagramFeed() {
               onClick={() => setFilter(tab.id)}
               className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition ${
                 filter === tab.id
-                  ? "bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 shadow-sm"
+                  ? "bg-emerald-700 text-white shadow-sm"
                   : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
               }`}
             >
@@ -241,10 +237,10 @@ export function InstagramFeed() {
                   href={post.permalink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-rose-600 transition p-1"
+                  className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 transition p-1"
                   aria-label="View on Instagram"
                 >
-                  <Instagram className="w-3.5 h-3.5" />
+                  <Instagram className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                 </a>
               </div>
 
@@ -259,9 +255,9 @@ export function InstagramFeed() {
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                 />
                 <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4 text-white font-bold text-xs">
-                  <span className="flex items-center gap-1.5"><Heart className="w-4 h-4 fill-white" /> {post.likes + (isLiked ? 1 : 0)}</span>
-                  <span className="flex items-center gap-1.5"><MessageCircle className="w-4 h-4 fill-white" /> {post.comments}</span>
-                  <Maximize2 className="w-4 h-4" />
+                  <span className="flex items-center gap-1.5"><Heart className="w-4 h-4 fill-emerald-400 text-emerald-400" /> {post.likes + (isLiked ? 1 : 0)}</span>
+                  <span className="flex items-center gap-1.5"><MessageCircle className="w-4 h-4 text-emerald-400 fill-emerald-400/20" /> {post.comments}</span>
+                  <Maximize2 className="w-4 h-4 text-emerald-400" />
                 </div>
               </div>
 
@@ -272,26 +268,26 @@ export function InstagramFeed() {
                     <div className="flex items-center gap-3">
                       <button
                         onClick={() => toggleLike(post.id)}
-                        className={`transition ${isLiked ? "text-rose-600 scale-110" : "hover:text-rose-600"}`}
+                        className={`transition ${isLiked ? "text-emerald-600 scale-110" : "text-emerald-600 dark:text-emerald-400 hover:text-emerald-800"}`}
                         aria-label="Like post"
                       >
-                        <Heart className={`w-4 h-4 ${isLiked ? "fill-rose-600" : ""}`} />
+                        <Heart className={`w-4 h-4 text-emerald-600 dark:text-emerald-400 ${isLiked ? "fill-emerald-600" : ""}`} />
                       </button>
                       <button
                         onClick={() => setSelectedPost(post)}
-                        className="hover:text-blue-600 transition"
+                        className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 transition"
                         aria-label="Comment"
                       >
-                        <MessageCircle className="w-4 h-4" />
+                        <MessageCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                       </button>
                       <a
                         href={post.permalink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-emerald-600 transition"
+                        className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 transition"
                         aria-label="Share"
                       >
-                        <Share2 className="w-4 h-4" />
+                        <Share2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                       </a>
                     </div>
                     <span className="text-[10px] font-semibold text-slate-400">{post.timestamp}</span>
@@ -313,7 +309,7 @@ export function InstagramFeed() {
                   rel="noopener noreferrer"
                   className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 hover:underline inline-flex items-center gap-1 pt-1"
                 >
-                  View post on Instagram <ExternalLink className="w-2.5 h-2.5" />
+                  View post on Instagram <ExternalLink className="w-2.5 h-2.5 text-emerald-600 dark:text-emerald-400" />
                 </a>
               </div>
             </div>
@@ -336,7 +332,7 @@ export function InstagramFeed() {
               className="absolute top-4 right-4 z-10 p-2 rounded-full bg-slate-900/60 text-white hover:bg-slate-900 transition"
               aria-label="Close"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 text-emerald-400" />
             </button>
 
             {/* Media Column */}
@@ -359,7 +355,7 @@ export function InstagramFeed() {
                   />
                   <div>
                     <h4 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-1">
-                      dimpleajmera <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 fill-blue-500/20" />
+                      dimpleajmera <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 fill-emerald-500/20" />
                     </h4>
                     <span className="text-[11px] text-slate-400">{selectedPost.location || "Charlotte, NC"}</span>
                   </div>
@@ -380,7 +376,7 @@ export function InstagramFeed() {
                   href={selectedPost.permalink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-rose-600 text-white font-bold text-xs shadow text-center block transition hover:opacity-95"
+                  className="w-full py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow text-center block transition"
                 >
                   Open Original Post on Instagram &rarr;
                 </a>

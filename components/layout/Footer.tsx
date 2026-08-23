@@ -25,7 +25,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm shadow-lg transition transform hover:-translate-y-0.5"
             >
-              <Heart className="w-4 h-4 fill-white" /> Donate on ActBlue
+              <Heart className="w-4 h-4 fill-white" /> Donate
             </a>
             <Link
               href="/volunteer"
@@ -68,7 +68,7 @@ export function Footer() {
           {/* Council Legislative Hub */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
-              <Landmark className="w-3.5 h-3.5 text-emerald-600" /> Council Hub &amp; Wiki
+              <Landmark className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> Council Hub &amp; Wiki
             </h4>
             <ul className="space-y-2 text-xs text-slate-600 dark:text-slate-400">
               <li><Link href="/council-wiki" className="hover:text-emerald-600 font-semibold">Legislative Wiki Feed</Link></li>
@@ -76,7 +76,7 @@ export function Footer() {
               <li><Link href="/council-wiki#finance" className="hover:text-emerald-600">Campaign Finance Ledger</Link></li>
               <li>
                 <a href="https://charlottenc.legistar.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 inline-flex items-center gap-1">
-                  Granicus Legistar <ExternalLink className="w-2.5 h-2.5" />
+                  Granicus Legistar <ExternalLink className="w-2.5 h-2.5 text-emerald-600 dark:text-emerald-400" />
                 </a>
               </li>
             </ul>
