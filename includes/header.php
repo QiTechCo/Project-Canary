@@ -57,6 +57,22 @@ require_once __DIR__ . '/config.php';
         <li class="nav-item">
           <a class="nav-link" href="index.php#priorities">Key Priorities</a>
         </li>
+        <!-- On Council Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/council-wiki" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-bank2 me-1 text-emerald-accent"></i>On Council
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3">
+            <li><a class="dropdown-item py-2 fw-bold text-dark" href="/council-wiki"><i class="bi bi-journal-text me-2 text-emerald-accent"></i>Council Hub &amp; Legislative Wiki</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item py-2" href="/council-wiki#votes"><i class="bi bi-check2-square me-2 text-primary"></i>Voting Record &amp; Roll Calls</a></li>
+            <li><a class="dropdown-item py-2" href="/council-wiki#finance"><i class="bi bi-cash-stack me-2 text-success"></i>Campaign Finance &amp; Disclosures</a></li>
+            <li><a class="dropdown-item py-2" href="/council-wiki"><i class="bi bi-tree-fill me-2 text-emerald-accent"></i>SEAP &amp; Climate Action Plan</a></li>
+            <li><a class="dropdown-item py-2" href="/council-wiki"><i class="bi bi-calculator-fill me-2 text-warning"></i>Budget Committee Leadership</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item py-2 text-muted" href="https://charlottenc.legistar.com" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Granicus Legistar Portal</a></li>
+          </ul>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="endorsements.php">Endorsements</a>
         </li>

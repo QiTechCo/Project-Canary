@@ -1,0 +1,39 @@
+name: Sync Charlotte City Council Legistar Archive
+
+on:
+  schedule:
+    # Run every Tuesday and Thursday at 06:00 UTC (following Monday council business & zoning sessions)
+    - cron: '0 6 * * 2,4'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
+
+jobs:
+  sync-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          pip install requests youtube-transcript-api
+
+      - name: Run Live Legistar Sync Pipeline
+        run: |
+          python scripts/sync-legistar-live.py
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --global user.name "Council Archive Sync Bot"
+          git config --global user.email "bot@dimpleajmera.com"
+          git add data/dimple-ajmera-council-archive.json data/sync-metadata.json
+          if git diff --staged --quiet; then
+            echo "No new council records found. Archive is up to date."
+          else
+            git commit -m "chore(data): auto-sync latest Charlotte City Council Legistar records [skip ci]"
+            git push
+          fi

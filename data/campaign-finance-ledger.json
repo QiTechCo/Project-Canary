@@ -1,0 +1,102 @@
+[
+  {
+    "id": "tx-6",
+    "contributor": "Local Grassroots Contributors (<$50)",
+    "employer": "Various",
+    "occupation": "Aggregated Small-Dollar",
+    "amount": 14580.0,
+    "date": "2025-10-01",
+    "cycle": "2025 (At-Large)",
+    "type": "Individual"
+  },
+  {
+    "id": "tx-2",
+    "contributor": "Lillian's List PAC",
+    "employer": "N/A",
+    "occupation": "Political Action Committee",
+    "amount": 5000.0,
+    "date": "2020-01-20",
+    "cycle": "2020 (Treasurer)",
+    "type": "PAC"
+  },
+  {
+    "id": "tx-3",
+    "contributor": "Stephen Rosenburgh",
+    "employer": "US Developments",
+    "occupation": "Real Estate Executive",
+    "amount": 5000.0,
+    "date": "2020-02-02",
+    "cycle": "2020 (Treasurer)",
+    "type": "Individual"
+  },
+  {
+    "id": "tx-5",
+    "contributor": "Kinjal Ajmera",
+    "employer": "Healthcare Services",
+    "occupation": "Physician",
+    "amount": 5000.0,
+    "date": "2019-12-10",
+    "cycle": "2020 (Treasurer)",
+    "type": "Individual"
+  },
+  {
+    "id": "tx-7",
+    "contributor": "North Carolina AFL-CIO PAC",
+    "employer": "N/A",
+    "occupation": "Labor Association",
+    "amount": 4000.0,
+    "date": "2022-04-18",
+    "cycle": "2022 (At-Large)",
+    "type": "PAC"
+  },
+  {
+    "id": "tx-1",
+    "contributor": "Hugh L. McColl Jr.",
+    "employer": "Retired",
+    "occupation": "Former CEO, Bank of America",
+    "amount": 3500.0,
+    "date": "2020-02-14",
+    "cycle": "2020 (Treasurer)",
+    "type": "Individual"
+  },
+  {
+    "id": "tx-9",
+    "contributor": "Piedmont Rising Action",
+    "employer": "N/A",
+    "occupation": "Civic Action Committee",
+    "amount": 3000.0,
+    "date": "2020-01-15",
+    "cycle": "2020 (Treasurer)",
+    "type": "PAC"
+  },
+  {
+    "id": "tx-4",
+    "contributor": "Charlotte Firefighters PAC",
+    "employer": "N/A",
+    "occupation": "Labor Association",
+    "amount": 2500.0,
+    "date": "2023-09-12",
+    "cycle": "2023 (At-Large)",
+    "type": "PAC"
+  },
+  {
+    "id": "tx-8",
+    "contributor": "Sierra Club NC Chapter PAC",
+    "employer": "N/A",
+    "occupation": "Environmental PAC",
+    "amount": 2500.0,
+    "date": "2023-10-05",
+    "cycle": "2023 (At-Large)",
+    "type": "PAC"
+  },
+  {
+    "id": "tx-10",
+    "contributor": "Charlotte Metro REALTORS PAC",
+    "employer": "N/A",
+    "occupation": "Industry PAC",
+    "amount": 2500.0,
+    "date": "2023-08-20",
+    "cycle": "2023 (At-Large)",
+    "type": "PAC"
+  }
+]

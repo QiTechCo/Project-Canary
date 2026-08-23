@@ -135,6 +135,56 @@ require_once __DIR__ . '/includes/header.php';
       </div>
     </div>
 
+    <!-- Dimple on Council: Interactive Legislative Hub & Open Wiki Feature -->
+    <div class="my-5 p-4 p-md-5 rounded-4 shadow-sm border border-emerald-accent border-opacity-25" style="background: linear-gradient(135deg, #0b2545 0%, #133a68 60%, #044b2a 100%); color: #ffffff;">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white bg-opacity-15 text-white text-uppercase tracking-wider fw-bold small mb-3">
+            <i class="bi bi-bank2 text-warning"></i> Official Legislative Archive &amp; Wiki
+          </div>
+          <h2 class="serif-font display-6 fw-bold text-white mb-3">
+            Dimple Ajmera on Council Hub
+          </h2>
+          <p class="text-white-50 lead fs-6 mb-4">
+            Search 8+ years of public service (January 17, 2017 – Present). Ingested directly from the Granicus Legistar Web API and Charlotte GOV Channel — featuring instant fuzzy search, roll-call voting records, timecoded spoken transcripts, and campaign finance disclosures.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge bg-white bg-opacity-20 text-white px-3 py-2 fw-semibold"><i class="bi bi-check2-circle text-success me-1"></i> 1,200+ Recorded Votes</span>
+            <span class="badge bg-white bg-opacity-20 text-white px-3 py-2 fw-semibold"><i class="bi bi-tree text-success me-1"></i> SEAP Zero-Carbon Leader</span>
+            <span class="badge bg-white bg-opacity-20 text-white px-3 py-2 fw-semibold"><i class="bi bi-calculator text-warning me-1"></i> $4.17B Balanced Budgets</span>
+            <span class="badge bg-white bg-opacity-20 text-white px-3 py-2 fw-semibold"><i class="bi bi-camera-video text-danger me-1"></i> Timecoded Transcripts</span>
+          </div>
+          <div class="d-flex flex-wrap gap-3 pt-2">
+            <a href="/council-wiki" class="btn btn-emerald-accent text-white px-4 py-2 fw-bold rounded-3 shadow">
+              <i class="bi bi-journal-text me-1"></i> Launch Council Hub &amp; Wiki
+            </a>
+            <a href="/council-wiki#finance" class="btn btn-outline-light px-4 py-2 fw-bold rounded-3">
+              <i class="bi bi-cash-stack me-1"></i> Campaign Finance Ledger
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="bg-white bg-opacity-10 p-4 rounded-3 border border-white border-opacity-15 backdrop-blur">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-white-50 small text-uppercase tracking-wider fw-bold">Live Data Ingestion</span>
+              <span class="badge bg-success"><i class="bi bi-broadcast me-1"></i> Live Sync Active</span>
+            </div>
+            <div class="p-3 bg-dark bg-opacity-40 rounded-2 mb-2">
+              <div class="text-warning small font-monospace"><i class="bi bi-terminal me-1"></i> Granicus Legistar Web API</div>
+              <div class="text-white small fw-bold mt-1">Full Council • Zoning • Budget • SEAP Committees</div>
+            </div>
+            <div class="p-3 bg-dark bg-opacity-40 rounded-2 mb-3">
+              <div class="text-info small font-monospace"><i class="bi bi-youtube me-1"></i> Charlotte GOV Channel</div>
+              <div class="text-white small fw-bold mt-1">100% Spoken Meeting Transcripts &amp; Timecodes</div>
+            </div>
+            <a href="/council-wiki" class="btn btn-light w-100 fw-bold text-dark py-2">
+              Explore Live Wiki Feed <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- High-Res Campaign Photography Gallery Grid -->
     <div class="text-center mb-4">
       <span class="text-emerald-accent fw-bold text-uppercase tracking-wider">On The Ground in Charlotte</span>
